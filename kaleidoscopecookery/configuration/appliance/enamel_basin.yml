@@ -1,0 +1,202 @@
+templates:
+  #搪瓷盆子外观
+  kaleidoscopecookery:appearance/enamel_basin:
+    state: soul_campfire[lit=false, signal_fire=true, facing=east]
+    transparent: true
+    entity_renderer:
+      item: "show:enamel_basin_${level}"
+      yaw: ${yaw}
+
+items:
+
+  #搪瓷盆子
+  kaleidoscopecookery:enamel_basin:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.enamel_basin>
+    texture: minecraft:item/custom/cook/enamel_basin
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+          arguments:
+            resistance: 1.0
+            solid: false
+        behaviors:
+          - type: kaleidoscopecookery:cooking_enamel_basin
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+            oil_level:
+              type: int
+              default: 0
+              min: 0
+              max: 4
+          appearances:
+            base_north:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: base
+                yaw: 180
+            base_south:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: base
+                yaw: 0
+            base_east:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: base
+                yaw: -90
+            base_west:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: base
+                yaw: 90
+            empty_north:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: empty
+                yaw: 180
+            empty_south:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: empty
+                yaw: 0
+            empty_east:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: empty
+                yaw: -90
+            empty_west:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: empty
+                yaw: 90
+            low_north:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: low
+                yaw: 180
+            low_south:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: low
+                yaw: 0
+            low_east:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: low
+                yaw: -90
+            low_west:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: low
+                yaw: 90
+            middle_north:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: middle
+                yaw: 180
+            middle_south:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: middle
+                yaw: 0
+            middle_east:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: middle
+                yaw: -90
+            middle_west:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: middle
+                yaw: 90
+            high_north:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: high
+                yaw: 180
+            high_south:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: high
+                yaw: 0
+            high_east:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: high
+                yaw: -90
+            high_west:
+              template: kaleidoscopecookery:appearance/enamel_basin
+              arguments:
+                level: high
+                yaw: 90
+          variants:
+            facing=north,oil_level=0:
+              appearance: base_north
+            facing=south,oil_level=0:
+              appearance: base_south
+            facing=east,oil_level=0:
+              appearance: base_east
+            facing=west,oil_level=0:
+              appearance: base_west
+            facing=north,oil_level=1:
+              appearance: empty_north
+            facing=south,oil_level=1:
+              appearance: empty_south
+            facing=east,oil_level=1:
+              appearance: empty_east
+            facing=west,oil_level=1:
+              appearance: empty_west
+            facing=north,oil_level=2:
+              appearance: low_north
+            facing=south,oil_level=2:
+              appearance: low_south
+            facing=east,oil_level=2:
+              appearance: low_east
+            facing=west,oil_level=2:
+              appearance: low_west
+            facing=north,oil_level=3:
+              appearance: middle_north
+            facing=south,oil_level=3:
+              appearance: middle_south
+            facing=east,oil_level=3:
+              appearance: middle_east
+            facing=west,oil_level=3:
+              appearance: middle_west
+            facing=north,oil_level=4:
+              appearance: high_north
+            facing=south,oil_level=4:
+              appearance: high_south
+            facing=east,oil_level=4:
+              appearance: high_east
+            facing=west,oil_level=4:
+              appearance: high_west
+
+config_factory#enamel_basin_displays:
+  instances:
+    #空盆底
+    - level: base
+    #无油
+    - level: empty
+    #少油
+    - level: low
+    #半油
+    - level: middle
+    #满油
+    - level: high
+  blueprint:
+    items:
+      #各油量搪瓷盆子展示模型
+      show:enamel_basin_${level}:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          name: enamel_basin
+          path: "minecraft:block/custom/cook/block/enamel_basin/${level}"

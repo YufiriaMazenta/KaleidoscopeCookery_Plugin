@@ -1,0 +1,81 @@
+templates:
+
+  #菜谱板交互箱
+  kaleidoscopecookery:hitbox/recipe_board:
+    template: kaleidoscopecookery:hitbox/interaction
+    arguments:
+      position: "${x},-0.4,0.05"
+      width: 0.1
+      height: 0.8
+
+  #菜谱板物品
+  kaleidoscopecookery:item/recipe_board:
+    material: nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.recipe_item_${state}>"
+    texture: "minecraft:item/custom/cook/recipe_item_${state}"
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_wall
+      furniture:
+        template: kaleidoscopecookery:furniture/metal_base
+        arguments:
+          item: kaleidoscopecookery:recipe_item
+        merges:
+          behaviors:
+            - type: kaleidoscopecookery:recipe_furniture
+          variants:
+            wall:
+              loot_spawn_offset: 0,0,0.3
+              elements:
+                - type: item_display
+                  item: show:recipe_block
+                  position: 0,0,0.5
+                  pitch: 90
+                  billboard: fixed
+              hitboxes:
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: 0.3
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: 0.2
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: 0.1
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: 0
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: -0.1
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: -0.2
+                - template: kaleidoscopecookery:hitbox/recipe_board
+                  arguments:
+                    x: -0.3
+
+items:
+
+  #菜谱板
+  show:recipe_block:
+    template: kaleidoscopecookery:display/block_model
+    arguments:
+      name: recipe_item
+
+  #空白菜谱
+  kaleidoscopecookery:recipe_item_no_recipe:
+    template: kaleidoscopecookery:item/recipe_board
+    arguments:
+      state: no_recipe
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.recipe_item.need_cooked>"
+      - "<!i><gray><lang:tooltip.kaleidoscopecookery.recipe_item.use>"
+
+  #写好的菜谱
+  kaleidoscopecookery:recipe_item_has_recipe:
+    template: kaleidoscopecookery:item/recipe_board
+    arguments:
+      state: has_recipe

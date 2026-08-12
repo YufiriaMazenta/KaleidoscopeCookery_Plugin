@@ -1,0 +1,346 @@
+templates:
+  #水稻阶段展示模型
+  kaleidoscopecookery:display/rice_stage:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.rice_panicle>"
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/crop/rice/stage${stage}_${segment}"
+
+  #水稻外观
+  kaleidoscopecookery:appearance/rice:
+    state: "${state}"
+    transparent: true
+    entity_renderer:
+      item: "show:rice_crop_${stage}_${segment}"
+
+blocks:
+  #稻米作物
+  kaleidoscopecookery:rice_crop:
+    settings:
+      template: kaleidoscopecookery:settings/crop
+      arguments:
+        seed: kaleidoscopecookery:wild_rice
+    behaviors:
+      - type: multi_high_block
+        property: location
+      - type: bush_block
+        stackable: true
+        max_height: 3
+        bottom_blocks:
+          - minecraft:farmland
+      - type: kaleidoscopecookery:rice_crop
+        grow_speed: 0.0625
+        light_requirement: 9
+        bone_meal_age_bonus:
+          type: uniform
+          min: 1
+          max: 2
+        booster_entities:
+          - minecraft:cod
+          - minecraft:salmon
+          - minecraft:tropical_fish
+          - minecraft:pufferfish
+          - minecraft:tadpole
+          - minecraft:axolotl
+        night_sound: kaleidoscopecookery:paddy
+        night_sound_cell_size: 8
+        night_sound_cooldown: 40
+        night_sound_volume_step: 0.15
+        night_sound_max_bonus: 0.4
+        harvest_reset_age: 1
+        harvest_blacklist:
+          - "#kaleidoscopecookery:range_harvest_tool"
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                location: 0
+          entries:
+            - type: alternatives
+              children:
+                - type: item
+                  item: kaleidoscopecookery:rice_panicle
+                  conditions:
+                    - type: match_block_property
+                      properties:
+                        age: 7
+                  functions:
+                    - type: set_count
+                      add: false
+                      count:
+                        type: uniform
+                        min: 2
+                        max: 4
+                - type: item
+                  item: kaleidoscopecookery:wild_rice
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                location: 0
+                age: 7
+          entries:
+            - type: item
+              item: kaleidoscopecookery:wild_rice
+              functions:
+                - type: apply_bonus
+                  enchantment: minecraft:fortune
+                  formula:
+                    type: binomial_with_bonus_count
+                    extra: 3
+                    probability: 0.5714286
+    states:
+      properties:
+        age:
+          type: int
+          default: 0
+          min: 0
+          max: 7
+        location:
+          type: int
+          default: 0
+          min: 0
+          max: 2
+        waterlogged:
+          type: boolean
+          default: true
+      appearances:
+        hidden_top:
+          state: minecraft:light[level=0,waterlogged=false]
+          transparent: true
+        stage_0_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 0
+            segment: down
+        stage_1_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 1
+            segment: down
+        stage_2_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 2
+            segment: down
+        stage_3_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 3
+            segment: down
+        stage_4_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 4
+            segment: down
+        stage_5_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 5
+            segment: down
+        stage_6_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 6
+            segment: down
+        stage_7_down:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:kelp[age=25]
+            stage: 7
+            segment: down
+        stage_0_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 0
+            segment: middle
+        stage_1_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 1
+            segment: middle
+        stage_2_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 2
+            segment: middle
+        stage_3_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 3
+            segment: middle
+        stage_4_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:sugar_cane[age=14]
+            stage: 4
+            segment: middle
+        stage_5_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:sugar_cane[age=14]
+            stage: 5
+            segment: middle
+        stage_6_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:sugar_cane[age=14]
+            stage: 6
+            segment: middle
+        stage_7_middle:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:sugar_cane[age=14]
+            stage: 7
+            segment: middle
+        stage_4_up:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:light[level=0,waterlogged=false]
+            stage: 4
+            segment: up
+        stage_5_up:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:light[level=0,waterlogged=false]
+            stage: 5
+            segment: up
+        stage_6_up:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 6
+            segment: up
+        stage_7_up:
+          template: kaleidoscopecookery:appearance/rice
+          arguments:
+            state: minecraft:potatoes[age=3]
+            stage: 7
+            segment: up
+      variants:
+        waterlogged=true:
+          settings:
+            fluid_state: water
+        age=0,location=0:
+          appearance: stage_0_down
+        age=1,location=0:
+          appearance: stage_1_down
+        age=2,location=0:
+          appearance: stage_2_down
+        age=3,location=0:
+          appearance: stage_3_down
+        age=4,location=0:
+          appearance: stage_4_down
+        age=5,location=0:
+          appearance: stage_5_down
+        age=6,location=0:
+          appearance: stage_6_down
+        age=7,location=0:
+          appearance: stage_7_down
+        age=0,location=1:
+          appearance: stage_0_middle
+        age=1,location=1:
+          appearance: stage_1_middle
+        age=2,location=1:
+          appearance: stage_2_middle
+        age=3,location=1:
+          appearance: stage_3_middle
+        age=4,location=1:
+          appearance: stage_4_middle
+        age=5,location=1:
+          appearance: stage_5_middle
+        age=6,location=1:
+          appearance: stage_6_middle
+        age=7,location=1:
+          appearance: stage_7_middle
+        age=0,location=2:
+          appearance: hidden_top
+        age=1,location=2:
+          appearance: hidden_top
+        age=2,location=2:
+          appearance: hidden_top
+        age=3,location=2:
+          appearance: hidden_top
+        age=4,location=2:
+          appearance: stage_4_up
+        age=5,location=2:
+          appearance: stage_5_up
+        age=6,location=2:
+          appearance: stage_6_up
+        age=7,location=2:
+          appearance: stage_7_up
+
+config_factory#rice_stage_displays:
+  instances:
+    - segment: down
+    - segment: middle
+  blueprint:
+    items:
+      #水稻阶段展示模型
+      show:rice_crop_0_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 0
+      #水稻阶段展示模型
+      show:rice_crop_1_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 1
+      #水稻阶段展示模型
+      show:rice_crop_2_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 2
+      #水稻阶段展示模型
+      show:rice_crop_3_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 3
+      #水稻阶段展示模型
+      show:rice_crop_4_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 4
+      #水稻阶段展示模型
+      show:rice_crop_5_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 5
+      #水稻阶段展示模型
+      show:rice_crop_6_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 6
+      #水稻阶段展示模型
+      show:rice_crop_7_${segment}:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          stage: 7
+
+config_factory#rice_top_stage_displays:
+  instances:
+    - stage: 4
+    - stage: 5
+    - stage: 6
+    - stage: 7
+  blueprint:
+    items:
+      #水稻顶段阶段展示模型
+      show:rice_crop_${stage}_up:
+        template: kaleidoscopecookery:display/rice_stage
+        arguments:
+          segment: up

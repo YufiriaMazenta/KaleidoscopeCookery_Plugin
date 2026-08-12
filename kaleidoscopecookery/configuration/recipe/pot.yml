@@ -1,0 +1,12 @@
+pot_food_raw:
+  items:
+    - minecraft:beef
+    - minecraft:porkchop
+    - minecraft:chicken
+    - minecraft:rabbit
+    - kaleidoscopecookery:raw_donkey_meat
+    - minecraft:carrot
+    - minecraft:potato
+    - minecraft:rotten_flesh
+
+pot_flex_foods:

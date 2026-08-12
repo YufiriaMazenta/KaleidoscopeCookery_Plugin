@@ -1,0 +1,22 @@
+#吃完退还容器 炒锅与高汤锅的模糊配方自带 carrier 不用在这里重复写
+#这里补的是合成 蒸笼 茶壶的产出 那三条路没有 carrier 字段
+#摆盘菜走 dishes.yml 的 eaten_pools 也别写进来 两边都写会退两个
+dish_carrier:
+  #茶 退空茶杯
+  kaleidoscopecookery:barley_tea: kaleidoscopecookery:empty_cup
+  kaleidoscopecookery:biluochun: kaleidoscopecookery:empty_cup
+  kaleidoscopecookery:oolong: kaleidoscopecookery:empty_cup
+  kaleidoscopecookery:flower_tea: kaleidoscopecookery:empty_cup
+  kaleidoscopecookery:tieguanyin: kaleidoscopecookery:empty_cup
+  kaleidoscopecookery:sakura_fubuki: kaleidoscopecookery:empty_cup
+
+  #竹筒饭 退竹子
+  kaleidoscopecookery:raw_bamboo_tube_rice: minecraft:bamboo
+  kaleidoscopecookery:bamboo_tube_rice: minecraft:bamboo
+
+  #盖饭 碗跟着原菜带过来
+  kaleidoscopecookery:scramble_egg_with_tomatoes_rice_bowl: minecraft:bowl
+  kaleidoscopecookery:braised_beef_rice_bowl: minecraft:bowl
+  kaleidoscopecookery:stir_fried_pork_with_peppers_rice_bowl: minecraft:bowl
+  kaleidoscopecookery:sweet_and_sour_pork_rice_bowl: minecraft:bowl
+  kaleidoscopecookery:fish_flavored_shredded_pork_rice_bowl: minecraft:bowl

@@ -1,0 +1,29 @@
+item_tags:
+
+  #菜刀
+  kaleidoscopecookery:kitchen_knife:
+    - craftengine:kaleidoscopecookery:iron_kitchen_knife
+    - craftengine:kaleidoscopecookery:gold_kitchen_knife
+    - craftengine:kaleidoscopecookery:diamond_kitchen_knife
+    - craftengine:kaleidoscopecookery:netherite_kitchen_knife
+
+  #锅铲
+  kaleidoscopecookery:kitchen_shovel:
+    - craftengine:kaleidoscopecookery:kitchen_shovel_no_oil
+    - craftengine:kaleidoscopecookery:kitchen_shovel_has_oil
+
+  #油壶
+  kaleidoscopecookery:oil_pot:
+    - craftengine:kaleidoscopecookery:oil_pot
+    - craftengine:kaleidoscopecookery:oil_pot_empty
+
+  #范围收割工具
+  kaleidoscopecookery:range_harvest_tool:
+    - craftengine:kaleidoscopecookery:sickle
+
+  #全部厨具
+  kaleidoscopecookery:kitchenware:
+    - "#kaleidoscopecookery:kitchen_knife"
+    - "#kaleidoscopecookery:kitchen_shovel"
+    - "#kaleidoscopecookery:oil_pot"
+    - craftengine:kaleidoscopecookery:stockpot_lid

@@ -1,0 +1,700 @@
+equipments:
+  $$>=1.21.2:
+    #农夫套装外观
+    kaleidoscopecookery:farmer:
+      type: component
+      humanoid: minecraft:entity/equipment/humanoid/kaleidoscopecookery_farmer
+      humanoid_leggings: minecraft:entity/equipment/humanoid_leggings/kaleidoscopecookery_farmer
+  $$<1.21.2:
+    #农夫套装外观
+    kaleidoscopecookery:farmer:
+      type: trim
+      humanoid: minecraft:entity/equipment/humanoid/kaleidoscopecookery_farmer
+      humanoid_leggings: minecraft:entity/equipment/humanoid_leggings/kaleidoscopecookery_farmer
+
+templates:
+  #悬挂串外观
+  kaleidoscopecookery:appearance/hanging_string:
+    state: minecraft:sugar_cane[age=13]
+    transparent: true
+    entity_renderer:
+      item: "show:${item}"
+
+items:
+  #油脂块
+  kaleidoscopecookery:oil_block:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.oil_block>"
+    model: minecraft:block/custom/cook/block/oil_block
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template:
+            - default:hardness/none
+            - default:settings/transparent_1x1x1
+          overrides:
+            friction: 0.985
+            map_color: ice
+            sounds:
+              break: minecraft:block.slime_block.break
+              step: minecraft:block.slime_block.step
+              place: minecraft:block.slime_block.place
+              hit: minecraft:block.slime_block.hit
+              fall: minecraft:block.slime_block.fall
+        state:
+          auto_state: solid
+          texture: minecraft:block/custom/cook/block/oil_block
+
+  #辣椒串串
+  kaleidoscopecookery:chili_ristra:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.chili_ristra>"
+    texture: minecraft:item/custom/cook/chili_ristra
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/hanging_string
+        behaviors:
+          - type: kaleidoscopecookery:hanging_string
+            harvest_item: kaleidoscopecookery:red_chili
+            harvest_amount: 3
+        states:
+          properties:
+            is_head:
+              type: boolean
+              default: true
+            sheared:
+              type: boolean
+              default: false
+          appearances:
+            head:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: chili_ristra_head
+            head_sheared:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: chili_ristra_head_sheared
+            body:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: chili_ristra_body
+            body_sheared:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: chili_ristra_body_sheared
+          variants:
+            is_head=true,sheared=false:
+              appearance: head
+            is_head=true,sheared=true:
+              appearance: head_sheared
+            is_head=false,sheared=false:
+              appearance: body
+            is_head=false,sheared=true:
+              appearance: body_sheared
+
+  #蘑菇串串
+  kaleidoscopecookery:strung_mushrooms:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.strung_mushrooms>"
+    texture: minecraft:item/custom/cook/strung_mushrooms
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/hanging_string
+          arguments:
+            map_color: 26
+        behaviors:
+          - type: kaleidoscopecookery:hanging_string
+            harvest_item: minecraft:brown_mushroom
+            harvest_amount: 3
+        states:
+          properties:
+            is_head:
+              type: boolean
+              default: true
+            sheared:
+              type: boolean
+              default: false
+          appearances:
+            head:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: strung_mushrooms_head
+            head_sheared:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: strung_mushrooms_head_sheared
+            body:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: strung_mushrooms_body
+            body_sheared:
+              template: kaleidoscopecookery:appearance/hanging_string
+              arguments:
+                item: strung_mushrooms_body_sheared
+          variants:
+            is_head=true,sheared=false:
+              appearance: head
+            is_head=true,sheared=true:
+              appearance: head_sheared
+            is_head=false,sheared=false:
+              appearance: body
+            is_head=false,sheared=true:
+              appearance: body_sheared
+
+  #稻草捆
+  kaleidoscopecookery:straw_block:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.straw_block>"
+    model: minecraft:block/custom/cook/block/straw_block
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template:
+            - default:sound/grass
+            - default:settings/solid_1x1x1
+          overrides:
+            hardness: 1.0
+            resistance: 0.5
+            instrument: banjo
+            map_color: yellow
+            tags:
+              - minecraft:mineable/hoe
+        states:
+          properties:
+            axis:
+              type: axis
+              default: y
+          appearances:
+            axisY:
+              auto_state: solid
+              model:
+                path: minecraft:block/custom/cook/block/straw_block
+            axisX:
+              auto_state: solid
+              model:
+                x: 90
+                y: 90
+                path: minecraft:block/custom/cook/block/straw_block_horizontal
+            axisZ:
+              auto_state: solid
+              model:
+                x: 90
+                path: minecraft:block/custom/cook/block/straw_block_horizontal
+          variants:
+            axis=x:
+              appearance: axisX
+            axis=y:
+              appearance: axisY
+            axis=z:
+              appearance: axisZ
+
+  #稻草人
+  kaleidoscopecookery:scarecrow:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.scarecrow>"
+    texture: minecraft:item/custom/cook/scarecrow
+    behavior:
+      type: furniture_item
+      furniture: kaleidoscopecookery:scarecrow
+      rules:
+        ground:
+          rotation: eight
+          alignment: CENTER
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.scarecrow>"
+
+  #嬗变饭袋
+  kaleidoscopecookery:transmutation_lunch_bag:
+    material: minecraft:bundle
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.transmutation_lunch_bag>"
+    texture: minecraft:item/custom/cook/transmutation_lunch_bag
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.config_only.storage_transmutation>"
+    behavior:
+      type: kaleidoscopecookery:transmutation_lunch_bag
+
+  kaleidoscopecookery:transmutation_lunch_bag_eating:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.transmutation_lunch_bag>"
+      components:
+        minecraft:max_stack_size: 1
+        minecraft:food:
+          nutrition: 0
+          saturation: 0
+          can_always_eat: true
+        minecraft:consumable:
+          consume_seconds: 2.0
+          animation: eat
+          has_consume_particles: true
+          sound: minecraft:entity.generic.eat
+    texture: minecraft:item/custom/cook/transmutation_lunch_bag
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.config_only.storage_transmutation>"
+
+  #镰刀
+  kaleidoscopecookery:sickle:
+    material: minecraft:iron_hoe
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.sickle>"
+    behavior:
+      type: kaleidoscopecookery:sickle_range_harvest
+    texture: minecraft:item/custom/cook/sickle
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.config_only.crop_harvest>"
+
+  #农夫围裙
+  kaleidoscopecookery:farmer_chest_plate:
+    template: kaleidoscopecookery:item/farmer_armor
+    arguments:
+      material: minecraft:chainmail_chestplate
+      slot: chest
+      max_damage: 240
+      armor: 4
+
+  #农夫长裤
+  kaleidoscopecookery:farmer_leggings:
+    template: kaleidoscopecookery:item/farmer_armor
+    arguments:
+      material: minecraft:chainmail_leggings
+      slot: legs
+      max_damage: 225
+      armor: 5
+
+  #农夫皮靴
+  kaleidoscopecookery:farmer_boots:
+    template: kaleidoscopecookery:item/farmer_armor
+    arguments:
+      material: minecraft:chainmail_boots
+      slot: feet
+      max_damage: 195
+      armor: 2
+
+  #稻米
+  kaleidoscopecookery:rice:
+    material: minecraft:nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.rice>"
+    texture: minecraft:item/custom/cook/rice
+    behavior:
+      type: block_item
+      block: kaleidoscopecookery:rice_crop
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.crop_seed_paddy>"
+
+  #野生稻米
+  kaleidoscopecookery:wild_rice:
+    material: minecraft:nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.wild_rice>"
+    texture: minecraft:item/custom/cook/wild_rice
+    behavior:
+      type: block_item
+      block: kaleidoscopecookery:rice_crop
+    lore:
+      - "<!i><gray><lang:lore.kaleidoscopecookery.crop_seed_paddy>"
+
+  #红辣椒
+  kaleidoscopecookery:red_chili:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.red_chili>"
+      components:
+        minecraft:food:
+          nutrition: 1
+          saturation: 0
+          can_always_eat: true
+        minecraft:consumable:
+          consume_seconds: 1.6
+          animation: eat
+    texture: minecraft:item/custom/cook/red_chili
+    events:
+      consume:
+        - type: damage
+          amount: 2
+          damage_type: minecraft:magic
+
+  #青辣椒
+  kaleidoscopecookery:green_chili:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.green_chili>"
+      components:
+        minecraft:food:
+          nutrition: 1
+          saturation: 0
+          can_always_eat: true
+        minecraft:consumable:
+          consume_seconds: 1.6
+          animation: eat
+    texture: minecraft:item/custom/cook/green_chili
+    events:
+      consume:
+        - type: damage
+          amount: 1
+          damage_type: minecraft:magic
+
+  #稻穗
+  kaleidoscopecookery:rice_panicle:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.rice_panicle>"
+    texture: minecraft:item/custom/cook/rice_panicle
+
+  #面粉
+  kaleidoscopecookery:flour:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.flour>"
+    texture: minecraft:item/custom/cook/flour
+
+  #裹馅面食
+  kaleidoscopecookery:stuffed_dough_food:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.stuffed_dough_food>"
+    texture: minecraft:item/custom/cook/stuffed_dough_food
+
+  #生粽子
+  kaleidoscopecookery:raw_zongzi:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.raw_zongzi>"
+    texture: minecraft:item/custom/cook/raw_zongzi
+
+  #冷切火腿片
+  kaleidoscopecookery:cold_cut_ham_slices:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.cold_cut_ham_slices>"
+    texture: minecraft:item/custom/cook/cold_cut_ham_slices
+
+  #樱吹雪
+  kaleidoscopecookery:sakura_fubuki:
+    material: minecraft:paper
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.sakura_fubuki>"
+      components:
+        minecraft:food:
+          nutrition: 1
+          saturation: 0.6
+          can_always_eat: true
+        minecraft:consumable:
+          consume_seconds: 1.6
+          animation: drink
+          sound: minecraft:entity.generic.drink
+    texture: minecraft:item/custom/cook/tea/sakura_fubuki
+
+config_factory#foods:
+  instances:
+    #美味蛋炒饭
+    - id: delicious_egg_fried_rice
+      nutrition: 12
+      saturation: 15.6
+    #番茄牛腩汤
+    - id: tomato_beef_brisket_soup
+      nutrition: 10
+      saturation: 12
+    #饺子
+    - id: dumpling
+      nutrition: 8
+      saturation: 16
+    #米饭
+    - id: cooked_rice
+      nutrition: 6
+      saturation: 12
+    #蛋炒饭
+    - id: egg_fried_rice
+      nutrition: 8
+      saturation: 14
+    #番茄炒蛋
+    - id: scramble_egg_with_tomatoes
+      nutrition: 9
+      saturation: 10.998
+    #红烧牛肉
+    - id: braised_beef
+      nutrition: 9
+      saturation: 10.998
+    #青椒炒肉
+    - id: stir_fried_pork_with_peppers
+      nutrition: 9
+      saturation: 10.998
+    #糖醋里脊
+    - id: sweet_and_sour_pork
+      nutrition: 9
+      saturation: 10.998
+    #鱼香肉丝
+    - id: fish_flavored_shredded_pork
+      nutrition: 9
+      saturation: 10.998
+    #大骨汤
+    - id: pork_bone_soup
+      nutrition: 6
+      saturation: 8.004
+    #海鲜味噌汤
+    - id: seafood_miso_soup
+      nutrition: 6
+      saturation: 8.004
+    #恐惧浓汤
+    - id: fearsome_thick_soup
+      nutrition: 4
+      saturation: 0
+    #萝卜羊肉汤
+    - id: lamb_and_radish_soup
+      nutrition: 6
+      saturation: 8.004
+    #土豆炖牛肉
+    - id: braised_beef_with_potatoes
+      nutrition: 6
+      saturation: 8.004
+    #野菌兔肉汤
+    - id: wild_mushroom_rabbit_soup
+      nutrition: 6
+      saturation: 8.004
+    #河豚汤
+    - id: pufferfish_soup
+      nutrition: 4
+      saturation: 0
+    #罗宋汤
+    - id: borscht
+      nutrition: 6
+      saturation: 8.004
+    #牛丸汤
+    - id: beef_meatball_soup
+      nutrition: 6
+      saturation: 8.004
+    #小鸡炖蘑菇
+    - id: chicken_and_mushroom_stew
+      nutrition: 6
+      saturation: 8.004
+    #牛肉面
+    - id: beef_noodle
+      nutrition: 14
+      saturation: 18.004
+    #羊肉烩面
+    - id: hui_noodle
+      nutrition: 14
+      saturation: 18.004
+    #乌冬面
+    - id: udon_noodle
+      nutrition: 14
+      saturation: 18.004
+    #番茄
+    - id: tomato
+      nutrition: 2
+      saturation: 2
+    #生菜
+    - id: lettuce
+      nutrition: 2
+      saturation: 0
+    #猪儿虫
+    - id: caterpillar
+      nutrition: 18
+      saturation: 7.2
+    #生竹筒饭
+    - id: raw_bamboo_tube_rice
+      nutrition: 10
+      saturation: 10
+    #煎蛋
+    - id: fried_egg
+      nutrition: 4
+      saturation: 4
+    #驴肉火烧
+    - id: donkey_burger
+      nutrition: 12
+      saturation: 19.2
+    #生驴肉
+    - id: raw_donkey_meat
+      nutrition: 3
+      saturation: 1.8
+    #熟驴肉
+    - id: cooked_donkey_meat
+      nutrition: 8
+      saturation: 12.8
+    #包子
+    - id: baozi
+      nutrition: 8
+      saturation: 16
+    #烤包子
+    - id: samsa
+      nutrition: 8
+      saturation: 16
+    #馅饼
+    - id: meat_pie
+      nutrition: 8
+      saturation: 16
+    #青团
+    - id: qingtuan
+      nutrition: 5
+      saturation: 6
+    #牛皮糖
+    - id: sticky_candy
+      nutrition: 6
+      saturation: 12
+    #糍粑
+    - id: sticky_rice_cake
+      nutrition: 8
+      saturation: 14
+    #熟粽子
+    - id: zongzi
+      nutrition: 8
+      saturation: 10
+    #熟竹筒饭
+    - id: bamboo_tube_rice
+      nutrition: 10
+      saturation: 10
+    #番茄炒蛋盖饭
+    - id: scramble_egg_with_tomatoes_rice_bowl
+      nutrition: 14
+      saturation: 18.004
+    #红烧牛肉盖饭
+    - id: braised_beef_rice_bowl
+      nutrition: 14
+      saturation: 18.004
+    #青椒炒肉盖饭
+    - id: stir_fried_pork_with_peppers_rice_bowl
+      nutrition: 14
+      saturation: 18.004
+    #糖醋里脊盖饭
+    - id: sweet_and_sour_pork_rice_bowl
+      nutrition: 14
+      saturation: 18.004
+    #鱼香肉丝盖饭
+    - id: fish_flavored_shredded_pork_rice_bowl
+      nutrition: 14
+      saturation: 18.004
+    #腊八粥
+    - id: laba_congee
+      nutrition: 12
+      saturation: 12
+    #热干面
+    - id: hot_dry_noodles
+      nutrition: 14
+      saturation: 18.004
+    #刺身
+    - id: sashimi
+      nutrition: 1
+      saturation: 1
+    #生羊排
+    - id: raw_lamb_chops
+      nutrition: 1
+      saturation: 1
+    #生牛杂
+    - id: raw_cow_offal
+      nutrition: 2
+      saturation: 1.2
+    #生五花肉
+    - id: raw_pork_belly
+      nutrition: 2
+      saturation: 1.2
+    #生切制小肉
+    - id: raw_cut_small_meats
+      nutrition: 2
+      saturation: 1.2
+    #生丸子
+    - id: raw_meatball
+      nutrition: 4
+      saturation: 2.4
+    #熟羊排
+    - id: cooked_lamb_chops
+      nutrition: 3
+      saturation: 4.8
+    #熟牛杂
+    - id: cooked_cow_offal
+      nutrition: 4
+      saturation: 6.4
+    #熟五花肉
+    - id: cooked_pork_belly
+      nutrition: 4
+      saturation: 6.4
+    #熟切制小肉
+    - id: cooked_cut_small_meats
+      nutrition: 4
+      saturation: 6.4
+    #熟丸子
+    - id: cooked_meatball
+      nutrition: 8
+      saturation: 12.8
+  blueprint:
+    items:
+      #熟食
+      kaleidoscopecookery:${id}:
+        template: kaleidoscopecookery:item/food
+        arguments:
+          texture: "food/${id}"
+
+config_factory#crop_seeds:
+  instances:
+    #番茄种子
+    - id: tomato_seed
+      crop: kaleidoscopecookery:tomato_crop
+    #辣椒种子
+    - id: chili_seed
+      crop: kaleidoscopecookery:chili_crop
+    #生菜种子
+    - id: lettuce_seed
+      crop: kaleidoscopecookery:lettuce_crop
+  blueprint:
+    items:
+      #作物种子
+      kaleidoscopecookery:${id}:
+        template: kaleidoscopecookery:item/plain
+        arguments:
+          material: minecraft:nether_brick
+          texture: "${id}"
+        behavior:
+          type: block_item
+          block: "${crop}"
+        lore:
+          - "<!i><gray><lang:lore.kaleidoscopecookery.crop_seed>"
+
+config_factory#hanging_string_displays:
+  instances:
+    #辣椒串串
+    - block: chili_ristra
+    #蘑菇串串
+    - block: strung_mushrooms
+  blueprint:
+    items:
+      #悬挂串头节展示模型
+      show:${block}_head:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          name: ${block}
+          path: "minecraft:block/custom/cook/block/${block}/head"
+      #悬挂串采摘后头节展示模型
+      show:${block}_head_sheared:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          name: ${block}
+          path: "minecraft:block/custom/cook/block/${block}/head_sheared"
+      #悬挂串身节展示模型
+      show:${block}_body:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          name: ${block}
+          path: "minecraft:block/custom/cook/block/${block}/body"
+      #悬挂串采摘后身节展示模型
+      show:${block}_body_sheared:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          name: ${block}
+          path: "minecraft:block/custom/cook/block/${block}/body_sheared"

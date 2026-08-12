@@ -1,0 +1,22 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "block/custom/cook/block/lava",
+		"particle": "block/custom/cook/block/lava"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [9.998, 0, 9.998],
+			"faces": {
+				"north": {"uv": [6.002, 16, 16, 16], "texture": "#missing"},
+				"east": {"uv": [6.002, 16, 16, 16], "texture": "#missing"},
+				"south": {"uv": [0, 16, 9.998, 16], "texture": "#missing"},
+				"west": {"uv": [0, 16, 9.998, 16], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0.002, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

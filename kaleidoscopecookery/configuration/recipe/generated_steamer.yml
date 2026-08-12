@@ -1,0 +1,22 @@
+config_factory#steamer_recipes:
+  instances:
+    - id: baozi_from_stuffed_dough_food
+      require: kaleidoscopecookery:stuffed_dough_food
+      result: kaleidoscopecookery:baozi
+    - id: mantou_from_dough_tag
+      require: kaleidoscopecookery:raw_dough
+      result: kaleidoscopecookery:mantou
+    - id: qingtuan_from_slime_ball
+      require: minecraft:slime_ball
+      result: kaleidoscopecookery:qingtuan
+    - id: bamboo_tube_rice_from_raw_bamboo_tube_rice
+      require: kaleidoscopecookery:raw_bamboo_tube_rice
+      result: kaleidoscopecookery:bamboo_tube_rice
+  blueprint:
+    accurate_foods:
+      #蒸笼配方
+      kaleidoscopecookery:steamer_${id}:
+        require: "${require}"
+        result: "${result}"
+        result_count: ${count:-1}
+        cook: steamer

@@ -1,0 +1,12 @@
+block_tags:
+
+  # 锄头能在水下开成耕地的方块（水田）
+  # 条目可以是方块 id（minecraft:dirt），或 # 开头的原版方块标签（#minecraft:dirt）。
+  # 这里只管原版方块；CraftEngine 自定义方块改在它自己的 settings.tags 里加
+  # kaleidoscopecookery:tillable，两边用的是同一个标签名。
+  # 写成空列表表示原版方块一个都不能开，与不写这个标签不同。
+  kaleidoscopecookery:tillable:
+    # dirt_path 与 farmland 不在 #minecraft:dirt 里，但原版锄头本来就认它们
+    - "#minecraft:dirt"
+    - minecraft:dirt_path
+    - minecraft:farmland

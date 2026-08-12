@@ -1,0 +1,54 @@
+config_factory#shawarma_recipes:
+  instances:
+    #原版营火配方
+    - from: beef
+      to: cooked_beef
+    - from: chicken
+      to: cooked_chicken
+    - from: cod
+      to: cooked_cod
+    - from: kelp
+      to: dried_kelp
+    - from: mutton
+      to: cooked_mutton
+    - from: porkchop
+      to: cooked_porkchop
+    - from: potato
+      to: baked_potato
+    - from: rabbit
+      to: cooked_rabbit
+    - from: salmon
+      to: cooked_salmon
+    #厨房模组营火配方
+    - from: raw_lamb_chops
+      from_ns: kaleidoscopecookery
+      to: cooked_lamb_chops
+      to_ns: kaleidoscopecookery
+    - from: raw_cow_offal
+      from_ns: kaleidoscopecookery
+      to: cooked_cow_offal
+      to_ns: kaleidoscopecookery
+    - from: raw_pork_belly
+      from_ns: kaleidoscopecookery
+      to: cooked_pork_belly
+      to_ns: kaleidoscopecookery
+    - from: raw_cut_small_meats
+      from_ns: kaleidoscopecookery
+      to: cooked_cut_small_meats
+      to_ns: kaleidoscopecookery
+    - from: raw_meatball
+      from_ns: kaleidoscopecookery
+      to: cooked_meatball
+      to_ns: kaleidoscopecookery
+    - from: stuffed_dough_food
+      from_ns: kaleidoscopecookery
+      to: samsa
+      to_ns: kaleidoscopecookery
+  blueprint:
+    accurate_foods:
+      #烤架配方
+      kaleidoscopecookery:shawarma_${to}_from_${from}:
+        require: "${from_ns:-minecraft}:${from}"
+        result: "${to_ns:-minecraft}:${to}"
+        result_count: 1
+        cook: shawarma

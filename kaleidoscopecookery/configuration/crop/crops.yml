@@ -1,0 +1,204 @@
+templates:
+  #作物阶段展示模型
+  kaleidoscopecookery:display/crop_stage:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${name_key}>"
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/crop/${crop}/stage${stage}"
+
+  #作物外观
+  kaleidoscopecookery:appearance/crop:
+    state: "${visual_state}"
+    transparent: true
+    entity_renderer:
+      item: "show:${crop}_crop_${stage}"
+
+  #八阶段作物方块
+  kaleidoscopecookery:block/crop_8stage:
+    settings:
+      template: kaleidoscopecookery:settings/crop
+      arguments:
+        seed: ${crop_seed}
+    behaviors:
+      - type: liquid_flowable_block
+      - type: bush_block
+        bottom_blocks:
+          - minecraft:farmland
+      - type: crop_block
+        grow_speed: ${grow_speed:-0.125}
+        light_requirement: ${light_requirement:-9}
+        is_bone_meal_target: true
+        bone_meal_age_bonus:
+          type: uniform
+          min: ${bone_meal_min:-2}
+          max: ${bone_meal_max:-5}
+      - type: kaleidoscopecookery:crop_harvest
+        reset_age: ${harvest_reset_age:-5}
+        blacklist:
+          - "#kaleidoscopecookery:range_harvest_tool"
+        loot:
+          pools:
+            - rolls: 1
+              entries: ${harvest_entries}
+    loot:
+      template: default:loot_table/seed_crop
+      arguments:
+        crop_item: ${crop_item}
+        crop_seed: ${crop_seed}
+        ripe_age: 7
+    states:
+      properties:
+        age:
+          type: int
+          default: 0
+          min: 0
+          max: 7
+      appearances:
+        stage_0:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 0
+        stage_1:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 1
+        stage_2:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 2
+        stage_3:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 3
+        stage_4:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 4
+        stage_5:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 5
+        stage_6:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 6
+        stage_7:
+          template: kaleidoscopecookery:appearance/crop
+          arguments:
+            stage: 7
+      variants:
+        age=0:
+          appearance: stage_0
+        age=1:
+          appearance: stage_1
+        age=2:
+          appearance: stage_2
+        age=3:
+          appearance: stage_3
+        age=4:
+          appearance: stage_4
+        age=5:
+          appearance: stage_5
+        age=6:
+          appearance: stage_6
+        age=7:
+          appearance: stage_7
+
+blocks:
+  #番茄作物
+  kaleidoscopecookery:tomato_crop:
+    template: kaleidoscopecookery:block/crop_8stage
+    arguments:
+      crop: tomato
+      crop_item: kaleidoscopecookery:tomato
+      crop_seed: kaleidoscopecookery:tomato_seed
+      visual_state: minecraft:potatoes[age=6]
+      harvest_entries:
+        - type: item
+          item: kaleidoscopecookery:tomato
+
+  #生菜作物
+  kaleidoscopecookery:lettuce_crop:
+    template: kaleidoscopecookery:block/crop_8stage
+    arguments:
+      crop: lettuce
+      crop_item: kaleidoscopecookery:lettuce
+      crop_seed: kaleidoscopecookery:lettuce_seed
+      visual_state: minecraft:potatoes[age=6]
+      harvest_entries:
+        - type: item
+          item: kaleidoscopecookery:lettuce
+
+  #辣椒作物
+  kaleidoscopecookery:chili_crop:
+    template: kaleidoscopecookery:block/crop_8stage
+    arguments:
+      crop: chili
+      crop_item: kaleidoscopecookery:red_chili
+      crop_seed: kaleidoscopecookery:chili_seed
+      visual_state: minecraft:potatoes[age=6]
+      harvest_entries:
+        - type: alternatives
+          children:
+            - type: item
+              item: kaleidoscopecookery:green_chili
+              conditions:
+                - type: random
+                  value: 0.2
+            - type: item
+              item: kaleidoscopecookery:red_chili
+
+config_factory#crop_stage_displays:
+  instances:
+    #番茄
+    - crop: tomato
+      name_key: tomato
+    #生菜
+    - crop: lettuce
+      name_key: lettuce
+    #辣椒
+    - crop: chili
+      name_key: red_chili
+  blueprint:
+    items:
+      #作物阶段展示模型
+      show:${crop}_crop_0:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 0
+      #作物阶段展示模型
+      show:${crop}_crop_1:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 1
+      #作物阶段展示模型
+      show:${crop}_crop_2:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 2
+      #作物阶段展示模型
+      show:${crop}_crop_3:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 3
+      #作物阶段展示模型
+      show:${crop}_crop_4:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 4
+      #作物阶段展示模型
+      show:${crop}_crop_5:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 5
+      #作物阶段展示模型
+      show:${crop}_crop_6:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 6
+      #作物阶段展示模型
+      show:${crop}_crop_7:
+        template: kaleidoscopecookery:display/crop_stage
+        arguments:
+          stage: 7

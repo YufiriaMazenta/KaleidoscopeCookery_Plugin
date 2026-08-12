@@ -1,0 +1,61 @@
+templates:
+  #种子掉落配方
+  kaleidoscopecookery:recipe/seed_drop:
+    type: item
+    item: ${seed}
+    weight: ${weight}
+    functions:
+      - type: apply_bonus
+        enchantment: minecraft:fortune
+        formula:
+          type: binomial_with_bonus_count
+          extra: ${fortune_extra:-2}
+          probability: 0.5714286
+
+loot_sources:
+  #草帽割草掉种子
+  kaleidoscopecookery:straw_hat_grass_seeds:
+    type: block_break
+    target:
+      - minecraft:short_grass
+    conditions:
+      - type: kaleidoscopecookery:wearing
+        slot: head
+        items:
+          - kaleidoscopecookery:straw_hat
+          - kaleidoscopecookery:straw_hat_flower
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: random
+              value: 0.448
+          entries:
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: kaleidoscopecookery:tomato_seed
+                weight: 125
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: kaleidoscopecookery:chili_seed
+                weight: 125
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: kaleidoscopecookery:lettuce_seed
+                weight: 125
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: kaleidoscopecookery:wild_rice
+                weight: 125
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: minecraft:beetroot_seeds
+                weight: 20
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: minecraft:pumpkin_seeds
+                weight: 20
+            - template: kaleidoscopecookery:recipe/seed_drop
+              arguments:
+                seed: minecraft:melon_seeds
+                weight: 20

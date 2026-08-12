@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/custom/cook/block/oil_pot_empty",
+  "textures": {
+    "3": "minecraft:block/custom/cook/block/oil_pot",
+    "particle": "block/white_wool"
+  }
+}

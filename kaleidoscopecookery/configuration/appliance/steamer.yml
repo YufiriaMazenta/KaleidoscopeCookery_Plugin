@@ -1,0 +1,293 @@
+templates:
+  #半格蒸笼外观
+  kaleidoscopecookery:appearance/steamer_half:
+    state: "sculk_sensor[power=${power}]"
+    model:
+      path: "minecraft:block/custom/cook/block/${model}"
+      y: ${y}
+
+  #整格蒸笼外观
+  kaleidoscopecookery:appearance/steamer_full:
+    auto_state: non_tintable_leaves
+    model:
+      path: "minecraft:block/custom/cook/block/${model}"
+      y: ${y}
+
+items:
+
+  #蒸笼
+  kaleidoscopecookery:steamer:
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.steamer>
+    texture: minecraft:item/custom/cook/steamer_no_items
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/wood_appliance
+        behaviors:
+          - type: kaleidoscopecookery:steamer
+            cooking_time: 1200
+          - type: kaleidoscopecookery:stacked_extra_drop
+            extra_drops:
+              - property: type
+                value: double
+                item: kaleidoscopecookery:steamer
+                amount: 1
+        states:
+          properties:
+            type:
+              type: slab_type
+              default: bottom
+            has_lid:
+              type: boolean
+              default: false
+            has_base:
+              type: boolean
+              default: false
+            facing:
+              type: horizontal_direction
+              default: north
+          appearances:
+            half_north:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 1
+                model: steamer_half
+                y: 180
+            half_south:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 2
+                model: steamer_half
+                y: 0
+            half_east:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 3
+                model: steamer_half
+                y: 270
+            half_west:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 4
+                model: steamer_half
+                y: 90
+            half_base_north:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 5
+                model: steamer_half_base
+                y: 180
+            half_base_south:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 6
+                model: steamer_half_base
+                y: 0
+            half_base_east:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 7
+                model: steamer_half_base
+                y: 270
+            half_base_west:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 8
+                model: steamer_half_base
+                y: 90
+            half_lid_north:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 9
+                model: steamer_half_lid
+                y: 180
+            half_lid_south:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 10
+                model: steamer_half_lid
+                y: 0
+            half_lid_east:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 11
+                model: steamer_half_lid
+                y: 270
+            half_lid_west:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 12
+                model: steamer_half_lid
+                y: 90
+            half_lid_base_north:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 13
+                model: steamer_half_lid_base
+                y: 180
+            half_lid_base_south:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 14
+                model: steamer_half_lid_base
+                y: 0
+            half_lid_base_east:
+              template: kaleidoscopecookery:appearance/steamer_half
+              arguments:
+                power: 15
+                model: steamer_half_lid_base
+                y: 270
+            half_lid_base_west:
+              state: sculk_sensor[power=15, sculk_sensor_phase=cooldown]
+              model:
+                path: minecraft:block/custom/cook/block/steamer_half_lid_base
+                y: 90
+            full_north:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full
+                y: 180
+            full_south:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full
+                y: 0
+            full_east:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full
+                y: 270
+            full_west:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full
+                y: 90
+            full_base_north:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_base
+                y: 180
+            full_base_south:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_base
+                y: 0
+            full_base_east:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_base
+                y: 270
+            full_base_west:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_base
+                y: 90
+            full_lid_north:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid
+                y: 180
+            full_lid_south:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid
+                y: 0
+            full_lid_east:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid
+                y: 270
+            full_lid_west:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid
+                y: 90
+            full_lid_base_north:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid_base
+                y: 180
+            full_lid_base_south:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid_base
+                y: 0
+            full_lid_base_east:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid_base
+                y: 270
+            full_lid_base_west:
+              template: kaleidoscopecookery:appearance/steamer_full
+              arguments:
+                model: steamer_full_lid_base
+                y: 90
+          variants:
+            type=bottom,waterlogged=false,has_lid=false,has_base=false,facing=north:
+              appearance: half_north
+            type=bottom,waterlogged=false,has_lid=false,has_base=false,facing=south:
+              appearance: half_south
+            type=bottom,waterlogged=false,has_lid=false,has_base=false,facing=east:
+              appearance: half_east
+            type=bottom,waterlogged=false,has_lid=false,has_base=false,facing=west:
+              appearance: half_west
+            type=bottom,waterlogged=false,has_lid=false,has_base=true,facing=north:
+              appearance: half_base_north
+            type=bottom,waterlogged=false,has_lid=false,has_base=true,facing=south:
+              appearance: half_base_south
+            type=bottom,waterlogged=false,has_lid=false,has_base=true,facing=east:
+              appearance: half_base_east
+            type=bottom,waterlogged=false,has_lid=false,has_base=true,facing=west:
+              appearance: half_base_west
+            type=bottom,waterlogged=false,has_lid=true,has_base=false,facing=north:
+              appearance: half_lid_north
+            type=bottom,waterlogged=false,has_lid=true,has_base=false,facing=south:
+              appearance: half_lid_south
+            type=bottom,waterlogged=false,has_lid=true,has_base=false,facing=east:
+              appearance: half_lid_east
+            type=bottom,waterlogged=false,has_lid=true,has_base=false,facing=west:
+              appearance: half_lid_west
+            type=bottom,waterlogged=false,has_lid=true,has_base=true,facing=north:
+              appearance: half_lid_base_north
+            type=bottom,waterlogged=false,has_lid=true,has_base=true,facing=south:
+              appearance: half_lid_base_south
+            type=bottom,waterlogged=false,has_lid=true,has_base=true,facing=east:
+              appearance: half_lid_base_east
+            type=bottom,waterlogged=false,has_lid=true,has_base=true,facing=west:
+              appearance: half_lid_base_west
+            type=double,waterlogged=false,has_lid=false,has_base=false,facing=north:
+              appearance: full_north
+            type=double,waterlogged=false,has_lid=false,has_base=false,facing=south:
+              appearance: full_south
+            type=double,waterlogged=false,has_lid=false,has_base=false,facing=east:
+              appearance: full_east
+            type=double,waterlogged=false,has_lid=false,has_base=false,facing=west:
+              appearance: full_west
+            type=double,waterlogged=false,has_lid=false,has_base=true,facing=north:
+              appearance: full_base_north
+            type=double,waterlogged=false,has_lid=false,has_base=true,facing=south:
+              appearance: full_base_south
+            type=double,waterlogged=false,has_lid=false,has_base=true,facing=east:
+              appearance: full_base_east
+            type=double,waterlogged=false,has_lid=false,has_base=true,facing=west:
+              appearance: full_base_west
+            type=double,waterlogged=false,has_lid=true,has_base=false,facing=north:
+              appearance: full_lid_north
+            type=double,waterlogged=false,has_lid=true,has_base=false,facing=south:
+              appearance: full_lid_south
+            type=double,waterlogged=false,has_lid=true,has_base=false,facing=east:
+              appearance: full_lid_east
+            type=double,waterlogged=false,has_lid=true,has_base=false,facing=west:
+              appearance: full_lid_west
+            type=double,waterlogged=false,has_lid=true,has_base=true,facing=north:
+              appearance: full_lid_base_north
+            type=double,waterlogged=false,has_lid=true,has_base=true,facing=south:
+              appearance: full_lid_base_south
+            type=double,waterlogged=false,has_lid=true,has_base=true,facing=east:
+              appearance: full_lid_base_east
+            type=double,waterlogged=false,has_lid=true,has_base=true,facing=west:
+              appearance: full_lid_base_west

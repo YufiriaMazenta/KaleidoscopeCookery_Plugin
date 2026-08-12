@@ -1,0 +1,66 @@
+templates:
+  #厨娘凳物品
+  kaleidoscopecookery:item/cook_stool:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.cook_stool_${wood}>"
+    model: "minecraft:block/custom/cook/block/cook_stool/${wood}"
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_ground_four
+      furniture:
+        template: kaleidoscopecookery:furniture/wood_base
+        arguments:
+          item: "kaleidoscopecookery:cook_stool_${wood}"
+        merges:
+          events:
+            - template: default:rotatable_furniture_4
+          variants:
+            ground:
+              loot_spawn_offset: 0.5,0.5,0
+              elements:
+                - item: "kaleidoscopecookery:cook_stool_${wood}"
+                  display_transform: none
+                  billboard: fixed
+                  position: 0,0,0
+                  translation: 0,0.5,0
+                  shadow_radius: 0
+                  shadow_strength: 0.2
+              hitboxes:
+                - template: kaleidoscopecookery:hitbox/shulker_seat
+                  arguments:
+                    position: -0.16,0,0
+                    direction: east
+                    peek: 67
+                    scale: 0.42
+                    blocks_building: true
+
+config_factory#cook_stools:
+  instances:
+    #金合欢木
+    - wood: acacia
+    #竹
+    - wood: bamboo
+    #白桦木
+    - wood: birch
+    #樱花木
+    - wood: cherry
+    #绯红木
+    - wood: crimson
+    #深色橡木
+    - wood: dark_oak
+    #丛林木
+    - wood: jungle
+    #红树木
+    - wood: mangrove
+    #橡木
+    - wood: oak
+    #云杉木
+    - wood: spruce
+    #诡异木
+    - wood: warped
+  blueprint:
+    items:
+      #各木材厨娘凳
+      kaleidoscopecookery:cook_stool_${wood}:
+        template: kaleidoscopecookery:item/cook_stool

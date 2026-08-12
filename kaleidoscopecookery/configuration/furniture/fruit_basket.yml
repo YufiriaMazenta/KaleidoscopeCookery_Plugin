@@ -1,0 +1,64 @@
+templates:
+  #果篮外观
+  kaleidoscopecookery:appearance/fruit_basket:
+    state: "soul_campfire[lit=false, signal_fire=true, facing=${facing}]"
+    transparent: true
+    entity_renderer:
+      item: show:fruit_basket
+      rotation: ${rotation}
+
+items:
+
+  #果篮
+  kaleidoscopecookery:fruit_basket:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.fruit_basket>
+    texture: minecraft:item/custom/cook/fruit_basket
+    behavior:
+      type: block_item
+      block:
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: kaleidoscopecookery:fruit_basket
+        states:
+          properties:
+            facing:
+              type: horizontal_direction
+          appearances:
+            facing=north:
+              template: kaleidoscopecookery:appearance/fruit_basket
+              arguments:
+                facing: north
+                rotation: 0
+            facing=south:
+              template: kaleidoscopecookery:appearance/fruit_basket
+              arguments:
+                facing: south
+                rotation: 180
+            facing=east:
+              template: kaleidoscopecookery:appearance/fruit_basket
+              arguments:
+                facing: east
+                rotation: 90
+            facing=west:
+              template: kaleidoscopecookery:appearance/fruit_basket
+              arguments:
+                facing: west
+                rotation: 270
+          variants:
+            facing=north:
+              appearance: facing=north
+            facing=south:
+              appearance: facing=south
+            facing=east:
+              appearance: facing=east
+            facing=west:
+              appearance: facing=west
+
+  #果篮
+  show:fruit_basket:
+    template: kaleidoscopecookery:display/block_model
+    arguments:
+      name: fruit_basket

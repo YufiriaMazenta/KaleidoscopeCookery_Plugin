@@ -1,0 +1,36 @@
+templates:
+
+  #实心碰撞箱
+  kaleidoscopecookery:hitbox/shulker:
+    type: shulker
+    position: "${position:-'0,0,0'}"
+    scale: ${scale}
+    peek: ${peek:-0}
+    direction: "${direction:-up}"
+    can_use_item_on: ${can_use_item_on:-true}
+    can_be_hit_by_projectile: ${can_be_hit_by_projectile:-true}
+    blocks_building: ${blocks_building:-false}
+    interactive: ${interactive:-false}
+    interaction_entity: ${interaction_entity:-true}
+    invisible: true
+
+  #可坐实心碰撞箱
+  kaleidoscopecookery:hitbox/shulker_seat:
+    template: kaleidoscopecookery:hitbox/shulker
+    merges:
+      interactive: true
+      interaction_entity: true
+      seats:
+        - "${seat:-'0,0.01,0'}"
+
+  #无碰撞交互碰撞箱
+  kaleidoscopecookery:hitbox/interaction:
+    type: interaction
+    position: "${position:-'0,0,0'}"
+    width: ${width}
+    height: ${height}
+    can_use_item_on: ${can_use_item_on:-true}
+    can_be_hit_by_projectile: ${can_be_hit_by_projectile:-true}
+    blocks_building: ${blocks_building:-false}
+    interactive: ${interactive:-false}
+    invisible: true

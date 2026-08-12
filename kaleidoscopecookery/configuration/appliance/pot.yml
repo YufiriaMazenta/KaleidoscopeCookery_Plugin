@@ -1,0 +1,172 @@
+templates:
+  #炒锅外观
+  kaleidoscopecookery:appearance/pot:
+    state: iron_trapdoor[open=false, half=bottom, powered=true]
+    transparent: true
+    entity_renderer:
+      item: "${item}"
+      yaw: ${yaw}
+
+items:
+
+  #炒锅
+  kaleidoscopecookery:pot:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.pot>
+    model: minecraft:block/custom/cook/block/pot
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+          arguments:
+            resistance: 1.0
+            solid: false
+        behaviors:
+          - type: kaleidoscopecookery:cooking_pot
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+            has_base:
+              type: boolean
+              default: false
+            has_oil:
+              type: boolean
+              default: false
+          appearances:
+            north:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot
+                yaw: 180
+            south:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot
+                yaw: 0
+            east:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot
+                yaw: -90
+            west:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot
+                yaw: 90
+            north_base:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base
+                yaw: 180
+            south_base:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base
+                yaw: 0
+            east_base:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base
+                yaw: -90
+            west_base:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base
+                yaw: 90
+            north_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_has_oil
+                yaw: 180
+            south_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_has_oil
+                yaw: 0
+            east_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_has_oil
+                yaw: -90
+            west_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_has_oil
+                yaw: 90
+            north_base_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base_has_oil
+                yaw: 180
+            south_base_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base_has_oil
+                yaw: 0
+            east_base_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base_has_oil
+                yaw: -90
+            west_base_oil:
+              template: kaleidoscopecookery:appearance/pot
+              arguments:
+                item: show:pot_base_has_oil
+                yaw: 90
+          variants:
+            facing=north,has_base=false,has_oil=false:
+              appearance: north
+            facing=south,has_base=false,has_oil=false:
+              appearance: south
+            facing=east,has_base=false,has_oil=false:
+              appearance: east
+            facing=west,has_base=false,has_oil=false:
+              appearance: west
+            facing=north,has_base=true,has_oil=false:
+              appearance: north_base
+            facing=south,has_base=true,has_oil=false:
+              appearance: south_base
+            facing=east,has_base=true,has_oil=false:
+              appearance: east_base
+            facing=west,has_base=true,has_oil=false:
+              appearance: west_base
+            facing=north,has_base=false,has_oil=true:
+              appearance: north_oil
+            facing=south,has_base=false,has_oil=true:
+              appearance: south_oil
+            facing=east,has_base=false,has_oil=true:
+              appearance: east_oil
+            facing=west,has_base=false,has_oil=true:
+              appearance: west_oil
+            facing=north,has_base=true,has_oil=true:
+              appearance: north_base_oil
+            facing=south,has_base=true,has_oil=true:
+              appearance: south_base_oil
+            facing=east,has_base=true,has_oil=true:
+              appearance: east_base_oil
+            facing=west,has_base=true,has_oil=true:
+              appearance: west_base_oil
+
+config_factory#pot_displays:
+  instances:
+    #炒锅
+    - id: pot
+    #带油炒锅
+    - id: pot_has_oil
+    #带底座炒锅
+    - id: pot_base
+    #带底座带油炒锅
+    - id: pot_base_has_oil
+  blueprint:
+    items:
+      #炒锅展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: pot

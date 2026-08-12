@@ -1,0 +1,113 @@
+templates:
+  #炉灶外观
+  kaleidoscopecookery:appearance/stove:
+    state: barrier
+    entity_renderer:
+      item: "${item}"
+      yaw: ${yaw}
+
+items:
+
+  #炉灶
+  kaleidoscopecookery:stove:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.stove>
+    model: minecraft:block/custom/cook/block/stove
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: kaleidoscopecookery:stove
+            particle_interval: 20
+            particle_count: 3
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+            lit:
+              type: boolean
+              default: false
+          appearances:
+            north:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove
+                yaw: 180
+            south:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove
+                yaw: 0
+            east:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove
+                yaw: -90
+            west:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove
+                yaw: 90
+            north_lit:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove_lit
+                yaw: 180
+            south_lit:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove_lit
+                yaw: 0
+            east_lit:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove_lit
+                yaw: -90
+            west_lit:
+              template: kaleidoscopecookery:appearance/stove
+              arguments:
+                item: show:stove_lit
+                yaw: 90
+          variants:
+            facing=north,lit=false:
+              appearance: north
+            facing=south,lit=false:
+              appearance: south
+            facing=east,lit=false:
+              appearance: east
+            facing=west,lit=false:
+              appearance: west
+            facing=north,lit=true:
+              appearance: north_lit
+            facing=south,lit=true:
+              appearance: south_lit
+            facing=east,lit=true:
+              appearance: east_lit
+            facing=west,lit=true:
+              appearance: west_lit
+
+config_factory#stove_displays:
+  instances:
+    #炉灶
+    - id: stove
+    #点火炉灶
+    - id: stove_lit
+    #出锅炉灶
+    - id: stove_finished
+    #岩浆炉灶
+    - id: stove_lava
+    #流水炉灶
+    - id: stove_water
+  blueprint:
+    items:
+      #炉灶展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: stove

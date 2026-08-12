@@ -1,0 +1,39 @@
+config_factory#cook_stool_recipes:
+  instances:
+    #金合欢木
+    - wood: acacia
+    #竹
+    - wood: bamboo
+    #白桦木
+    - wood: birch
+    #樱花木
+    - wood: cherry
+    #绯红木
+    - wood: crimson
+    #深色橡木
+    - wood: dark_oak
+    #丛林木
+    - wood: jungle
+    #红树木
+    - wood: mangrove
+    #橡木
+    - wood: oak
+    #云杉木
+    - wood: spruce
+    #诡异木
+    - wood: warped
+  blueprint:
+    recipes:
+      #各木材厨娘凳合成配方
+      kaleidoscopecookery:cook_stool_${wood}:
+        type: shaped
+        category: building
+        pattern:
+          - AAA
+          - B B
+        ingredients:
+          A: "minecraft:${wood}_planks"
+          B: "minecraft:${wood}_slab"
+        result:
+          id: "kaleidoscopecookery:cook_stool_${wood}"
+          count: 1

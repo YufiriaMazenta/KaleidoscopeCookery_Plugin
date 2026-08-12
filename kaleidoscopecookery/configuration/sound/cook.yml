@@ -1,0 +1,88 @@
+templates:
+  #循环音音效
+  kaleidoscopecookery:sound/loop:
+    attenuation_distance: ${distance:-5}
+    subtitle: "subtitles.kaleidoscopecookery.${subtitle}"
+    sounds:
+      - name: "${name}"
+        volume: ${volume:-1}
+
+sounds:
+
+  #面团变面条音效
+  kaleidoscopecookery:dough_transform:
+    template: kaleidoscopecookery:sound/loop
+    arguments:
+      subtitle: item.dough_transform
+      name: custom/cook/item/dough_transform
+
+  #垃圾桶
+  kaleidoscopecookery:trashcan:
+    template: kaleidoscopecookery:sound/loop
+    arguments:
+      subtitle: block.trash_can
+      name: custom/cook/block/trash_can
+      volume: 0.5
+
+  #稻田蛙鸣音效
+  kaleidoscopecookery:paddy:
+    attenuation_distance: 8
+    subtitle: "subtitles.kaleidoscopecookery.block.paddy"
+    sounds:
+      - name: custom/cook/block/paddy/paddy_0
+        volume: 1
+      - name: custom/cook/block/paddy/paddy_1
+        volume: 1
+
+config_factory#millstone_sounds:
+  instances:
+    - n: 0
+    - n: 1
+    - n: 2
+    - n: 3
+    - n: 4
+    - n: 5
+  blueprint:
+    sounds:
+      #石磨音效
+      kaleidoscopecookery:millstone_${n}:
+        template: kaleidoscopecookery:sound/loop
+        arguments:
+          subtitle: block.millstone
+          name: "custom/cook/block/millstone/millstone_${n}"
+
+config_factory#stockpot_sounds:
+  instances:
+    - n: 0
+    - n: 1
+    - n: 2
+    - n: 3
+    - n: 4
+    - n: 5
+    - n: 6
+  blueprint:
+    sounds:
+      #汤锅音效
+      kaleidoscopecookery:stockpot_${n}:
+        template: kaleidoscopecookery:sound/loop
+        arguments:
+          subtitle: block.stockpot
+          name: "custom/cook/block/stockpot/stockpot_${n}"
+          volume: 0.5
+
+config_factory#teapot_sounds:
+  instances:
+    - n: 0
+    - n: 1
+    - n: 2
+    - n: 3
+    - n: 4
+  blueprint:
+    sounds:
+      #茶壶音效
+      kaleidoscopecookery:teapot_${n}:
+        template: kaleidoscopecookery:sound/loop
+        arguments:
+          subtitle: block.teapot
+          name: "custom/cook/block/teapot/processing/teapot_${n}"
+          volume: 0.8

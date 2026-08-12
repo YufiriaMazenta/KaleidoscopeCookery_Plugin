@@ -1,0 +1,248 @@
+templates:
+  #油壶外观
+  kaleidoscopecookery:appearance/oil_pot:
+    state: oxidized_copper_lantern
+    transparent: true
+    entity_renderer:
+      item: "show:${item}"
+      yaw: ${yaw}
+
+items:
+
+  #汤锅盖
+  kaleidoscopecookery:stockpot_lid:
+    material: shield
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.stockpot_lid>
+    models:
+      - minecraft:item/custom/cook/stockpot_lid_normal
+      - minecraft:item/custom/cook/stockpot_lid_using
+
+  #油脂
+  kaleidoscopecookery:oil:
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.oil>
+    texture: minecraft:item/custom/cook/oil
+
+  #油壶
+  kaleidoscopecookery:oil_pot:
+    material: minecraft:brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.oil_pot>
+      max_damage: 256
+      components:
+        minecraft:max_stack_size: 1
+    template: kaleidoscopecookery:item/flat_gui_block_held
+    arguments:
+      gui_model: minecraft:item/custom/cook/oil_pot
+      world_model: minecraft:block/custom/cook/block/oil_pot_held
+    behavior:
+      type: kaleidoscopecookery:oil_pot_item
+      max_oil: 256
+      block:
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+          overrides:
+            hardness: 0.0
+            resistance: 0.0
+            push_reaction: destroy
+            is_redstone_conductor: false
+            is_suffocating: false
+            can_occlude: false
+            use_shape_for_light_occlusion: false
+            block_light: 0
+        behaviors:
+          - type: kaleidoscopecookery:oil_pot
+            max_oil: 256
+            oil_item: kaleidoscopecookery:oil
+            pot_item: kaleidoscopecookery:oil_pot
+            empty_pot_item: kaleidoscopecookery:oil_pot_empty
+        states:
+          properties:
+            facing:
+              type: horizontal_direction
+            has_oil:
+              type: boolean
+              default: false
+          appearances:
+            north_empty:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot_empty
+                yaw: 180
+            south_empty:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot_empty
+                yaw: 0
+            east_empty:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot_empty
+                yaw: -90
+            west_empty:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot_empty
+                yaw: 90
+            north_oil:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot
+                yaw: 180
+            south_oil:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot
+                yaw: 0
+            east_oil:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot
+                yaw: -90
+            west_oil:
+              template: kaleidoscopecookery:appearance/oil_pot
+              arguments:
+                item: oil_pot
+                yaw: 90
+          variants:
+            facing=north,has_oil=false:
+              appearance: north_empty
+            facing=south,has_oil=false:
+              appearance: south_empty
+            facing=east,has_oil=false:
+              appearance: east_empty
+            facing=west,has_oil=false:
+              appearance: west_empty
+            facing=north,has_oil=true:
+              appearance: north_oil
+            facing=south,has_oil=true:
+              appearance: south_oil
+            facing=east,has_oil=true:
+              appearance: east_oil
+            facing=west,has_oil=true:
+              appearance: west_oil
+
+  #空油壶
+  kaleidoscopecookery:oil_pot_empty:
+    material: minecraft:brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.oil_pot_empty>
+      components:
+        minecraft:max_stack_size: 1
+    template: kaleidoscopecookery:item/flat_gui_block_held
+    arguments:
+      gui_model: minecraft:item/custom/cook/oil_pot_empty
+      world_model: minecraft:block/custom/cook/block/oil_pot_empty_held
+    behavior:
+      type: block_item
+      block: kaleidoscopecookery:oil_pot
+
+  #垃圾桶
+  kaleidoscopecookery:trashcan_helmet:
+    material: leather_helmet
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.trashcan_helmet>"
+    model:
+      type: minecraft:model
+      path: minecraft:item/leather_helmet
+    settings:
+      equippable:
+        slot: head
+        asset_id: kaleidoscopecookery:trashcan_helmet
+        camera_overlay: minecraft:misc/zhezhao
+
+  #锅铲
+  kaleidoscopecookery:kitchen_shovel_no_oil:
+    material: iron_shovel
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.kitchen_shovel_no_oil>"
+      max_damage: 250
+      attribute_modifiers:
+        - type: minecraft:attack_damage
+          slot: mainhand
+          id: kaleidoscopecookery:kitchen_shovel_attack_damage
+          amount: 2
+          operation: add_value
+        - type: minecraft:attack_speed
+          slot: mainhand
+          id: kaleidoscopecookery:kitchen_shovel_attack_speed
+          amount: -2
+          operation: add_value
+    texture: minecraft:item/custom/cook/kitchen_shovel_no_oil
+
+  #旧沾油锅铲兼容 1.1.9删除
+  kaleidoscopecookery:kitchen_shovel_has_oil:
+    material: iron_shovel
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.kitchen_shovel_has_oil>"
+      max_damage: 250
+      attribute_modifiers:
+        - type: minecraft:attack_damage
+          slot: mainhand
+          id: kaleidoscopecookery:legacy_kitchen_shovel_attack_damage
+          amount: 2
+          operation: add_value
+        - type: minecraft:attack_speed
+          slot: mainhand
+          id: kaleidoscopecookery:legacy_kitchen_shovel_attack_speed
+          amount: -2
+          operation: add_value
+    texture: minecraft:item/custom/cook/kitchen_shovel_has_oil
+
+config_factory#oil_pot_displays:
+  instances:
+    #油壶
+    - id: oil_pot
+    #空油壶
+    - id: oil_pot_empty
+  blueprint:
+    items:
+      #油壶展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: oil_pot
+
+config_factory#kitchen_knives:
+  instances:
+    #铁菜刀
+    - id: iron_kitchen_knife
+      material: iron_sword
+      max_damage: 250
+      attack_damage: 3
+    #金菜刀
+    - id: gold_kitchen_knife
+      material: golden_sword
+      max_damage: 32
+      attack_damage: 0
+    #钻石菜刀
+    - id: diamond_kitchen_knife
+      material: diamond_sword
+      max_damage: 1561
+      attack_damage: 3
+    #下界合金菜刀
+    - id: netherite_kitchen_knife
+      material: netherite_sword
+      max_damage: 2031
+      attack_damage: 4
+  blueprint:
+    items:
+      #菜刀
+      kaleidoscopecookery:${id}:
+        material: ${material}
+        data:
+          item_name: "<!i><lang:item.kaleidoscopecookery.${id}>"
+          max_damage: ${max_damage}
+          attribute_modifiers:
+            - type: minecraft:attack_damage
+              slot: mainhand
+              id: "kaleidoscopecookery:${id}_attack_damage"
+              amount: ${attack_damage}
+              operation: add_value
+            - type: minecraft:attack_speed
+              slot: mainhand
+              id: "kaleidoscopecookery:${id}_attack_speed"
+              amount: -2
+              operation: add_value
+        texture: "minecraft:item/custom/cook/${id}"

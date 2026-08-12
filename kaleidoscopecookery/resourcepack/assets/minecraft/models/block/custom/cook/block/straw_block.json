@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/custom/cook/block/straw_block_end",
+    "side": "minecraft:block/custom/cook/block/straw_block_side"
+  }
+}

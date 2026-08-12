@@ -1,0 +1,71 @@
+templates:
+  #厨具架外观
+  kaleidoscopecookery:appearance/kitchenware_racks:
+    state: iron_trapdoor[facing=${facing}, open=true, half=bottom, powered=true]
+    transparent: true
+    entity_renderer:
+      item: show:kitchenware_racks
+      yaw: ${yaw}
+
+items:
+
+  #厨具架
+  kaleidoscopecookery:kitchenware_racks:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.kitchenware_racks>
+    template: kaleidoscopecookery:item/flat_gui_only
+    arguments:
+      gui_model: minecraft:block/custom/cook/block/food/item/kitchenware_racks
+      world_model: minecraft:block/custom/cook/block/kitchenware_racks
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: kaleidoscopecookery:kitchenware_racks
+          - type: directional_attached_block
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+          appearances:
+            north:
+              template: kaleidoscopecookery:appearance/kitchenware_racks
+              arguments:
+                facing: north
+                yaw: 180
+            south:
+              template: kaleidoscopecookery:appearance/kitchenware_racks
+              arguments:
+                facing: south
+                yaw: 0
+            east:
+              template: kaleidoscopecookery:appearance/kitchenware_racks
+              arguments:
+                facing: east
+                yaw: -90
+            west:
+              template: kaleidoscopecookery:appearance/kitchenware_racks
+              arguments:
+                facing: west
+                yaw: 90
+          variants:
+            facing=north:
+              appearance: north
+            facing=south:
+              appearance: south
+            facing=east:
+              appearance: east
+            facing=west:
+              appearance: west
+
+  #厨具架
+  show:kitchenware_racks:
+    template: kaleidoscopecookery:display/block_model
+    arguments:
+      name: kitchenware_racks

@@ -1,0 +1,119 @@
+templates:
+  #椅垫展示模型
+  kaleidoscopecookery:display/chair_carpet:
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/block/chair_carpet/${color}"
+
+  #椅子物品
+  kaleidoscopecookery:item/chair:
+    material: minecraft:nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.chair_${wood}>"
+    model: "minecraft:block/custom/cook/block/chair/${wood}"
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_ground_four
+      furniture:
+        template: kaleidoscopecookery:furniture/wood_base
+        arguments:
+          item: "kaleidoscopecookery:chair_${wood}"
+        merges:
+          behaviors:
+            - type: kaleidoscopecookery:chair
+          variants:
+            ground:
+              loot_spawn_offset: 0.5,0.5,0
+              elements:
+                - item: "kaleidoscopecookery:chair_${wood}"
+                  display_transform: none
+                  billboard: fixed
+                  position: 0,0,0
+                  translation: 0,0.5,0
+                  shadow_radius: 0
+                  shadow_strength: 0.2
+              hitboxes:
+                - template: kaleidoscopecookery:hitbox/shulker_seat
+                  arguments:
+                    scale: 0.6
+                - template: kaleidoscopecookery:hitbox/shulker
+                  arguments:
+                    position: 0,0.58,-0.3
+                    scale: 0.35
+                    interaction_entity: false
+                - template: kaleidoscopecookery:hitbox/shulker
+                  arguments:
+                    position: 0,0.88,-0.3
+                    scale: 0.32
+                    interaction_entity: false
+
+config_factory#chairs:
+  instances:
+    #橡木
+    - wood: oak
+    #云杉木
+    - wood: spruce
+    #金合欢木
+    - wood: acacia
+    #竹
+    - wood: bamboo
+    #白桦木
+    - wood: birch
+    #樱花木
+    - wood: cherry
+    #绯红木
+    - wood: crimson
+    #深色橡木
+    - wood: dark_oak
+    #丛林木
+    - wood: jungle
+    #红树木
+    - wood: mangrove
+    #诡异木
+    - wood: warped
+  blueprint:
+    items:
+      #各木材椅子
+      kaleidoscopecookery:chair_${wood}:
+        template: kaleidoscopecookery:item/chair
+
+config_factory#chair_carpets:
+  instances:
+    #白色
+    - color: white
+    #橙色
+    - color: orange
+    #品红色
+    - color: magenta
+    #淡蓝色
+    - color: light_blue
+    #黄色
+    - color: yellow
+    #黄绿色
+    - color: lime
+    #粉红色
+    - color: pink
+    #灰色
+    - color: gray
+    #淡灰色
+    - color: light_gray
+    #青色
+    - color: cyan
+    #紫色
+    - color: purple
+    #蓝色
+    - color: blue
+    #棕色
+    - color: brown
+    #绿色
+    - color: green
+    #红色
+    - color: red
+    #黑色
+    - color: black
+  blueprint:
+    items:
+      #各颜色椅垫展示模型
+      show:chair_carpet_${color}:
+        template: kaleidoscopecookery:display/chair_carpet

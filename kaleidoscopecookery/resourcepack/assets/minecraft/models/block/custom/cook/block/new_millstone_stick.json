@@ -1,0 +1,56 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "block/custom/cook/block/millstone",
+		"particle": "block/custom/cook/block/millstone"
+	},
+	"elements": [
+		{
+			"from": [6, 1, 6],
+			"to": [10, 31, 10],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 13.5, 8]},
+			"faces": {
+				"north": {"uv": [14.375, 11, 14.875, 14.75], "texture": "#0"},
+				"east": {"uv": [13.875, 11, 14.375, 14.75], "texture": "#0"},
+				"south": {"uv": [15.375, 11, 15.875, 14.75], "texture": "#0"},
+				"west": {"uv": [14.875, 11, 15.375, 14.75], "texture": "#0"},
+				"up": {"uv": [14.875, 11, 14.375, 10.5], "texture": "#0"},
+				"down": {"uv": [15.375, 10.5, 14.875, 11], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "wheel",
+			"origin": [8, 21, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [
+				{
+					"name": "roll",
+					"origin": [8, 21, 0],
+					"scope": 0,
+					"color": 0,
+					"children": []
+				},
+				{
+					"name": "stick",
+					"origin": [8, 21, 8],
+					"scope": 0,
+					"color": 0,
+					"children": [
+						{
+							"name": "rotStick",
+							"origin": [8, 17, 8],
+							"scope": 0,
+							"color": 0,
+							"children": [0]
+						}
+					]
+				}
+			]
+		}
+	]
+}

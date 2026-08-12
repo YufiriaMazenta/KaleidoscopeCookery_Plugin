@@ -1,0 +1,521 @@
+config_factory#food_fwd_2:
+  instances:
+    #谜之炒菜
+    - dish: suspicious_stir_fry
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+
+config_factory#food_fwd_3:
+  instances:
+    #棕蘑菇瓦罐汤
+    - dish: brown_mushroom_pot_soup
+    #佛跳墙
+    - dish: buddha_jumps_over_the_wall
+    #绯红菌瓦罐汤
+    - dish: crimson_fungus_pot_soup
+    #红蘑菇瓦罐汤
+    - dish: red_mushroom_pot_soup
+    #诡异菌瓦罐汤
+    - dish: warped_fungus_pot_soup
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_2"
+
+config_factory#food_fwd_4:
+  instances:
+    #烈焰羊排
+    - dish: blaze_lamb_chop
+    #拔丝土豆
+    - dish: candied_potato
+    #荷包紫颂烧
+    - dish: chorus_fried_egg
+    #水晶羊排
+    - dish: crystal_lamb_chop
+    #黑暗料理
+    - dish: dark_cuisine
+    #东坡肉
+    - dish: dongpo_pork
+    #疙瘩汤
+    - dish: dough_drop_soup
+    #油炸猪儿虫
+    - dish: fried_caterpillar
+    #炸春卷
+    - dish: fried_spring_roll
+    #凛冬羊排
+    - dish: frost_lamb_chop
+    #椒麻鸡
+    - dish: numbing_spicy_chicken
+    #黏液饭
+    - dish: slime_ball_meal
+    #毛血旺
+    - dish: spicy_blood_stew
+    #麻辣兔头
+    - dish: spicy_rabbit_head
+    #珍珠咕噜肉
+    - dish: sweet_and_sour_ender_pearls
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_2"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_3"
+
+config_factory#food_fwd_5:
+  instances:
+    #红烧鱼
+    - dish: braised_fish
+    #寒带风味刺身
+    - dish: cold_style_sashimi
+    #沙漠风味刺身
+    - dish: desert_style_sashimi
+    #末地风味刺身
+    - dish: end_style_sashimi
+    #翻糖派
+    - dish: fondant_pie
+    #翻糖蛛眼
+    - dish: fondant_spider_eye
+    #四喜丸子汤
+    - dish: four_joy_meatball_soup
+    #下界风味刺身
+    - dish: nether_style_sashimi
+    #香煎骑士牛排
+    - dish: pan_seared_knight_steak
+    #水煎包
+    - dish: shengjian_mantou
+    #辣子鸡
+    - dish: spicy_chicken
+    #仰望星空派
+    - dish: stargazy_pie
+    #苔原风味刺身
+    - dish: tundra_style_sashimi
+    #烧鸟串
+    - dish: yakitori
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_2"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_3"
+      #第4口展示模型
+      kaleidoscopecookery:${dish}_display_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_4"
+
+config_factory#food_fwd_6:
+  instances:
+    #虎皮青椒酿肉
+    - dish: stuffed_tiger_skin_pepper
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_2"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_3"
+      #第4口展示模型
+      kaleidoscopecookery:${dish}_display_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_4"
+      #第5口展示模型
+      kaleidoscopecookery:${dish}_display_5:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_5"
+
+config_factory#food_fwd_7:
+  instances:
+    #黄金沙拉
+    - dish: golden_salad
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_0"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_1"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_2"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_3"
+      #第4口展示模型
+      kaleidoscopecookery:${dish}_display_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_4"
+      #第5口展示模型
+      kaleidoscopecookery:${dish}_display_5:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_5"
+      #第6口展示模型
+      kaleidoscopecookery:${dish}_display_6:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_6"
+
+config_factory#food_wide_4:
+  instances:
+    #冷肉炙
+    - dish: cold_roasted_meat
+  blueprint:
+    items:
+      #第0口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+      #第0口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+      #第1口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+      #第1口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+      #第2口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+      #第2口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+      #第3口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+      #第3口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+
+config_factory#food_wide_5:
+  instances:
+    #红烧排骨
+    - dish: braised_pork_ribs
+  blueprint:
+    items:
+      #第0口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+      #第0口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+      #第1口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+      #第1口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+      #第2口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+      #第2口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+      #第3口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+      #第3口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+      #第4口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_4"
+      #第4口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_4"
+
+config_factory#food_wide_6:
+  instances:
+    #油泼鱼
+    - dish: oil_splashed_fish
+  blueprint:
+    items:
+      #第0口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+      #第0口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+      #第1口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+      #第1口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+      #第2口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+      #第2口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+      #第3口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+      #第3口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+      #第4口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_4"
+      #第4口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_4"
+      #第5口左盘展示模型
+      kaleidoscopecookery:${dish}_display_left_5:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_left_5"
+      #第5口右盘展示模型
+      kaleidoscopecookery:${dish}_display_right_5:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/food/${dish}_right_5"
+
+config_factory#plate_rev_4:
+  instances:
+    #西瓜拼盘
+    - dish: watermelon_platter
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_0"
+
+config_factory#plate_rev_5:
+  instances:
+    #苹果拼盘
+    - dish: apple_platter
+    #浆果拼盘
+    - dish: berry_platter
+    #一盘青团
+    - dish: qingtuan_plate
+    #一盘牛皮糖
+    - dish: sticky_candy_plate
+    #一盘粽子
+    - dish: zongzi_plate
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_4"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+      #第4口展示模型
+      kaleidoscopecookery:${dish}_display_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_0"
+
+config_factory#plate_rev_6:
+  instances:
+    #一盘包子
+    - dish: baozi_plate
+    #紫颂果拼盘
+    - dish: chorus_fruit_platter
+    #一盘水煎包
+    - dish: shengjian_mantou_plate
+    #一盘糍粑
+    - dish: sticky_rice_cake_plate
+    #番茄拼盘
+    - dish: tomato_platter
+  blueprint:
+    items:
+      #第0口展示模型
+      kaleidoscopecookery:${dish}_display_0:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_5"
+      #第1口展示模型
+      kaleidoscopecookery:${dish}_display_1:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_4"
+      #第2口展示模型
+      kaleidoscopecookery:${dish}_display_2:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+      #第3口展示模型
+      kaleidoscopecookery:${dish}_display_3:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+      #第4口展示模型
+      kaleidoscopecookery:${dish}_display_4:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+      #第5口展示模型
+      kaleidoscopecookery:${dish}_display_5:
+        template: kaleidoscopecookery:dish/display
+        arguments:
+          path: "minecraft:block/custom/cook/block/plate/${dish}_0"

@@ -1,0 +1,33 @@
+config_factory#teas:
+  instances:
+    #大麦茶
+    - id: barley_tea
+    #碧螺春
+    - id: biluochun
+    #乌龙茶
+    - id: oolong
+    #花茶
+    - id: flower_tea
+    #铁观音
+    - id: tieguanyin
+  blueprint:
+    items:
+      #各种茶叶
+      kaleidoscopecookery:${id}:
+        template: kaleidoscopecookery:item/food
+        arguments:
+          texture: "tea/${id}"
+          nutrition: 1
+          saturation: 0.6
+          animation: drink
+        data:
+          components:
+            minecraft:consumable:
+              sound: minecraft:entity.generic.drink
+
+items:
+  #空茶杯
+  kaleidoscopecookery:empty_cup:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.empty_cup>"
+    texture: minecraft:item/custom/cook/tea/empty_cup

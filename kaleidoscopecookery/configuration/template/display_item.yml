@@ -1,0 +1,116 @@
+templates:
+
+  #同名方块模型的展示物品
+  kaleidoscopecookery:display/block_model:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${name}>"
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/block/${__ID__}"
+
+  #自定模型路径的展示物品
+  kaleidoscopecookery:display/model:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${name}>"
+    model:
+      type: minecraft:model
+      path: "${path}"
+
+  #背包平面手持三维物品
+  kaleidoscopecookery:item/flat_gui_block_held:
+    model:
+      type: minecraft:select
+      property: minecraft:display_context
+      cases:
+        - when:
+            - gui
+            - ground
+            - fixed
+            - on_shelf
+          model:
+            type: minecraft:model
+            path: "${gui_model}"
+            generation:
+              parent: minecraft:item/generated
+              textures:
+                layer0: "${gui_model}"
+      fallback:
+        type: minecraft:model
+        path: "${world_model}"
+    legacy_model:
+      path: "${gui_model}"
+      generation:
+        parent: minecraft:item/generated
+        textures:
+          layer0: "${gui_model}"
+
+  #仅背包平面物品
+  kaleidoscopecookery:item/flat_gui_only:
+    model:
+      type: minecraft:select
+      property: minecraft:display_context
+      cases:
+        - when:
+            - gui
+          model:
+            type: minecraft:model
+            path: "${gui_model}"
+            generation:
+              parent: minecraft:item/generated
+              textures:
+                layer0: "${gui_model}"
+      fallback:
+        type: minecraft:model
+        path: "${world_model}"
+    legacy_model:
+      path: "${world_model}"
+
+  #普通材料物品
+  kaleidoscopecookery:item/plain:
+    material: "${material:-'minecraft:paper'}"
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${__ID__}>"
+    texture: "minecraft:item/custom/cook/${texture}"
+
+  #可食用物品
+  kaleidoscopecookery:item/food:
+    material: "${material:-'minecraft:paper'}"
+    settings:
+      craft_remainder:
+        type: recipe_based
+        terms:
+          - recipes:
+              - "kaleidoscopecookery:craftless_${__ID__}_rice_bowl"
+            craft_remainder: minecraft:bowl
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${__ID__}>"
+      components:
+        minecraft:food:
+          nutrition: ${nutrition}
+          saturation: ${saturation}
+          can_always_eat: ${can_always_eat:-true}
+        minecraft:consumable:
+          consume_seconds: ${consume_seconds:-1.6}
+          animation: ${animation:-eat}
+    texture: "minecraft:item/custom/cook/${texture}"
+
+  #农夫套装物品
+  kaleidoscopecookery:item/farmer_armor:
+    material: "${material}"
+    settings:
+      tags:
+        - minecraft:trimmable_armor
+      equipment:
+        asset_id: kaleidoscopecookery:farmer
+        $$>=1.21.2:
+          slot: "${slot}"
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${__ID__}>"
+      max_damage: ${max_damage}
+      attribute_modifiers:
+        - type: minecraft:armor
+          slot: "${slot}"
+          id: "kaleidoscopecookery:farmer_${slot}_armor"
+          amount: ${armor}
+          operation: add_value
+    texture: "minecraft:item/custom/cook/${__ID__}"

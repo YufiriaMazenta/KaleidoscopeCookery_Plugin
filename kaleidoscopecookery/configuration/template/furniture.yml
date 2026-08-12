@@ -1,0 +1,56 @@
+templates:
+
+  #通用家具
+  kaleidoscopecookery:furniture/base:
+    settings:
+      item: "${item}"
+      hit_times: ${hit_times:-3}
+      sounds:
+        break: "${break_sound}"
+        place: "${place_sound}"
+        hit: "${hit_sound}"
+    loot:
+      template: default:loot_table/furniture
+      arguments:
+        item: "${item}"
+
+  #金属通用家具
+  kaleidoscopecookery:furniture/metal_base:
+    template: kaleidoscopecookery:furniture/base
+    arguments:
+      break_sound: minecraft:block.metal.break
+      place_sound: minecraft:block.metal.place
+      hit_sound: minecraft:block.metal.hit
+
+  #木质通用家具
+  kaleidoscopecookery:furniture/wood_base:
+    template: kaleidoscopecookery:furniture/base
+    arguments:
+      break_sound: minecraft:block.wood.break
+      place_sound: minecraft:block.wood.place
+      hit_sound: minecraft:block.wood.hit
+
+  #盔甲架通用家具
+  kaleidoscopecookery:furniture/armor_stand_base:
+    template: kaleidoscopecookery:furniture/base
+    arguments:
+      break_sound: minecraft:entity.armor_stand.break
+      place_sound: minecraft:entity.armor_stand.place
+      hit_sound: minecraft:entity.armor_stand.hit
+
+  #地面四向摆放家具
+  kaleidoscopecookery:furniture/rule_ground_four:
+    ground:
+      rotation: four
+      alignment: center
+
+  #地面任意角度摆放家具
+  kaleidoscopecookery:furniture/rule_ground_any:
+    ground:
+      rotation: any
+      alignment: any
+
+  #挂墙摆放家具
+  kaleidoscopecookery:furniture/rule_wall:
+    wall:
+      alignment: any

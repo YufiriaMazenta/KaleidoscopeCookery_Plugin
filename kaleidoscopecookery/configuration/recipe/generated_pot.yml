@@ -1,0 +1,298 @@
+config_factory#pot_flex_recipes:
+  instances:
+    - id: braised_fish_from_cod
+      result: kaleidoscopecookery:braised_fish
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:cod: 6
+        kaleidoscopecookery:red_chili: 1
+    - id: yakitori_from_chicken_chili
+      result: kaleidoscopecookery:yakitori
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:chicken: 4
+        kaleidoscopecookery:red_chili: 2
+    - id: cooked_donkey_meat_from_raw
+      result: kaleidoscopecookery:cooked_donkey_meat
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_donkey_meat: 1
+    - id: delicious_egg_fried_rice_from_egg_lettuce_rice_carrot
+      result: kaleidoscopecookery:delicious_egg_fried_rice
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:egg: 2
+        kaleidoscopecookery:lettuce: 2
+        kaleidoscopecookery:cooked_rice: 1
+        minecraft:carrot: 1
+    - id: donkey_burger_from_chilipepper_dough_meat
+      result: kaleidoscopecookery:donkey_burger
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:red_chili: 2
+        kaleidoscopecookery:raw_dough: 2
+        kaleidoscopecookery:raw_cut_small_meats: 2
+    - id: egg_fried_rice_from_eggs_rice
+      result: kaleidoscopecookery:egg_fried_rice
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:egg: 2
+        kaleidoscopecookery:cooked_rice: 1
+    - id: scramble_egg_with_tomatoes_from_eggs_tomato
+      result: kaleidoscopecookery:scramble_egg_with_tomatoes
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:egg: 3
+        kaleidoscopecookery:tomato: 3
+    - id: braised_beef_from_rawbeef_redchili
+      result: kaleidoscopecookery:braised_beef
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:beef: 3
+        kaleidoscopecookery:red_chili: 3
+    - id: stir_fried_pork_with_peppers_from_greenchili_rawpork
+      result: kaleidoscopecookery:stir_fried_pork_with_peppers
+      carrier: minecraft:bowl
+      perfect:
+        kaleidoscopecookery:green_chili: 3
+        minecraft:porkchop: 3
+    - id: sweet_and_sour_pork_from_sugar_rawpork
+      result: kaleidoscopecookery:sweet_and_sour_pork
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:sugar: 3
+        minecraft:porkchop: 3
+    - id: fish_flavored_shredded_pork_from_mushroom_rawpork_chili
+      result: kaleidoscopecookery:fish_flavored_shredded_pork
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:brown_mushroom: 2
+        minecraft:porkchop: 2
+        kaleidoscopecookery:red_chili: 2
+    - id: sticky_candy_from_leather_sugar
+      result: kaleidoscopecookery:sticky_candy
+      carrier: minecraft:air
+      perfect:
+        minecraft:leather: 1
+        minecraft:sugar: 4
+    - id: pot_fondant_pie
+      result: kaleidoscopecookery:fondant_pie
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:sugar: 4
+        minecraft:pumpkin_pie: 4
+    - id: pot_dongpo_pork
+      result: kaleidoscopecookery:dongpo_pork
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:bamboo: 2
+        minecraft:porkchop: 6
+    - id: pot_fondant_spider_eye
+      result: kaleidoscopecookery:fondant_spider_eye
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:sugar: 4
+        minecraft:spider_eye: 4
+    - id: pot_chorus_fried_egg
+      result: kaleidoscopecookery:chorus_fried_egg
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:chorus_fruit: 3
+        minecraft:egg: 3
+    - id: pot_spicy_chicken
+      result: kaleidoscopecookery:spicy_chicken
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:chicken: 4
+        kaleidoscopecookery:red_chili: 4
+    - id: pot_pan_seared_knight_steak
+      result: kaleidoscopecookery:pan_seared_knight_steak
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:bone: 3
+        minecraft:sweet_berries: 3
+        minecraft:beef: 2
+    - id: pot_stargazy_pie
+      result: kaleidoscopecookery:stargazy_pie
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:pumpkin_pie: 1
+        minecraft:cod: 5
+    - id: pot_sweet_and_sour_ender_pearls
+      result: kaleidoscopecookery:sweet_and_sour_ender_pearls
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:ender_pearl: 2
+        minecraft:ender_eye: 1
+    - id: pot_crystal_lamb_chop
+      result: kaleidoscopecookery:crystal_lamb_chop
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:amethyst_shard: 3
+        minecraft:mutton: 3
+    - id: pot_blaze_lamb_chop
+      result: kaleidoscopecookery:blaze_lamb_chop
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:blaze_powder: 3
+        minecraft:mutton: 3
+    - id: pot_frost_lamb_chop
+      result: kaleidoscopecookery:frost_lamb_chop
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:blue_ice: 3
+        minecraft:mutton: 3
+    - id: pot_candied_potato
+      result: kaleidoscopecookery:candied_potato
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:potato: 4
+        minecraft:sugar: 2
+    - id: pot_stuffed_tiger_skin_pepper
+      result: kaleidoscopecookery:stuffed_tiger_skin_pepper
+      carrier: minecraft:bowl
+      perfect:
+        kaleidoscopecookery:green_chili: 4
+        kaleidoscopecookery:raw_cut_small_meats: 4
+    - id: pot_spicy_rabbit_head
+      result: kaleidoscopecookery:spicy_rabbit_head
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:rabbit: 3
+        kaleidoscopecookery:red_chili: 3
+    - id: pot_fried_caterpillar
+      result: kaleidoscopecookery:fried_caterpillar
+      carrier: minecraft:bowl
+      perfect:
+        kaleidoscopecookery:caterpillar: 3
+    - id: pot_fried_spring_roll
+      result: kaleidoscopecookery:fried_spring_roll
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:phantom_membrane: 2
+        minecraft:porkchop: 4
+        minecraft:brown_mushroom: 2
+    - id: pot_oil_splashed_fish
+      result: kaleidoscopecookery:oil_splashed_fish
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:cod: 6
+        kaleidoscopecookery:red_chili: 2
+    - id: pot_braised_pork_ribs
+      result: kaleidoscopecookery:braised_pork_ribs
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:bone: 4
+        minecraft:porkchop: 4
+    - id: pot_slime_ball_meal
+      result: kaleidoscopecookery:slime_ball_meal
+      carrier: minecraft:bowl
+      perfect:
+        minecraft:slime_ball: 6
+    - id: simple_baked_potato
+      result: minecraft:baked_potato
+      carrier: minecraft:air
+      perfect:
+        minecraft:potato: 1
+    - id: simple_dried_kelp
+      result: minecraft:dried_kelp
+      carrier: minecraft:air
+      perfect:
+        minecraft:kelp: 1
+    - id: simple_popped_chorus_fruit
+      result: minecraft:popped_chorus_fruit
+      carrier: minecraft:air
+      perfect:
+        minecraft:chorus_fruit: 1
+    - id: simple_fried_egg_from_egg
+      result: kaleidoscopecookery:fried_egg
+      carrier: minecraft:air
+      perfect:
+        minecraft:egg: 1
+    - id: simple_fried_egg_from_turtle_egg
+      result: kaleidoscopecookery:fried_egg
+      carrier: minecraft:air
+      perfect:
+        minecraft:turtle_egg: 1
+    - id: simple_fried_egg_from_fried_egg
+      result: kaleidoscopecookery:fried_egg
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:fried_egg: 1
+    - id: simple_cooked_beef
+      result: minecraft:cooked_beef
+      carrier: minecraft:air
+      perfect:
+        minecraft:beef: 1
+    - id: simple_cooked_chicken
+      result: minecraft:cooked_chicken
+      carrier: minecraft:air
+      perfect:
+        minecraft:chicken: 1
+    - id: simple_cooked_cod
+      result: minecraft:cooked_cod
+      carrier: minecraft:air
+      perfect:
+        minecraft:cod: 1
+    - id: simple_cooked_salmon
+      result: minecraft:cooked_salmon
+      carrier: minecraft:air
+      perfect:
+        minecraft:salmon: 1
+    - id: simple_cooked_mutton
+      result: minecraft:cooked_mutton
+      carrier: minecraft:air
+      perfect:
+        minecraft:mutton: 1
+    - id: simple_cooked_porkchop
+      result: minecraft:cooked_porkchop
+      carrier: minecraft:air
+      perfect:
+        minecraft:porkchop: 1
+    - id: simple_cooked_rabbit
+      result: minecraft:cooked_rabbit
+      carrier: minecraft:air
+      perfect:
+        minecraft:rabbit: 1
+    - id: simple_cooked_lamb_chops
+      result: kaleidoscopecookery:cooked_lamb_chops
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_lamb_chops: 1
+    - id: simple_cooked_cow_offal
+      result: kaleidoscopecookery:cooked_cow_offal
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_cow_offal: 1
+    - id: simple_cooked_pork_belly
+      result: kaleidoscopecookery:cooked_pork_belly
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_pork_belly: 1
+    - id: simple_cooked_cut_small_meats
+      result: kaleidoscopecookery:cooked_cut_small_meats
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_cut_small_meats: 1
+    - id: simple_cooked_meatball
+      result: kaleidoscopecookery:cooked_meatball
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:raw_meatball: 1
+    - id: simple_meat_pie
+      result: kaleidoscopecookery:meat_pie
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:stuffed_dough_food: 1
+    - id: simple_sticky_rice_cake
+      result: kaleidoscopecookery:sticky_rice_cake
+      carrier: minecraft:air
+      perfect:
+        kaleidoscopecookery:cooked_rice: 1
+  blueprint:
+    pot_flex_foods:
+      #炒锅模糊配方
+      kaleidoscopecookery:pot_${id}:
+        result: "${result}"
+        perfect: ${perfect}
+        carrier: "${carrier}"

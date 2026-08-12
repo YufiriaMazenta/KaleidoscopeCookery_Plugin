@@ -1,0 +1,262 @@
+templates:
+  #汤锅外观
+  kaleidoscopecookery:appearance/stockpot:
+    state: soul_campfire[lit=false, signal_fire=true, facing=east]
+    transparent: true
+    entity_renderer:
+      item: "${item}"
+      yaw: ${yaw}
+
+items:
+
+  #汤锅
+  kaleidoscopecookery:stockpot:
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.stockpot>
+    model: minecraft:block/custom/cook/block/stockpot
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+          arguments:
+            resistance: 1.0
+            solid: false
+        behaviors:
+          - type: kaleidoscopecookery:stockpot
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+            has_lid:
+              type: boolean
+              default: false
+            has_base:
+              type: boolean
+              default: false
+            has_chains:
+              type: boolean
+              default: false
+          appearances:
+            north:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot
+                yaw: 180
+            south:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot
+                yaw: 0
+            east:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot
+                yaw: -90
+            west:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot
+                yaw: 90
+            north_base:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 180
+            south_base:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 0
+            east_base:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: -90
+            west_base:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 90
+            north_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains
+                yaw: 180
+            south_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains
+                yaw: 0
+            east_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains
+                yaw: -90
+            west_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains
+                yaw: 90
+            north_base_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 180
+            south_base_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 0
+            east_base_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: -90
+            west_base_chains:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base
+                yaw: 90
+            north_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_has_lid
+                yaw: 180
+            south_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_has_lid
+                yaw: 0
+            east_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_has_lid
+                yaw: -90
+            west_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_has_lid
+                yaw: 90
+            north_base_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base_has_lid
+                yaw: 180
+            south_base_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base_has_lid
+                yaw: 0
+            east_base_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base_has_lid
+                yaw: -90
+            west_base_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_base_has_lid
+                yaw: 90
+            north_chains_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains_has_lid
+                yaw: 180
+            south_chains_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains_has_lid
+                yaw: 0
+            east_chains_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains_has_lid
+                yaw: -90
+            west_chains_lid:
+              template: kaleidoscopecookery:appearance/stockpot
+              arguments:
+                item: show:stockpot_chains_has_lid
+                yaw: 90
+          variants:
+            facing=north,has_base=false,has_chains=false,has_lid=false:
+              appearance: north
+            facing=south,has_base=false,has_chains=false,has_lid=false:
+              appearance: south
+            facing=east,has_base=false,has_chains=false,has_lid=false:
+              appearance: east
+            facing=west,has_base=false,has_chains=false,has_lid=false:
+              appearance: west
+            facing=north,has_base=true,has_chains=false,has_lid=false:
+              appearance: north_base
+            facing=south,has_base=true,has_chains=false,has_lid=false:
+              appearance: south_base
+            facing=east,has_base=true,has_chains=false,has_lid=false:
+              appearance: east_base
+            facing=west,has_base=true,has_chains=false,has_lid=false:
+              appearance: west_base
+            facing=north,has_base=false,has_chains=true,has_lid=false:
+              appearance: north_chains
+            facing=south,has_base=false,has_chains=true,has_lid=false:
+              appearance: south_chains
+            facing=east,has_base=false,has_chains=true,has_lid=false:
+              appearance: east_chains
+            facing=west,has_base=false,has_chains=true,has_lid=false:
+              appearance: west_chains
+            facing=north,has_base=true,has_chains=true,has_lid=false:
+              appearance: north_base_chains
+            facing=south,has_base=true,has_chains=true,has_lid=false:
+              appearance: south_base_chains
+            facing=east,has_base=true,has_chains=true,has_lid=false:
+              appearance: east_base_chains
+            facing=west,has_base=true,has_chains=true,has_lid=false:
+              appearance: west_base_chains
+            facing=north,has_base=false,has_chains=false,has_lid=true:
+              appearance: north_lid
+            facing=south,has_base=false,has_chains=false,has_lid=true:
+              appearance: south_lid
+            facing=east,has_base=false,has_chains=false,has_lid=true:
+              appearance: east_lid
+            facing=west,has_base=false,has_chains=false,has_lid=true:
+              appearance: west_lid
+            facing=north,has_base=true,has_chains=false,has_lid=true:
+              appearance: north_base_lid
+            facing=south,has_base=true,has_chains=false,has_lid=true:
+              appearance: south_base_lid
+            facing=east,has_base=true,has_chains=false,has_lid=true:
+              appearance: east_base_lid
+            facing=west,has_base=true,has_chains=false,has_lid=true:
+              appearance: west_base_lid
+            facing=north,has_base=false,has_chains=true,has_lid=true:
+              appearance: north_chains_lid
+            facing=south,has_base=false,has_chains=true,has_lid=true:
+              appearance: south_chains_lid
+            facing=east,has_base=false,has_chains=true,has_lid=true:
+              appearance: east_chains_lid
+            facing=west,has_base=false,has_chains=true,has_lid=true:
+              appearance: west_chains_lid
+
+config_factory#stockpot_displays:
+  instances:
+    #汤锅
+    - id: stockpot
+    #带底座汤锅
+    - id: stockpot_base
+    #带底座盖盖汤锅
+    - id: stockpot_base_has_lid
+    #带链汤锅
+    - id: stockpot_chains
+    #带链盖盖汤锅
+    - id: stockpot_chains_has_lid
+    #盖盖汤锅
+    - id: stockpot_has_lid
+  blueprint:
+    items:
+      #汤锅展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: stockpot

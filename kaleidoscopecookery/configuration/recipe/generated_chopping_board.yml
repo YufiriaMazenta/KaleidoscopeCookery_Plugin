@@ -1,0 +1,182 @@
+templates:
+  #菜板切割阶段配方
+  kaleidoscopecookery:recipe/chopping_board_stage:
+    material: minecraft:paper
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/block/chopping_board/${mat}/${stage}"
+
+  #菜板配方
+  kaleidoscopecookery:recipe/chopping_board:
+    require: "${require}"
+    stage: 5
+    values: "cb:block/custom/cook/block/chopping_board/${mat}"
+    mode: single
+    result: ${result}
+
+  #菜板无过程模型配方
+  kaleidoscopecookery:recipe/chopping_board_no_model:
+    require: "${require}"
+    stage: ${stage:-5}
+    mode: ${mode:-single}
+    result: ${result}
+
+config_factory#chopping_board_stage_models:
+  instances:
+    - mat: cod
+    - mat: cooked_chicken
+    - mat: cooked_cod
+    - mat: cooked_cow_offal
+    - mat: cooked_lamb_chops
+    - mat: cooked_pork_belly
+    - mat: cooked_rabbit
+    - mat: cooked_salmon
+    - mat: raw_chicken
+    - mat: raw_cow_offal
+    - mat: raw_dough
+    - mat: raw_lamb_chops
+    - mat: raw_pork_belly
+    - mat: raw_rabbit
+    - mat: salmon
+    - mat: sashimi
+  blueprint:
+    items:
+      #菜板切割阶段模型
+      cb:block/custom/cook/block/chopping_board/${mat}/0:
+        template: kaleidoscopecookery:recipe/chopping_board_stage
+        arguments:
+          stage: 0
+      #菜板切割阶段模型
+      cb:block/custom/cook/block/chopping_board/${mat}/1:
+        template: kaleidoscopecookery:recipe/chopping_board_stage
+        arguments:
+          stage: 1
+      #菜板切割阶段模型
+      cb:block/custom/cook/block/chopping_board/${mat}/2:
+        template: kaleidoscopecookery:recipe/chopping_board_stage
+        arguments:
+          stage: 2
+      #菜板切割阶段模型
+      cb:block/custom/cook/block/chopping_board/${mat}/3:
+        template: kaleidoscopecookery:recipe/chopping_board_stage
+        arguments:
+          stage: 3
+      #菜板切割阶段模型
+      cb:block/custom/cook/block/chopping_board/${mat}/4:
+        template: kaleidoscopecookery:recipe/chopping_board_stage
+        arguments:
+          stage: 4
+
+chopping_board_raws:
+  kaleidoscopecookery:chop_raw_lamb_chops_from_mutton:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:mutton
+      mat: raw_lamb_chops
+      result:
+        - kaleidoscopecookery:raw_lamb_chops 2 100
+  kaleidoscopecookery:chop_cooked_lamb_chops_from_cooked_mutton:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_mutton
+      mat: cooked_lamb_chops
+      result:
+        - kaleidoscopecookery:cooked_lamb_chops 2 100
+  kaleidoscopecookery:chop_sashimi_from_tropical_fish:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:tropical_fish
+      mat: sashimi
+      result:
+        - kaleidoscopecookery:sashimi 2 100
+  kaleidoscopecookery:chop_sashimi_from_cod:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cod
+      mat: cod
+      result:
+        - kaleidoscopecookery:sashimi 2 100
+  kaleidoscopecookery:chop_bone_from_cooked_cod:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_cod
+      mat: cooked_cod
+      result:
+        - minecraft:bone 2 100
+  kaleidoscopecookery:chop_sashimi_from_salmon:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:salmon
+      mat: salmon
+      result:
+        - kaleidoscopecookery:sashimi 2 100
+  kaleidoscopecookery:chop_bone_from_cooked_salmon:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_salmon
+      mat: cooked_salmon
+      result:
+        - minecraft:bone 2 100
+  kaleidoscopecookery:chop_raw_cow_offal_from_beef:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:beef
+      mat: raw_cow_offal
+      result:
+        - kaleidoscopecookery:raw_cow_offal 2 100
+  kaleidoscopecookery:chop_cooked_cow_offal_from_cooked_beef:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_beef
+      mat: cooked_cow_offal
+      result:
+        - kaleidoscopecookery:cooked_cow_offal 2 100
+  kaleidoscopecookery:chop_raw_pork_belly_from_porkchop:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:porkchop
+      mat: raw_pork_belly
+      result:
+        - kaleidoscopecookery:raw_pork_belly 2 100
+  kaleidoscopecookery:chop_cooked_pork_belly_from_cooked_porkchop:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_porkchop
+      mat: cooked_pork_belly
+      result:
+        - kaleidoscopecookery:cooked_pork_belly 2 100
+  kaleidoscopecookery:chop_raw_cut_small_meats_from_chicken:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:chicken
+      mat: raw_chicken
+      result:
+        - kaleidoscopecookery:raw_cut_small_meats 2 100
+  kaleidoscopecookery:chop_cooked_cut_small_meats_from_cooked_chicken:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_chicken
+      mat: cooked_chicken
+      result:
+        - kaleidoscopecookery:cooked_cut_small_meats 2 100
+  kaleidoscopecookery:chop_raw_cut_small_meats_from_rabbit:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:rabbit
+      mat: raw_rabbit
+      result:
+        - kaleidoscopecookery:raw_cut_small_meats 2 100
+  kaleidoscopecookery:chop_cooked_cut_small_meats_from_cooked_rabbit:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: minecraft:cooked_rabbit
+      mat: cooked_rabbit
+      result:
+        - kaleidoscopecookery:cooked_cut_small_meats 2 100
+  kaleidoscopecookery:chop_raw_noodles_from_dough_tag:
+    template: kaleidoscopecookery:recipe/chopping_board
+    arguments:
+      require: kaleidoscopecookery:raw_dough
+      mat: raw_dough
+      result:
+        - kaleidoscopecookery:raw_noodles 2 100

@@ -1,0 +1,3 @@
+block_state_mappings:
+  minecraft:potatoes[age=6]: minecraft:potatoes[age=4]
+  minecraft:potatoes[age=3]: minecraft:potatoes[age=2]

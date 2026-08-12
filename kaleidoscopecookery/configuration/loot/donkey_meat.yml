@@ -1,0 +1,30 @@
+loot_sources:
+  #驴掉生驴肉
+  kaleidoscopecookery:donkey_raw_meat:
+    type: entity_death
+    target:
+      - minecraft:donkey
+      - minecraft:mule
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: kaleidoscopecookery:raw_donkey_meat
+              functions:
+                - type: set_count
+                  count:
+                    type: uniform
+                    min: 1
+                    max: 3
+                - type: apply_bonus
+                  enchantment: minecraft:looting
+                  formula:
+                    type: uniform_bonus_count
+                    multiplier: 1
+                - type: furnace_smelt
+                  conditions:
+                    - type: entity_properties
+                      predicate:
+                        flags:
+                          is_on_fire: true

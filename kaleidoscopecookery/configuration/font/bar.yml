@@ -1,0 +1,25 @@
+config_factory#tea_bar_images:
+  instances:
+    #空茶格
+    - id: tea_empty
+      file: empty
+    #满岩浆茶格
+    - id: tea_lava_full
+      file: lava_full
+    #满水茶格
+    - id: tea_water_full
+      file: water_full
+    #茶条左端
+    - id: tea_left
+      file: left
+    #茶条右端
+    - id: tea_right
+      file: right
+  blueprint:
+    images:
+      #茶壶液体进度条图片
+      kaleidoscopecookery:${id}:
+        font: kaleidoscopecookery:trashcan
+        file: "minecraft:font/bar/${file}.png"
+        height: 8
+        ascent: 8

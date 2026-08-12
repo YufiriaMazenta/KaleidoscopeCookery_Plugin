@@ -1,0 +1,479 @@
+templates:
+
+  #单盘菜每阶段外观
+  kaleidoscopecookery:dish/plate:
+    elements:
+      - item: "kaleidoscopecookery:${__ID__}_display_${stage}"
+        scale: 1
+        position: 0,0.5,0
+    hitboxes:
+      - template: kaleidoscopecookery:hitbox/interaction
+        arguments:
+          width: ${width}
+          height: ${stage_height}
+          interactive: true
+
+  #双盘菜每阶段外观
+  kaleidoscopecookery:dish/plate_wide:
+    elements:
+      - item: "kaleidoscopecookery:${__ID__}_display_left_${stage}"
+        scale: 1
+        position: 0,0.5,0
+        translation: 0.5,0,0
+      - item: "kaleidoscopecookery:${__ID__}_display_right_${stage}"
+        scale: 1
+        position: 0,0.5,0
+        translation: -0.5,0,0
+    hitboxes:
+      - template: kaleidoscopecookery:hitbox/interaction
+        arguments:
+          width: ${width}
+          height: ${stage_height}
+          interactive: true
+
+  #吃一口的基础效果
+  kaleidoscopecookery:dish/bite_base:
+    - type: set_food
+      add: true
+      food: ${food}
+    - type: set_saturation
+      add: true
+      saturation: ${saturation}
+    - type: play_sound
+      sound: minecraft:entity.generic.eat
+    - type: swing_hand
+
+  #吃一口
+  kaleidoscopecookery:dish/bite:
+    template: kaleidoscopecookery:dish/bite_base
+    merges: ${extra_effects}
+
+  #吃完最后一口
+  kaleidoscopecookery:dish/finish:
+    - type: drop_loot
+      loot:
+        pools: ${eaten_pools}
+    - type: kaleidoscopecookery:return_carrier
+      dish: "kaleidoscopecookery:${__ID__}"
+    - type: remove_furniture
+      drop_loot: false
+
+  #吃完额外掉落一份
+  kaleidoscopecookery:dish/byproduct:
+    rolls: 1
+    entries:
+      - type: item
+        item: "${byproduct}"
+
+  #没吃完被打掉时额外掉落一份
+  kaleidoscopecookery:dish/byproduct_when_bitten:
+    rolls: 1
+    conditions:
+      - type: "!match_furniture_variant"
+        variants: ground
+    entries:
+      - type: item
+        item: "${byproduct}"
+
+  #菜品被打掉时的基础掉落
+  kaleidoscopecookery:dish/leftover_pools:
+    - rolls: 1
+      entries:
+        - type: alternatives
+          children:
+            - type: furniture_item
+              item: "kaleidoscopecookery:${__ID__}"
+              conditions:
+                - type: match_furniture_variant
+                  variants: ground
+            - type: item
+              item: "${leftover}"
+
+  #通用菜品
+  kaleidoscopecookery:dish/base:
+    material: minecraft:nether_brick
+    data:
+      item_name: "<!i><${color}><lang:item.kaleidoscopecookery.${__ID__}>"
+      components:
+        minecraft:max_stack_size: 1
+    texture: "${texture}"
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_ground_any
+      furniture:
+        settings:
+          item: "kaleidoscopecookery:${__ID__}"
+          hit_times: ${hit_times}
+          sounds:
+            place: minecraft:block.wood.place
+            break: minecraft:block.wood.break
+            hit: minecraft:block.wood.hit
+        loot:
+          pools:
+            template: kaleidoscopecookery:dish/leftover_pools
+            merges: ${broken_pools}
+
+  #可摆放菜品2口吃完
+  kaleidoscopecookery:dish/stages_2:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_1
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #可摆放菜品3口吃完
+  kaleidoscopecookery:dish/stages_3:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+            stage_2:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 2
+                stage_height: ${h2}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_2
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_2
+                    - when: stage_2
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #可摆放菜品4口吃完
+  kaleidoscopecookery:dish/stages_4:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+            stage_2:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 2
+                stage_height: ${h2}
+            stage_3:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 3
+                stage_height: ${h3}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_3
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_2
+                    - when: stage_2
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_3
+                    - when: stage_3
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #可摆放菜品5口吃完
+  kaleidoscopecookery:dish/stages_5:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+            stage_2:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 2
+                stage_height: ${h2}
+            stage_3:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 3
+                stage_height: ${h3}
+            stage_4:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 4
+                stage_height: ${h4}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_4
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_2
+                    - when: stage_2
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_3
+                    - when: stage_3
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_4
+                    - when: stage_4
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #可摆放菜品6口吃完
+  kaleidoscopecookery:dish/stages_6:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+            stage_2:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 2
+                stage_height: ${h2}
+            stage_3:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 3
+                stage_height: ${h3}
+            stage_4:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 4
+                stage_height: ${h4}
+            stage_5:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 5
+                stage_height: ${h5}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_5
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_2
+                    - when: stage_2
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_3
+                    - when: stage_3
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_4
+                    - when: stage_4
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_5
+                    - when: stage_5
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #可摆放菜品7口吃完
+  kaleidoscopecookery:dish/stages_7:
+    template: kaleidoscopecookery:dish/base
+    merges:
+      behavior:
+        furniture:
+          variants:
+            ground:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 0
+                stage_height: ${h0}
+            stage_1:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 1
+                stage_height: ${h1}
+            stage_2:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 2
+                stage_height: ${h2}
+            stage_3:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 3
+                stage_height: ${h3}
+            stage_4:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 4
+                stage_height: ${h4}
+            stage_5:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 5
+                stage_height: ${h5}
+            stage_6:
+              template: "${plate:-'kaleidoscopecookery:dish/plate'}"
+              arguments:
+                stage: 6
+                stage_height: ${h6}
+          events:
+            - on: right_click
+              functions:
+                - type: run
+                  conditions:
+                    - type: "!match_furniture_variant"
+                      variants: stage_6
+                  functions:
+                    template: kaleidoscopecookery:dish/bite
+                - type: when
+                  source: <arg:furniture.variant>
+                  cases:
+                    - when: ground
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_1
+                    - when: stage_1
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_2
+                    - when: stage_2
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_3
+                    - when: stage_3
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_4
+                    - when: stage_4
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_5
+                    - when: stage_5
+                      functions:
+                        - type: set_furniture_variant
+                          variant: stage_6
+                    - when: stage_6
+                      functions:
+                        template: kaleidoscopecookery:dish/finish
+
+  #菜品阶段展示模型
+  kaleidoscopecookery:dish/display:
+    material: minecraft:nether_brick
+    model:
+      type: minecraft:model
+      path: "${path}"

@@ -1,0 +1,1148 @@
+items:
+
+  #苹果拼盘
+  kaleidoscopecookery:apple_platter:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/apple_platter
+      color: "#FFFFFF"
+      hit_times: 4
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 1.125
+      h1: 0.8125
+      h2: 0.8125
+      h3: 0.8125
+      h4: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #一盘包子
+  kaleidoscopecookery:baozi_plate:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/baozi_plate
+      color: "#FFFFFF"
+      hit_times: 5
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.625
+      h2: 0.375
+      h3: 0.375
+      h4: 0.375
+      h5: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #浆果拼盘
+  kaleidoscopecookery:berry_platter:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/berry_platter
+      color: "#FFFFFF"
+      hit_times: 4
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.9375
+      h1: 0.75
+      h2: 0.5625
+      h3: 0.5625
+      h4: 0.4375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #烈焰羊排
+  kaleidoscopecookery:blaze_lamb_chop:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/blaze_lamb_chop
+      color: "#FF6B35"
+      hit_times: 3
+      food: 4
+      saturation: 2
+      leftover: minecraft:bowl
+      width: 1.0625
+      h0: 0.6875
+      h1: 0.6875
+      h2: 0.6875
+      h3: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:blaze_rod
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:blaze_rod
+
+  #红烧鱼
+  kaleidoscopecookery:braised_fish:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/braised_fish
+      color: "#FFA500"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.3125
+      h1: 0.3125
+      h2: 0.3125
+      h3: 0.3125
+      h4: 0.3125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #红烧排骨
+  kaleidoscopecookery:braised_pork_ribs:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/braised_pork_ribs
+      color: "#A0522D"
+      hit_times: 4
+      food: 4
+      saturation: 3.2
+      leftover: minecraft:bowl
+      plate: kaleidoscopecookery:dish/plate_wide
+      width: 1.9375
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.4375
+      h3: 0.4375
+      h4: 0.25
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bone
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:bone
+
+  #棕蘑菇瓦罐汤
+  kaleidoscopecookery:brown_mushroom_pot_soup:
+    template: kaleidoscopecookery:dish/stages_3
+    arguments:
+      texture: minecraft:item/custom/cook/food/brown_mushroom_pot_soup
+      color: "#B5651D"
+      hit_times: 2
+      food: 6
+      saturation: 4.0
+      leftover: minecraft:flower_pot
+      width: 0.875
+      h0: 0.5625
+      h1: 0.4375
+      h2: 0.4375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #佛跳墙
+  kaleidoscopecookery:buddha_jumps_over_the_wall:
+    template: kaleidoscopecookery:dish/stages_3
+    arguments:
+      texture: minecraft:item/custom/cook/food/buddha_jumps_over_the_wall
+      color: "#C49A4A"
+      hit_times: 2
+      food: 7
+      saturation: 3.65
+      leftover: minecraft:flower_pot
+      width: 0.875
+      h0: 0.5
+      h1: 0.4375
+      h2: 0.4375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #拔丝土豆
+  kaleidoscopecookery:candied_potato:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/candied_potato
+      color: "#E8A33D"
+      hit_times: 3
+      food: 5
+      saturation: 2.75
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.375
+      h2: 0.375
+      h3: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #荷包紫颂烧
+  kaleidoscopecookery:chorus_fried_egg:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/chorus_fried_egg
+      color: "#9B59B6"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.6875
+      h1: 0.6875
+      h2: 0.6875
+      h3: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #紫颂果拼盘
+  kaleidoscopecookery:chorus_fruit_platter:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/chorus_fruit_platter
+      color: "#FFFFFF"
+      hit_times: 5
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 1.0625
+      h1: 0.75
+      h2: 0.75
+      h3: 0.75
+      h4: 0.75
+      h5: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #冷肉炙
+  kaleidoscopecookery:cold_roasted_meat:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/cold_roasted_meat
+      color: "#B8860B"
+      hit_times: 3
+      food: 4
+      saturation: 3.2
+      leftover: minecraft:bowl
+      plate: kaleidoscopecookery:dish/plate_wide
+      width: 2.3125
+      h0: 0.25
+      h1: 0.25
+      h2: 0.25
+      h3: 0.25
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #寒带风味刺身
+  kaleidoscopecookery:cold_style_sashimi:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/cold_style_sashimi
+      color: "#00CED1"
+      hit_times: 3
+      food: 2
+      saturation: 1.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.875
+      h1: 0.875
+      h2: 0.875
+      h3: 0.875
+      h4: 0.875
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:snowball
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:snowball
+
+  #绯红菌瓦罐汤
+  kaleidoscopecookery:crimson_fungus_pot_soup:
+    template: kaleidoscopecookery:dish/stages_3
+    arguments:
+      texture: minecraft:item/custom/cook/food/crimson_fungus_pot_soup
+      color: "#8B1A1A"
+      hit_times: 2
+      food: 6
+      saturation: 4.0
+      leftover: minecraft:flower_pot
+      width: 0.875
+      h0: 0.625
+      h1: 0.4375
+      h2: 0.4375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #水晶羊排
+  kaleidoscopecookery:crystal_lamb_chop:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/crystal_lamb_chop
+      color: "#87CEEB"
+      hit_times: 3
+      food: 4
+      saturation: 2.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.625
+      h2: 0.625
+      h3: 0.625
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:amethyst_shard
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:amethyst_shard
+
+  #黑暗料理
+  kaleidoscopecookery:dark_cuisine:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/dark_cuisine
+      color: "#2C2C2C"
+      hit_times: 3
+      food: 1
+      saturation: 0.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.3125
+      h1: 0.3125
+      h2: 0.3125
+      h3: 0.125
+      extra_effects:
+        - type: potion_effect
+          potion-effect: "minecraft:glowing"
+          duration: 300
+          amplifier: 0
+          particles: true
+      eaten_pools: []
+      broken_pools: []
+
+  #沙漠风味刺身
+  kaleidoscopecookery:desert_style_sashimi:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/desert_style_sashimi
+      color: "#EDC9AF"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.8125
+      h1: 0.8125
+      h2: 0.8125
+      h3: 0.8125
+      h4: 0.8125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:cactus
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:cactus
+
+  #东坡肉
+  kaleidoscopecookery:dongpo_pork:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/dongpo_pork
+      color: "#8B4513"
+      hit_times: 3
+      food: 5
+      saturation: 3.0
+      leftover: minecraft:bowl
+      width: 1.125
+      h0: 0.875
+      h1: 0.875
+      h2: 0.875
+      h3: 0.875
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bamboo
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:bamboo
+
+  #疙瘩汤
+  kaleidoscopecookery:dough_drop_soup:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/dough_drop_soup
+      color: "#EAD9B0"
+      hit_times: 3
+      food: 2
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.75
+      h0: 0.4375
+      h1: 0.375
+      h2: 0.375
+      h3: 0.375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #末地风味刺身
+  kaleidoscopecookery:end_style_sashimi:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/end_style_sashimi
+      color: "#8B008B"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.875
+      h1: 0.875
+      h2: 0.875
+      h3: 0.875
+      h4: 0.875
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:chorus_fruit
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:chorus_fruit
+
+  #翻糖派
+  kaleidoscopecookery:fondant_pie:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/fondant_pie
+      color: "#FFB6C1"
+      hit_times: 3
+      food: 4
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.4375
+      h3: 0.4375
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #翻糖蛛眼
+  kaleidoscopecookery:fondant_spider_eye:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/fondant_spider_eye
+      color: "#8B008B"
+      hit_times: 3
+      food: 2
+      saturation: 1.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.75
+      h1: 0.75
+      h2: 0.75
+      h3: 0.5625
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #四喜丸子汤
+  kaleidoscopecookery:four_joy_meatball_soup:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/four_joy_meatball_soup
+      color: "#A0522D"
+      hit_times: 4
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.75
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.375
+      h3: 0.375
+      h4: 0.375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #油炸猪儿虫
+  kaleidoscopecookery:fried_caterpillar:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/fried_caterpillar
+      color: "#7FB069"
+      hit_times: 3
+      food: 4
+      saturation: 3.2
+      leftover: minecraft:bowl
+      width: 1.125
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.4375
+      h3: 0.25
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #炸春卷
+  kaleidoscopecookery:fried_spring_roll:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/fried_spring_roll
+      color: "#D4A017"
+      hit_times: 3
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5
+      h1: 0.375
+      h2: 0.3125
+      h3: 0.25
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #凛冬羊排
+  kaleidoscopecookery:frost_lamb_chop:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/frost_lamb_chop
+      color: "#B0E0E6"
+      hit_times: 3
+      food: 4
+      saturation: 2.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.625
+      h2: 0.625
+      h3: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:blue_ice
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:blue_ice
+
+  #黄金沙拉
+  kaleidoscopecookery:golden_salad:
+    template: kaleidoscopecookery:dish/stages_7
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/golden_salad
+      color: "#FFD700"
+      hit_times: 3
+      food: 2
+      saturation: 1.0
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.625
+      h1: 0.625
+      h2: 0.5625
+      h3: 0.5625
+      h4: 0.5625
+      h5: 0.5
+      h6: 0.25
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #下界风味刺身
+  kaleidoscopecookery:nether_style_sashimi:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/nether_style_sashimi
+      color: "#DC143C"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.5625
+      h1: 0.5625
+      h2: 0.5625
+      h3: 0.5625
+      h4: 0.5625
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:crimson_fungus
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:warped_fungus
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:crimson_fungus
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:warped_fungus
+
+  #椒麻鸡
+  kaleidoscopecookery:numbing_spicy_chicken:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/numbing_spicy_chicken
+      color: "#D2691E"
+      hit_times: 3
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.75
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.4375
+      h3: 0.375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #油泼鱼
+  kaleidoscopecookery:oil_splashed_fish:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/oil_splashed_fish
+      color: "#F4A460"
+      hit_times: 5
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      plate: kaleidoscopecookery:dish/plate_wide
+      width: 2.1875
+      h0: 0.375
+      h1: 0.375
+      h2: 0.375
+      h3: 0.375
+      h4: 0.375
+      h5: 0.3125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bone_meal
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:bone_meal
+
+  #香煎骑士牛排
+  kaleidoscopecookery:pan_seared_knight_steak:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/pan_seared_knight_steak
+      color: "#CD853F"
+      hit_times: 3
+      food: 5
+      saturation: 3.0
+      leftover: minecraft:bowl
+      width: 1.0
+      h0: 0.6875
+      h1: 0.6875
+      h2: 0.6875
+      h3: 0.6875
+      h4: 0.6875
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bone
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bone_meal
+      broken_pools:
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:bone
+        - template: kaleidoscopecookery:dish/byproduct_when_bitten
+          arguments:
+            byproduct: minecraft:bone_meal
+
+  #一盘青团
+  kaleidoscopecookery:qingtuan_plate:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/qingtuan_plate
+      color: "#FFFFFF"
+      hit_times: 4
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.375
+      h2: 0.375
+      h3: 0.375
+      h4: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #红蘑菇瓦罐汤
+  kaleidoscopecookery:red_mushroom_pot_soup:
+    template: kaleidoscopecookery:dish/stages_3
+    arguments:
+      texture: minecraft:item/custom/cook/food/red_mushroom_pot_soup
+      color: "#C0392B"
+      hit_times: 2
+      food: 6
+      saturation: 4.0
+      leftover: minecraft:flower_pot
+      width: 0.875
+      h0: 0.625
+      h1: 0.4375
+      h2: 0.4375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #水煎包
+  kaleidoscopecookery:shengjian_mantou:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/shengjian_mantou
+      color: "#F4A460"
+      hit_times: 3
+      food: 4
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.375
+      h2: 0.375
+      h3: 0.375
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #一盘水煎包
+  kaleidoscopecookery:shengjian_mantou_plate:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/shengjian_mantou_plate
+      color: "#FFFFFF"
+      hit_times: 5
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.625
+      h2: 0.375
+      h3: 0.375
+      h4: 0.375
+      h5: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #黏液饭
+  kaleidoscopecookery:slime_ball_meal:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/slime_ball_meal
+      color: "#7CFC00"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5
+      h1: 0.375
+      h2: 0.375
+      h3: 0.3125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #毛血旺
+  kaleidoscopecookery:spicy_blood_stew:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/spicy_blood_stew
+      color: "#8B0000"
+      hit_times: 3
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.75
+      h0: 0.5
+      h1: 0.5
+      h2: 0.4375
+      h3: 0.375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #辣子鸡
+  kaleidoscopecookery:spicy_chicken:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/spicy_chicken
+      color: "#FF4500"
+      hit_times: 3
+      food: 4
+      saturation: 2.5
+      leftover: minecraft:bowl
+      width: 1.125
+      h0: 0.75
+      h1: 0.75
+      h2: 0.75
+      h3: 0.6875
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #麻辣兔头
+  kaleidoscopecookery:spicy_rabbit_head:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/spicy_rabbit_head
+      color: "#B22222"
+      hit_times: 3
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.3125
+      h1: 0.3125
+      h2: 0.3125
+      h3: 0.1875
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #仰望星空派
+  kaleidoscopecookery:stargazy_pie:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/stargazy_pie
+      color: "#4169E1"
+      hit_times: 3
+      food: 4
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5625
+      h1: 0.5
+      h2: 0.5
+      h3: 0.5
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #一盘牛皮糖
+  kaleidoscopecookery:sticky_candy_plate:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/sticky_candy_plate
+      color: "#FFFFFF"
+      hit_times: 4
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.4375
+      h1: 0.3125
+      h2: 0.3125
+      h3: 0.3125
+      h4: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #一盘糍粑
+  kaleidoscopecookery:sticky_rice_cake_plate:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/sticky_rice_cake_plate
+      color: "#FFFFFF"
+      hit_times: 5
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5625
+      h1: 0.5625
+      h2: 0.375
+      h3: 0.375
+      h4: 0.375
+      h5: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #虎皮青椒酿肉
+  kaleidoscopecookery:stuffed_tiger_skin_pepper:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/stuffed_tiger_skin_pepper
+      color: "#6B8E23"
+      hit_times: 5
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.4375
+      h1: 0.4375
+      h2: 0.4375
+      h3: 0.375
+      h4: 0.375
+      h5: 0.1875
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #谜之炒菜
+  kaleidoscopecookery:suspicious_stir_fry:
+    template: kaleidoscopecookery:dish/stages_2
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/suspicious_stir_fry
+      color: "#556B2F"
+      hit_times: 3
+      food: 1
+      saturation: 0.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5625
+      h1: 0.125
+      extra_effects:
+        - type: potion_effect
+          potion-effect: "minecraft:levitation"
+          duration: 200
+          amplifier: 0
+        - type: potion_effect
+          potion-effect: "minecraft:slow_falling"
+          duration: 300
+          amplifier: 0
+      eaten_pools: []
+      broken_pools: []
+
+  #珍珠咕噜肉
+  kaleidoscopecookery:sweet_and_sour_ender_pearls:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/sweet_and_sour_ender_pearls
+      color: "#9370DB"
+      hit_times: 3
+      food: 3
+      saturation: 2.0
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.5
+      h1: 0.5
+      h2: 0.5
+      h3: 0.25
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #番茄拼盘
+  kaleidoscopecookery:tomato_platter:
+    template: kaleidoscopecookery:dish/stages_6
+    arguments:
+      texture: minecraft:item/custom/cook/food/tomato_platter
+      color: "#FFFFFF"
+      hit_times: 5
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.875
+      h1: 0.625
+      h2: 0.625
+      h3: 0.625
+      h4: 0.625
+      h5: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #苔原风味刺身
+  kaleidoscopecookery:tundra_style_sashimi:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/tundra_style_sashimi
+      color: "#E0FFFF"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.625
+      h1: 0.625
+      h2: 0.5
+      h3: 0.5
+      h4: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #诡异菌瓦罐汤
+  kaleidoscopecookery:warped_fungus_pot_soup:
+    template: kaleidoscopecookery:dish/stages_3
+    arguments:
+      texture: minecraft:item/custom/cook/food/warped_fungus_pot_soup
+      color: "#1ABC9C"
+      hit_times: 2
+      food: 6
+      saturation: 4.0
+      leftover: minecraft:flower_pot
+      width: 0.875
+      h0: 0.625
+      h1: 0.4375
+      h2: 0.4375
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #西瓜拼盘
+  kaleidoscopecookery:watermelon_platter:
+    template: kaleidoscopecookery:dish/stages_4
+    arguments:
+      texture: minecraft:item/custom/cook/food/watermelon_platter
+      color: "#FFFFFF"
+      hit_times: 3
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.9375
+      h0: 0.8125
+      h1: 0.8125
+      h2: 0.8125
+      h3: 0.375
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []
+
+  #烧鸟串
+  kaleidoscopecookery:yakitori:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:block/custom/cook/block/food/item/yakitori
+      color: "#D2691E"
+      hit_times: 3
+      food: 4
+      saturation: 2.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.75
+      h1: 0.75
+      h2: 0.75
+      h3: 0.75
+      h4: 0.125
+      extra_effects: []
+      eaten_pools: []
+      broken_pools: []
+
+  #一盘粽子
+  kaleidoscopecookery:zongzi_plate:
+    template: kaleidoscopecookery:dish/stages_5
+    arguments:
+      texture: minecraft:item/custom/cook/food/zongzi_plate
+      color: "#FFFFFF"
+      hit_times: 4
+      food: 3
+      saturation: 1.5
+      leftover: minecraft:bowl
+      width: 0.875
+      h0: 0.6875
+      h1: 0.5
+      h2: 0.5
+      h3: 0.5
+      h4: 0.125
+      extra_effects: []
+      eaten_pools:
+        - template: kaleidoscopecookery:dish/byproduct
+          arguments:
+            byproduct: minecraft:bowl
+      broken_pools: []

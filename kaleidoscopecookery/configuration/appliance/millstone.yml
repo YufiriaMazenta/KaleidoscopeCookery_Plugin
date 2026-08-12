@@ -1,0 +1,77 @@
+templates:
+
+  #石磨底盘碰撞箱
+  kaleidoscopecookery:hitbox/millstone_base:
+    template: kaleidoscopecookery:hitbox/shulker
+    arguments:
+      scale: 0.95
+
+  #石磨上盘碰撞箱
+  kaleidoscopecookery:hitbox/millstone_top:
+    template: kaleidoscopecookery:hitbox/shulker
+    arguments:
+      position: 0,1,0
+      scale: 0.68
+      peek: 100
+
+items:
+
+  #石磨
+  kaleidoscopecookery:new_millstone:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.new_millstone>
+    texture: minecraft:item/custom/cook/millstone
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_ground_four
+      furniture:
+        template: kaleidoscopecookery:furniture/metal_base
+        arguments:
+          item: kaleidoscopecookery:new_millstone
+        merges:
+          behaviors:
+            - type: kaleidoscopecookery:millstone
+          variants:
+            ground:
+              loot_spawn_offset: 0,0,0.3
+              elements:
+                - type: item_display
+                  item: show:new_millstone
+                  position: 0,0.5,0
+                  billboard: fixed
+              hitboxes:
+                - template: kaleidoscopecookery:hitbox/millstone_base
+                  arguments:
+                    position: 0.5,0,0.5
+                - template: kaleidoscopecookery:hitbox/millstone_base
+                  arguments:
+                    position: 0.5,0,-0.5
+                - template: kaleidoscopecookery:hitbox/millstone_base
+                  arguments:
+                    position: -0.5,0,-0.5
+                - template: kaleidoscopecookery:hitbox/millstone_base
+                  arguments:
+                    position: -0.5,0,0.5
+                - template: kaleidoscopecookery:hitbox/millstone_top
+
+config_factory#millstone_displays:
+  instances:
+    #石磨
+    - id: new_millstone
+      name: new_millstone
+    #石磨磨盘
+    - id: new_millstone_stone
+      name: millstone_stone
+    #石磨推杆一
+    - id: new_millstone_stick
+      name: new_millstone
+    #石磨推杆二
+    - id: new_millstone_stick2
+      name: new_millstone
+  blueprint:
+    items:
+      #石磨展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model

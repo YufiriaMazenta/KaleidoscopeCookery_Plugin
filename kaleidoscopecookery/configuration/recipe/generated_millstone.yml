@@ -1,0 +1,292 @@
+config_factory#millstone_recipes:
+  instances:
+    - from: allium
+      to: magenta_dye
+      count: 2
+    - from: amethyst_block
+      to: amethyst_shard
+      count: 3
+    - from: azure_bluet
+      to: light_gray_dye
+      count: 2
+    - from: basalt
+      to: polished_basalt
+    - from: beetroot
+      to: red_dye
+      count: 2
+    - from: black_wool
+      to: string
+      count: 3
+    - from: blackstone
+      to: polished_blackstone
+    - from: blue_orchid
+      to: light_blue_dye
+      count: 2
+    - from: blue_wool
+      to: string
+      count: 3
+    - from: bone
+      to: bone_meal
+      count: 5
+    - from: brown_wool
+      to: string
+      count: 3
+    - from: cactus
+      to: green_dye
+      count: 2
+    - from: chiseled_quartz_block
+      to: quartz
+      count: 3
+    - from: coal_ore
+      to: coal
+      count: 3
+    - from: cobbled_deepslate
+      to: polished_deepslate
+    - from: cobblestone
+      to: smooth_stone
+    - from: copper_ore
+      to: raw_copper
+      count: 5
+    - from: cornflower
+      to: blue_dye
+      count: 2
+    - from: cyan_wool
+      to: string
+      count: 3
+    - from: dandelion
+      to: yellow_dye
+      count: 2
+    - from: deepslate
+      to: polished_deepslate
+    - from: deepslate_coal_ore
+      to: coal
+      count: 3
+    - from: deepslate_copper_ore
+      to: raw_copper
+      count: 5
+    - from: deepslate_diamond_ore
+      to: diamond
+      count: 2
+    - from: deepslate_emerald_ore
+      to: emerald
+      count: 2
+    - from: deepslate_gold_ore
+      to: raw_gold
+      count: 3
+    - from: deepslate_iron_ore
+      to: raw_iron
+      count: 3
+    - from: deepslate_lapis_ore
+      to: lapis_lazuli
+      count: 7
+    - from: deepslate_redstone_ore
+      to: redstone
+      count: 7
+    - from: diamond_ore
+      to: diamond
+      count: 2
+    - from: diorite
+      to: polished_diorite
+    - from: emerald_ore
+      to: emerald
+      count: 2
+    - from: flint
+      to: gunpowder
+    - from: gilded_blackstone
+      to: gold_nugget
+      count: 3
+    - from: gold_ore
+      to: raw_gold
+      count: 3
+    - from: granite
+      to: polished_granite
+    - from: gravel
+      to: sand
+    - from: gray_wool
+      to: string
+      count: 3
+    - from: green_wool
+      to: string
+      count: 3
+    - from: iron_ore
+      to: raw_iron
+      count: 3
+    - from: lapis_ore
+      to: lapis_lazuli
+      count: 7
+    - from: large_fern
+      to: green_dye
+      count: 3
+    - from: light_blue_wool
+      to: string
+      count: 3
+    - from: light_gray_wool
+      to: string
+      count: 3
+    - from: lilac
+      to: magenta_dye
+      count: 3
+    - from: lily_of_the_valley
+      to: white_dye
+      count: 2
+    - from: lime_wool
+      to: string
+      count: 3
+    - from: magenta_wool
+      to: string
+      count: 3
+    - from: nether_gold_ore
+      to: gold_nugget
+      count: 5
+    - from: nether_quartz_ore
+      to: quartz
+      count: 3
+    - from: orange_tulip
+      to: orange_dye
+      count: 2
+    - from: orange_wool
+      to: string
+      count: 3
+    - from: oxeye_daisy
+      to: light_gray_dye
+      count: 2
+    - from: peony
+      to: pink_dye
+      count: 3
+    - from: pink_petals
+      to: pink_dye
+      count: 2
+    - from: pink_tulip
+      to: pink_dye
+      count: 2
+    - from: pink_wool
+      to: string
+      count: 3
+    - from: pitcher_plant
+      to: cyan_dye
+      count: 2
+    - from: poppy
+      to: red_dye
+      count: 2
+    - from: purple_wool
+      to: string
+      count: 3
+    - from: quartz_block
+      to: quartz
+      count: 3
+    - from: quartz_bricks
+      to: quartz
+      count: 3
+    - from: quartz_pillar
+      to: quartz
+      count: 3
+    - from: red_sand
+      to: smooth_red_sandstone
+    - from: red_sandstone
+      to: smooth_red_sandstone
+    - from: red_tulip
+      to: red_dye
+      count: 2
+    - from: red_wool
+      to: string
+      count: 3
+    - from: redstone_ore
+      to: redstone
+      count: 7
+    - from: rose_bush
+      to: red_dye
+      count: 3
+    - from: sand
+      to: smooth_sandstone
+    - from: sandstone
+      to: smooth_sandstone
+    - from: fern
+      to: green_dye
+    - from: smooth_basalt
+      to: polished_basalt
+    - from: andesite
+      to: polished_andesite
+    - from: smooth_quartz
+      to: quartz
+      count: 3
+    - from: stone
+      to: cobblestone
+    - from: sunflower
+      to: yellow_dye
+      count: 3
+    - from: torchflower
+      to: orange_dye
+      count: 2
+    - from: white_tulip
+      to: white_dye
+      count: 2
+    - from: white_wool
+      to: string
+      count: 3
+    - from: wither_rose
+      to: black_dye
+      count: 2
+    - from: yellow_wool
+      to: string
+      count: 3
+    - from: wheat
+      to: flour
+      to_ns: kaleidoscopecookery
+    - from: beetroot_seeds
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: melon_seeds
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: pumpkin_seeds
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: torchflower_seeds
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: pitcher_pod
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: chili_seed
+      from_ns: kaleidoscopecookery
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: tomato_seed
+      from_ns: kaleidoscopecookery
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: lettuce_seed
+      from_ns: kaleidoscopecookery
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: wild_rice
+      from_ns: kaleidoscopecookery
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: rice
+      from_ns: kaleidoscopecookery
+      to: oil
+      to_ns: kaleidoscopecookery
+    - from: rice_panicle
+      from_ns: kaleidoscopecookery
+      to: rice
+      to_ns: kaleidoscopecookery
+      count: 3
+  blueprint:
+    accurate_foods:
+      #石磨研磨配方
+      kaleidoscopecookery:millstone_${to}_from_${from}:
+        require: "${from_ns:-minecraft}:${from}"
+        result: "${to_ns:-minecraft}:${to}"
+        result_count: ${count:-1}
+        cook: millstone
+        rotations: 1
+
+accurate_foods:
+  #石磨磨种子出油
+  kaleidoscopecookery:millstone_oil_from_seeds:
+    require: minecraft:wheat_seeds
+    result: kaleidoscopecookery:oil
+    result_count: 1
+    cook: millstone
+    rotations: 1

@@ -1,0 +1,89 @@
+templates:
+  #稻草人挂件交互箱
+  kaleidoscopecookery:hitbox/scarecrow:
+    template: kaleidoscopecookery:hitbox/interaction
+    arguments:
+      height: 0.7
+
+items:
+  #稻草人身体
+  show:scarecrow_body:
+    template: kaleidoscopecookery:display/model
+    arguments:
+      name: scarecrow
+      path: minecraft:block/custom/cook/furniture/scarecrow
+
+  #无头稻草人
+  show:scarecrow_headless:
+    template: kaleidoscopecookery:display/model
+    arguments:
+      name: scarecrow
+      path: minecraft:block/custom/cook/furniture/scarecrow_headless
+
+  #稻草人灯笼
+  show:scarecrow_lantern:
+    data:
+      item_name: "<!i><lang:block.minecraft.lantern>"
+    model:
+      type: minecraft:model
+      path: minecraft:block/lantern
+  #稻草人灵魂灯笼
+  show:scarecrow_soul_lantern:
+    data:
+      item_name: "<!i><lang:block.minecraft.soul_lantern>"
+    model:
+      type: minecraft:model
+      path: minecraft:block/soul_lantern
+
+furniture:
+  #稻草人
+  kaleidoscopecookery:scarecrow:
+    template: kaleidoscopecookery:furniture/armor_stand_base
+    arguments:
+      item: kaleidoscopecookery:scarecrow
+    merges:
+      behaviors:
+        - type: kaleidoscopecookery:scarecrow
+          protection_radius: 16
+          parrot_perch: true
+          parrot_scan_interval: 40
+          body_offset: 0,1.0,0
+          slots:
+            head:
+              position: 0,2.25,0
+              scale: 1.125
+              item_transform: 5
+              yaw_offset: 180
+              hitbox:
+                template: kaleidoscopecookery:hitbox/scarecrow
+                arguments:
+                  position: 0,1.65,0
+                  width: 0.7
+            main_hand:
+              position: 0.9,1.651,0
+              scale: 0.75
+              item_transform: 2
+              yaw_offset: -90
+              hitbox:
+                template: kaleidoscopecookery:hitbox/scarecrow
+                arguments:
+                  position: 0.75,1.25,0
+                  width: 0.5
+            off_hand:
+              position: -0.75,1.406,0
+              scale: 0.75
+              item_transform: 0
+              yaw_offset: 0
+              hitbox:
+                template: kaleidoscopecookery:hitbox/scarecrow
+                arguments:
+                  position: -0.75,1.25,0
+                  width: 0.5
+      variants:
+        ground:
+          hitboxes:
+            - template: kaleidoscopecookery:hitbox/interaction
+              arguments:
+                width: 0.7
+                height: 1.7
+                can_use_item_on: false

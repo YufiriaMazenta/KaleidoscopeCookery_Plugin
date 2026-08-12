@@ -1,0 +1,40 @@
+config_factory#straw_hats:
+  instances:
+    #草帽
+    - id: straw_hat
+      lore_key: straw_hat
+    #缀花草帽
+    - id: straw_hat_flower
+      lore_key: straw_hat_flowery
+  blueprint:
+    items:
+      #草帽
+      kaleidoscopecookery:${id}:
+        material: minecraft:leather_helmet
+        data:
+          item_name: "<!i><lang:item.kaleidoscopecookery.${id}>"
+          unbreakable: true
+          remove_components:
+            - attribute_modifiers
+          $$>=1.21.2:
+            equippable:
+              slot: head
+          lore:
+            - "<!i><gray><lang:lore.kaleidoscopecookery.${lore_key}>"
+        model:
+          type: minecraft:select
+          property: minecraft:display_context
+          cases:
+            - when: head
+              model:
+                type: minecraft:model
+                path: "minecraft:item/custom/cook/${id}/${id}"
+          fallback:
+            type: minecraft:model
+            path: "minecraft:item/custom/cook/${id}_inventory"
+            generation:
+              parent: minecraft:item/generated
+              textures:
+                layer0: "minecraft:item/custom/cook/${id}"
+        legacy_model:
+          path: "minecraft:item/custom/cook/${id}/${id}"

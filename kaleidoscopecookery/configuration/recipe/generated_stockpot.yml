@@ -1,0 +1,288 @@
+config_factory#stockpot_flex_recipes:
+  instances:
+    #番茄牛腩汤
+    - id: tomato_beef_brisket_soup
+      result: kaleidoscopecookery:tomato_beef_brisket_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:beef: 3
+        kaleidoscopecookery:tomato: 4
+    - id: rice_count_1to9
+      result: kaleidoscopecookery:cooked_rice
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:rice_panicle: 1
+    - id: dumpling_count_1to9
+      result: kaleidoscopecookery:dumpling
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:stuffed_dough_food: 1
+    - id: shengjian_mantou_count_1to9
+      result: kaleidoscopecookery:shengjian_mantou
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:lava_bucket
+      perfect:
+        kaleidoscopecookery:stuffed_dough_food: 1
+    - id: zongzi_count_1to9
+      result: kaleidoscopecookery:zongzi
+      carrier: minecraft:air
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:raw_zongzi: 1
+    #大骨汤
+    - id: pork_bone_soup
+      result: kaleidoscopecookery:pork_bone_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:bone: 7
+    #海鲜味噌汤
+    - id: seafood_miso_soup
+      result: kaleidoscopecookery:seafood_miso_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:cod: 2
+        kaleidoscopecookery:lettuce: 3
+    - id: seafood_miso_soup_cod_entity
+      result: kaleidoscopecookery:seafood_miso_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:cod_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 3
+    - id: seafood_miso_soup_salmon_entity
+      result: kaleidoscopecookery:seafood_miso_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:salmon_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 3
+    - id: seafood_miso_soup_tropical_entity
+      result: kaleidoscopecookery:seafood_miso_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:tropical_fish_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 3
+    #恐惧浓汤
+    - id: fearsome_thick_soup
+      result: kaleidoscopecookery:fearsome_thick_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:lava_bucket
+      perfect:
+        minecraft:rotten_flesh: 4
+        minecraft:sculk: 5
+    #萝卜羊肉汤
+    - id: lamb_and_radish_soup
+      result: kaleidoscopecookery:lamb_and_radish_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:carrot: 3
+        minecraft:mutton: 2
+    #土豆炖牛肉
+    - id: braised_beef_with_potatoes
+      result: kaleidoscopecookery:braised_beef_with_potatoes
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:potato: 3
+        minecraft:beef: 2
+    #野菌兔肉汤
+    - id: wild_mushroom_rabbit_soup
+      result: kaleidoscopecookery:wild_mushroom_rabbit_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:brown_mushroom: 3
+        minecraft:rabbit: 2
+    #河豚汤
+    - id: pufferfish_soup
+      result: kaleidoscopecookery:pufferfish_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:pufferfish: 2
+        kaleidoscopecookery:lettuce: 3
+    - id: pufferfish_soup_entity
+      result: kaleidoscopecookery:pufferfish_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:pufferfish_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 3
+    #罗宋汤
+    - id: borscht
+      result: kaleidoscopecookery:borscht
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:beef: 2
+        kaleidoscopecookery:tomato: 4
+    #牛丸汤
+    - id: beef_meatball_soup
+      result: kaleidoscopecookery:beef_meatball_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:raw_meatball: 2
+        kaleidoscopecookery:lettuce: 3
+    #小鸡炖蘑菇
+    - id: chicken_and_mushroom_stew
+      result: kaleidoscopecookery:chicken_and_mushroom_stew
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:chicken: 2
+        minecraft:brown_mushroom: 3
+    #腊八粥
+    - id: laba_congee
+      result: kaleidoscopecookery:laba_congee
+      carrier: minecraft:air
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:wheat_seeds: 6
+        minecraft:sugar: 3
+    #牛肉面
+    - id: beef_noodle
+      result: kaleidoscopecookery:beef_noodle
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:beef: 4
+        kaleidoscopecookery:raw_noodles: 3
+    #羊肉烩面
+    - id: hui_noodle
+      result: kaleidoscopecookery:hui_noodle
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:mutton: 4
+        kaleidoscopecookery:raw_noodles: 3
+    #乌冬面
+    - id: udon_noodle
+      result: kaleidoscopecookery:udon_noodle
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 2
+        minecraft:egg: 2
+        kaleidoscopecookery:raw_noodles: 3
+    #热干面
+    - id: hot_dry_noodles
+      result: kaleidoscopecookery:hot_dry_noodles
+      carrier: minecraft:air
+      liquid:
+        - minecraft:lava_bucket
+      perfect:
+        kaleidoscopecookery:raw_noodles: 3
+        kaleidoscopecookery:red_chili: 3
+    #疙瘩汤
+    - id: dough_drop_soup
+      result: kaleidoscopecookery:dough_drop_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:lettuce: 4
+        kaleidoscopecookery:flour: 2
+    #四喜丸子汤
+    - id: four_joy_meatball_soup
+      result: kaleidoscopecookery:four_joy_meatball_soup
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        kaleidoscopecookery:raw_meatball: 4
+    #椒麻鸡
+    - id: numbing_spicy_chicken
+      result: kaleidoscopecookery:numbing_spicy_chicken
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:lava_bucket
+      perfect:
+        kaleidoscopecookery:red_chili: 2
+        minecraft:chicken: 3
+    #毛血旺
+    - id: spicy_blood_stew
+      result: kaleidoscopecookery:spicy_blood_stew
+      carrier: minecraft:bowl
+      liquid:
+        - minecraft:lava_bucket
+      perfect:
+        minecraft:porkchop: 4
+        kaleidoscopecookery:red_chili: 4
+        minecraft:blaze_powder: 1
+    #棕蘑菇瓦罐汤
+    - id: brown_mushroom_pot_soup
+      result: kaleidoscopecookery:brown_mushroom_pot_soup
+      carrier: minecraft:flower_pot
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:brown_mushroom: 6
+    #红蘑菇瓦罐汤
+    - id: red_mushroom_pot_soup
+      result: kaleidoscopecookery:red_mushroom_pot_soup
+      carrier: minecraft:flower_pot
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:red_mushroom: 6
+    #诡异菌瓦罐汤
+    - id: warped_fungus_pot_soup
+      result: kaleidoscopecookery:warped_fungus_pot_soup
+      carrier: minecraft:flower_pot
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:warped_fungus: 6
+    #绯红菌瓦罐汤
+    - id: crimson_fungus_pot_soup
+      result: kaleidoscopecookery:crimson_fungus_pot_soup
+      carrier: minecraft:flower_pot
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:crimson_fungus: 6
+    #佛跳墙
+    - id: buddha_jumps_over_the_wall
+      result: kaleidoscopecookery:buddha_jumps_over_the_wall
+      carrier: minecraft:flower_pot
+      liquid:
+        - minecraft:water_bucket
+      perfect:
+        minecraft:egg: 2
+        minecraft:phantom_membrane: 2
+        kaleidoscopecookery:lettuce: 4
+  blueprint:
+    stock_flex_foods:
+      #汤锅模糊配方
+      kaleidoscopecookery:stock_${id}:
+        result: "${result}"
+        liquid: ${liquid}
+        perfect: ${perfect}
+        carrier: "${carrier}"

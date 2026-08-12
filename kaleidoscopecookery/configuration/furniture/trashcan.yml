@@ -1,0 +1,45 @@
+items:
+
+  #垃圾桶
+  kaleidoscopecookery:trashcan:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.trashcan>
+    model: minecraft:block/custom/cook/block/trashcan
+    behavior:
+      type: furniture_item
+      rules:
+        template: kaleidoscopecookery:furniture/rule_ground_four
+      furniture:
+        template: kaleidoscopecookery:furniture/metal_base
+        arguments:
+          item: kaleidoscopecookery:trashcan
+          hit_times: 5
+        merges:
+          behaviors:
+            - type: kaleidoscopecookery:trashcan
+          variants:
+            ground:
+              loot_spawn_offset: 0,0,0.3
+              hitboxes:
+                - template: kaleidoscopecookery:hitbox/shulker
+                  arguments:
+                    scale: 0.8
+                    peek: 30
+                    interaction_entity: false
+
+config_factory#trashcan_displays:
+  instances:
+    #垃圾桶一
+    - id: trashcan_1
+    #垃圾桶二
+    - id: trashcan_2
+    #垃圾桶三
+    - id: trashcan_3
+  blueprint:
+    items:
+      #垃圾桶展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: trashcan

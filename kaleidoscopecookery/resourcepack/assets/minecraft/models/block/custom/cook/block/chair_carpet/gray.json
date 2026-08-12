@@ -1,0 +1,49 @@
+{
+  "textures": {
+    "wool": "minecraft:block/gray_wool",
+    "particle": "minecraft:block/gray_wool"
+  },
+  "elements": [
+    {
+      "from": [
+        1.9,
+        2.9,
+        2.8
+      ],
+      "to": [
+        14.1,
+        9.1,
+        12
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            10,
+            9,
+            16
+          ],
+          "texture": "#wool"
+        },
+        "west": {
+          "uv": [
+            0,
+            10,
+            9,
+            16
+          ],
+          "texture": "#wool"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            12,
+            9
+          ],
+          "texture": "#wool"
+        }
+      }
+    }
+  ]
+}

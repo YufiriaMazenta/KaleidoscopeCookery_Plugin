@@ -1,0 +1,23 @@
+stock_food_raw:
+  liquid:
+    - item: minecraft:water_bucket
+      show: show:stove_water
+    - item: minecraft:cod_bucket
+      show: show:stove_water
+    - item: minecraft:salmon_bucket
+      show: show:stove_water
+    - item: minecraft:tropical_fish_bucket
+      show: show:stove_water
+    - item: minecraft:pufferfish_bucket
+      show: show:stove_water
+    - item: minecraft:axolotl_bucket
+      show: show:stove_water
+    - item: minecraft:tadpole_bucket
+      show: show:stove_water
+    - item: minecraft:lava_bucket
+      show: show:stove_lava
+  items:
+    - minecraft:beef
+    - minecraft:cod
+    - minecraft:salmon
+    - minecraft:potato

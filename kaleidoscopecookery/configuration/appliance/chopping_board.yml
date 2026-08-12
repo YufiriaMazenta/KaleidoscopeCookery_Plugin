@@ -1,0 +1,73 @@
+templates:
+
+  #菜板外观
+  kaleidoscopecookery:appearance/chopping_board:
+    state: iron_trapdoor[open=false, half=bottom, powered=true]
+    transparent: true
+    entity_renderer:
+      item: show:chopping_board
+      yaw: ${yaw}
+
+items:
+
+  #菜板
+  kaleidoscopecookery:chopping_board:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.chopping_board>
+    model: minecraft:block/custom/cook/block/chopping_board
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: sturdy_base_block
+            direction: down
+            support_types:
+              - full
+            stackable: false
+            max_height: 0
+            delay: 0
+          - type: kaleidoscopecookery:chopping_board
+            knives:
+              - "#kaleidoscopecookery:kitchen_knife"
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+          appearances:
+            north:
+              template: kaleidoscopecookery:appearance/chopping_board
+              arguments:
+                yaw: 180
+            south:
+              template: kaleidoscopecookery:appearance/chopping_board
+              arguments:
+                yaw: 0
+            east:
+              template: kaleidoscopecookery:appearance/chopping_board
+              arguments:
+                yaw: -90
+            west:
+              template: kaleidoscopecookery:appearance/chopping_board
+              arguments:
+                yaw: 90
+          variants:
+            facing=north:
+              appearance: north
+            facing=south:
+              appearance: south
+            facing=east:
+              appearance: east
+            facing=west:
+              appearance: west
+
+  #菜板
+  show:chopping_board:
+    template: kaleidoscopecookery:display/block_model
+    arguments:
+      name: chopping_board

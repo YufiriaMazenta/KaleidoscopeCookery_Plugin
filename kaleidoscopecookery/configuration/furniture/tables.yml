@@ -1,0 +1,234 @@
+templates:
+  #餐桌物品
+  kaleidoscopecookery:item/table:
+    material: minecraft:nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.table_${wood}>"
+    model: "minecraft:block/custom/cook/block/table/${wood}/single"
+    behavior:
+      type: block_item
+      block: "kaleidoscopecookery:table_${wood}"
+
+  #餐桌展示模型
+  kaleidoscopecookery:display/table:
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.table_${wood}>"
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/block/table/${wood}/${shape}"
+
+  #桌布展示模型
+  kaleidoscopecookery:display/table_carpet:
+    model:
+      type: minecraft:model
+      path: "minecraft:block/custom/cook/block/table_carpet/${color}_${shape}"
+
+  #餐桌外观
+  kaleidoscopecookery:appearance/table:
+    state: minecraft:iron_trapdoor[facing=north,half=top,open=false,powered=true,waterlogged=false]
+    transparent: true
+    entity_renderer:
+      item: "show:table_${wood}_${shape}"
+
+  #餐桌方块
+  kaleidoscopecookery:block/table:
+    settings:
+      template: kaleidoscopecookery:settings/wood_furniture
+      arguments:
+        item: "kaleidoscopecookery:table_${wood}"
+    behaviors:
+      - type: kaleidoscopecookery:table
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "kaleidoscopecookery:table_${wood}"
+    states:
+      properties:
+        line:
+          type: int
+          default: 0
+          min: 0
+          max: 1
+        position:
+          type: int
+          default: 0
+          min: 0
+          max: 3
+      appearances:
+        l0_p0:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: single
+        l0_p1:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: left
+        l0_p2:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: middle
+        l0_p3:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: right
+        l1_p0:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: single
+        l1_p1:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: left_rot
+        l1_p2:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: middle_rot
+        l1_p3:
+          template: kaleidoscopecookery:appearance/table
+          arguments:
+            shape: right_rot
+      variants:
+        line=0,position=0:
+          appearance: l0_p0
+        line=0,position=1:
+          appearance: l0_p1
+        line=0,position=2:
+          appearance: l0_p2
+        line=0,position=3:
+          appearance: l0_p3
+        line=1,position=0:
+          appearance: l1_p0
+        line=1,position=1:
+          appearance: l1_p1
+        line=1,position=2:
+          appearance: l1_p2
+        line=1,position=3:
+          appearance: l1_p3
+
+config_factory#tables:
+  instances:
+    #橡木
+    - wood: oak
+    #云杉木
+    - wood: spruce
+    #白桦木
+    - wood: birch
+    #丛林木
+    - wood: jungle
+    #金合欢木
+    - wood: acacia
+    #深色橡木
+    - wood: dark_oak
+    #红树木
+    - wood: mangrove
+    #樱花木
+    - wood: cherry
+    #竹
+    - wood: bamboo
+    #绯红木
+    - wood: crimson
+    #诡异木
+    - wood: warped
+  blueprint:
+    items:
+      #各木材餐桌
+      kaleidoscopecookery:table_${wood}:
+        template: kaleidoscopecookery:item/table
+      #各木材餐桌
+      show:table_${wood}_single:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: single
+      #各木材餐桌
+      show:table_${wood}_left:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: left
+      #各木材餐桌
+      show:table_${wood}_middle:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: middle
+      #各木材餐桌
+      show:table_${wood}_right:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: right
+      #各木材餐桌
+      show:table_${wood}_left_rot:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: left_rot
+      #各木材餐桌
+      show:table_${wood}_middle_rot:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: middle_rot
+      #各木材餐桌
+      show:table_${wood}_right_rot:
+        template: kaleidoscopecookery:display/table
+        arguments:
+          shape: right_rot
+    blocks:
+      #各木材餐桌
+      kaleidoscopecookery:table_${wood}:
+        template: kaleidoscopecookery:block/table
+
+config_factory#table_carpets:
+  instances:
+    #白色
+    - color: white
+    #橙色
+    - color: orange
+    #品红色
+    - color: magenta
+    #淡蓝色
+    - color: light_blue
+    #黄色
+    - color: yellow
+    #黄绿色
+    - color: lime
+    #粉红色
+    - color: pink
+    #灰色
+    - color: gray
+    #淡灰色
+    - color: light_gray
+    #青色
+    - color: cyan
+    #紫色
+    - color: purple
+    #蓝色
+    - color: blue
+    #棕色
+    - color: brown
+    #绿色
+    - color: green
+    #红色
+    - color: red
+    #黑色
+    - color: black
+  blueprint:
+    items:
+      #各颜色桌布
+      show:table_carpet_${color}_single:
+        template: kaleidoscopecookery:display/table_carpet
+        arguments:
+          shape: single
+      #各颜色桌布
+      show:table_carpet_${color}_left:
+        template: kaleidoscopecookery:display/table_carpet
+        arguments:
+          shape: left
+      #各颜色桌布
+      show:table_carpet_${color}_middle:
+        template: kaleidoscopecookery:display/table_carpet
+        arguments:
+          shape: middle
+      #各颜色桌布
+      show:table_carpet_${color}_right:
+        template: kaleidoscopecookery:display/table_carpet
+        arguments:
+          shape: right

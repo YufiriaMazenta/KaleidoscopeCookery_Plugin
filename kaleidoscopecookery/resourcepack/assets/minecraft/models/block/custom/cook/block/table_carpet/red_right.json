@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/custom/cook/block/table_carpet/right",
+  "textures": {
+    "particle": "minecraft:block/custom/cook/block/table_carpet/red"
+  }
+}

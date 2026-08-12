@@ -1,0 +1,39 @@
+config_factory#table_recipes:
+  instances:
+    #橡木
+    - wood: oak
+    #云杉木
+    - wood: spruce
+    #白桦木
+    - wood: birch
+    #丛林木
+    - wood: jungle
+    #金合欢木
+    - wood: acacia
+    #深色橡木
+    - wood: dark_oak
+    #红树木
+    - wood: mangrove
+    #樱花木
+    - wood: cherry
+    #竹
+    - wood: bamboo
+    #绯红木
+    - wood: crimson
+    #诡异木
+    - wood: warped
+  blueprint:
+    recipes:
+      #各木材餐桌合成配方
+      kaleidoscopecookery:craft_table_${wood}:
+        type: shaped
+        category: misc
+        pattern:
+          - "SSS"
+          - "F F"
+        ingredients:
+          S: "minecraft:${wood}_slab"
+          F: "minecraft:${wood}_fence"
+        result:
+          id: "kaleidoscopecookery:table_${wood}"
+          count: 1

@@ -1,0 +1,489 @@
+config_factory#shaped_recipes:
+  instances:
+    - id: craft_stove_campfire
+      pattern:
+        - "AAA"
+        - "AFA"
+        - "AAA"
+      ingredients:
+        A: minecraft:cobblestone
+        F: minecraft:campfire
+      result: kaleidoscopecookery:stove
+    - id: craft_stove_soul_campfire
+      pattern:
+        - "AAA"
+        - "AFA"
+        - "AAA"
+      ingredients:
+        A: minecraft:cobblestone
+        F: minecraft:soul_campfire
+      result: kaleidoscopecookery:stove
+    - id: craft_fruit_basket
+      pattern:
+        - " S "
+        - "ACA"
+        - "AAA"
+      ingredients:
+        S: minecraft:stick
+        A: minecraft:oak_planks
+        C: minecraft:chest
+      result: kaleidoscopecookery:fruit_basket
+    - id: craft_scarecrow
+      pattern:
+        - " H "
+        - "SPS"
+        - " A "
+      ingredients:
+        H: kaleidoscopecookery:straw_hat
+        S: minecraft:stick
+        P: minecraft:pumpkin
+        A: kaleidoscopecookery:straw_block
+      result: kaleidoscopecookery:scarecrow
+    - id: craft_pot
+      pattern:
+        - "AAA"
+        - "AAA"
+        - " A "
+      ingredients:
+        A: minecraft:iron_ingot
+      result: kaleidoscopecookery:pot
+    - id: craft_iron_kitchen_knife
+      pattern:
+        - "AA"
+        - "AS"
+      ingredients:
+        A: minecraft:iron_ingot
+        S: minecraft:stick
+      result: kaleidoscopecookery:iron_kitchen_knife
+    - id: craft_gold_kitchen_knife
+      pattern:
+        - "AA"
+        - "AS"
+      ingredients:
+        A: minecraft:gold_ingot
+        S: minecraft:stick
+      result: kaleidoscopecookery:gold_kitchen_knife
+    - id: craft_diamond_kitchen_knife
+      pattern:
+        - "AA"
+        - "AS"
+      ingredients:
+        A: minecraft:diamond
+        S: minecraft:stick
+      result: kaleidoscopecookery:diamond_kitchen_knife
+    - id: craft_kitchen_shovel
+      pattern:
+        - "I  "
+        - " N "
+        - "  S"
+      ingredients:
+        I: minecraft:iron_ingot
+        N: minecraft:iron_nugget
+        S: minecraft:stick
+      result: kaleidoscopecookery:kitchen_shovel_no_oil
+    - id: craft_teacup_coaster
+      pattern:
+        - "BB"
+        - "TT"
+      ingredients:
+        B: minecraft:bamboo
+        T: minecraft:string
+      result: kaleidoscopecookery:teacup_coaster
+    - id: craft_oil_pot_empty
+      pattern:
+        - "B B"
+        - "B B"
+        - " B "
+      ingredients:
+        B: minecraft:brick
+      result: kaleidoscopecookery:oil_pot_empty
+    - id: craft_straw_hat
+      pattern:
+        - " W "
+        - " S "
+        - "WWW"
+      ingredients:
+        W: minecraft:wheat
+        S: minecraft:string
+      result: kaleidoscopecookery:straw_hat
+    - id: craft_straw_hat_flower
+      pattern:
+        - "FFF"
+        - "FHF"
+        - "FFF"
+      ingredients:
+        F: minecraft:dandelion
+        H: kaleidoscopecookery:straw_hat
+      result: kaleidoscopecookery:straw_hat_flower
+    - id: craft_oil_block
+      pattern:
+        - "OOO"
+        - "OOO"
+        - "OOO"
+      ingredients:
+        O: kaleidoscopecookery:oil
+      result: kaleidoscopecookery:oil_block
+    - id: craft_chopping_board
+      pattern:
+        - "PPP"
+        - "PPP"
+      ingredients:
+        P: minecraft:oak_pressure_plate
+      result: kaleidoscopecookery:chopping_board
+    - id: craft_stockpot
+      pattern:
+        - "B B"
+        - "I I"
+        - "III"
+      ingredients:
+        B: minecraft:brick
+        I: minecraft:iron_ingot
+      result: kaleidoscopecookery:stockpot
+    - id: craft_stockpot_lid
+      pattern:
+        - " B "
+        - "III"
+      ingredients:
+        B: minecraft:brick
+        I: minecraft:iron_ingot
+      result: kaleidoscopecookery:stockpot_lid
+    - id: craft_enamel_basin
+      pattern:
+        - "O"
+        - "I"
+        - "B"
+      ingredients:
+        O: minecraft:stone_button
+        I: minecraft:heavy_weighted_pressure_plate
+        B: minecraft:bucket
+      result: kaleidoscopecookery:enamel_basin
+    - id: craft_kitchenware_racks
+      pattern:
+        - "SSS"
+        - "INI"
+      ingredients:
+        S: minecraft:stick
+        I: minecraft:iron_ingot
+        N: minecraft:iron_nugget
+      result: kaleidoscopecookery:kitchenware_racks
+    - id: craft_chili_ristra
+      pattern:
+        - "CC"
+        - "CC"
+        - "CC"
+      ingredients:
+        C: kaleidoscopecookery:red_chili
+      result: kaleidoscopecookery:chili_ristra
+    - id: craft_strung_mushrooms
+      pattern:
+        - "MM"
+        - "MM"
+        - "MM"
+      ingredients:
+        M: minecraft:brown_mushroom
+      result: kaleidoscopecookery:strung_mushrooms
+    - id: craft_straw_block
+      pattern:
+        - "RRR"
+        - "RRR"
+        - "RRR"
+      ingredients:
+        R: kaleidoscopecookery:rice_panicle
+      result: kaleidoscopecookery:straw_block
+    - id: craft_farmer_chest_plate
+      pattern:
+        - "I I"
+        - "LLL"
+        - "LLL"
+      ingredients:
+        I: minecraft:iron_ingot
+        L: minecraft:leather
+      result: kaleidoscopecookery:farmer_chest_plate
+    - id: craft_farmer_leggings
+      pattern:
+        - "LIL"
+        - "L L"
+        - "L L"
+      ingredients:
+        I: minecraft:iron_ingot
+        L: minecraft:leather
+      result: kaleidoscopecookery:farmer_leggings
+    - id: craft_farmer_boots
+      pattern:
+        - "I I"
+        - "L L"
+      ingredients:
+        I: minecraft:iron_ingot
+        L: minecraft:leather
+      result: kaleidoscopecookery:farmer_boots
+    - id: craft_shawarma_spit
+      pattern:
+        - "ICI"
+        - "ICI"
+      ingredients:
+        I:
+          "$$<=1.21.10": minecraft:chain
+          "$$>=1.21.11": minecraft:iron_chain
+        C: minecraft:campfire
+      result: kaleidoscopecookery:shawarma_spit
+    - id: craft_millstone
+      pattern:
+        - " F "
+        - "SG "
+        - "TTT"
+      ingredients:
+        F: minecraft:oak_fence
+        S: minecraft:stick
+        G: minecraft:grindstone
+        T: minecraft:smooth_stone
+      result: kaleidoscopecookery:new_millstone
+    - id: craft_recipe_item
+      pattern:
+        - "PP"
+        - "PP"
+      ingredients:
+        P: minecraft:paper
+      result: kaleidoscopecookery:recipe_item_no_recipe
+    - id: craft_steamer
+      pattern:
+        - "TTT"
+        - "BBB"
+      ingredients:
+        T: minecraft:bamboo_trapdoor
+        B: minecraft:bamboo_block
+      result: kaleidoscopecookery:steamer
+    - id: craft_transmutation_lunch_bag
+      pattern:
+        - " L "
+        - "LSL"
+        - "LLL"
+      ingredients:
+        L: minecraft:leather
+        S: minecraft:nether_star
+      result: kaleidoscopecookery:transmutation_lunch_bag
+    - id: craft_sickle
+      pattern:
+        - "AAB"
+        - " CA"
+        - "C  "
+      ingredients:
+        A: minecraft:flint
+        B: minecraft:string
+        C: minecraft:stick
+      result: kaleidoscopecookery:sickle
+    - id: craft_teapot
+      pattern:
+        - " I "
+        - "IBI"
+        - "III"
+      ingredients:
+        I: minecraft:copper_ingot
+        B: minecraft:bucket
+      result: kaleidoscopecookery:teapot
+    - id: craft_trash_can
+      pattern:
+        - "III"
+        - "ICI"
+        - "III"
+      ingredients:
+        I: minecraft:iron_ingot
+        C: minecraft:composter
+      result: kaleidoscopecookery:trashcan
+    - id: craft_cook_stool_oak
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:oak_planks
+      result: kaleidoscopecookery:cook_stool_oak
+    - id: craft_cook_stool_spruce
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:spruce_planks
+      result: kaleidoscopecookery:cook_stool_spruce
+    - id: craft_cook_stool_acacia
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:acacia_planks
+      result: kaleidoscopecookery:cook_stool_acacia
+    - id: craft_cook_stool_bamboo
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:bamboo_block
+      result: kaleidoscopecookery:cook_stool_bamboo
+    - id: craft_cook_stool_birch
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:birch_planks
+      result: kaleidoscopecookery:cook_stool_birch
+    - id: craft_cook_stool_cherry
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:cherry_planks
+      result: kaleidoscopecookery:cook_stool_cherry
+    - id: craft_cook_stool_crimson
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:crimson_planks
+      result: kaleidoscopecookery:cook_stool_crimson
+    - id: craft_cook_stool_dark_oak
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:dark_oak_planks
+      result: kaleidoscopecookery:cook_stool_dark_oak
+    - id: craft_cook_stool_jungle
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:jungle_planks
+      result: kaleidoscopecookery:cook_stool_jungle
+    - id: craft_cook_stool_mangrove
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:mangrove_planks
+      result: kaleidoscopecookery:cook_stool_mangrove
+    - id: craft_cook_stool_warped
+      pattern:
+        - "   "
+        - "AAA"
+        - "A A"
+      ingredients:
+        A: minecraft:warped_planks
+      result: kaleidoscopecookery:cook_stool_warped
+    - id: craft_chair_oak
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:oak_fence
+        S: minecraft:oak_slab
+      result: kaleidoscopecookery:chair_oak
+    - id: craft_chair_spruce
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:spruce_fence
+        S: minecraft:spruce_slab
+      result: kaleidoscopecookery:chair_spruce
+    - id: craft_chair_acacia
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:acacia_fence
+        S: minecraft:acacia_slab
+      result: kaleidoscopecookery:chair_acacia
+    - id: craft_chair_bamboo
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:bamboo_block
+        S: minecraft:bamboo_slab
+      result: kaleidoscopecookery:chair_bamboo
+    - id: craft_chair_birch
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:birch_fence
+        S: minecraft:birch_slab
+      result: kaleidoscopecookery:chair_birch
+    - id: craft_chair_cherry
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:cherry_fence
+        S: minecraft:cherry_slab
+      result: kaleidoscopecookery:chair_cherry
+    - id: craft_chair_crimson
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:crimson_fence
+        S: minecraft:crimson_slab
+      result: kaleidoscopecookery:chair_crimson
+    - id: craft_chair_dark_oak
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:dark_oak_fence
+        S: minecraft:dark_oak_slab
+      result: kaleidoscopecookery:chair_dark_oak
+    - id: craft_chair_jungle
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:jungle_fence
+        S: minecraft:jungle_slab
+      result: kaleidoscopecookery:chair_jungle
+    - id: craft_chair_mangrove
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:mangrove_fence
+        S: minecraft:mangrove_slab
+      result: kaleidoscopecookery:chair_mangrove
+    - id: craft_chair_warped
+      pattern:
+        - "F  "
+        - "SSS"
+        - "F F"
+      ingredients:
+        F: minecraft:warped_fence
+        S: minecraft:warped_slab
+      result: kaleidoscopecookery:chair_warped
+  blueprint:
+    recipes:
+      #有序合成配方
+      kaleidoscopecookery:${id}:
+        type: shaped
+        category: misc
+        pattern: ${pattern}
+        ingredients: ${ingredients}
+        result:
+          id: "${result}"
+          count: ${count:-1}

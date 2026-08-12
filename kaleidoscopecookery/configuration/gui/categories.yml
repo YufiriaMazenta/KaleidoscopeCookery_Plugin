@@ -1,0 +1,571 @@
+categories:
+  #总目录
+  kaleidoscopecookery:catalog:
+    priority: 100
+    name: "<!i><gold><l10n:category.kaleidoscopecookery.catalog>"
+    icon: kaleidoscopecookery:pot
+    list:
+      - "#kaleidoscopecookery:appliances"
+      - "#kaleidoscopecookery:functional_blocks"
+      - "#kaleidoscopecookery:tools"
+      - "#kaleidoscopecookery:wearables"
+      - "#kaleidoscopecookery:ingredients"
+      - "#kaleidoscopecookery:cuisine"
+      - "#kaleidoscopecookery:tea"
+      - "#kaleidoscopecookery:furniture"
+
+  #烹饪台
+  kaleidoscopecookery:appliances:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.appliances>"
+    icon: kaleidoscopecookery:stove
+    list:
+      - kaleidoscopecookery:chopping_board
+      - kaleidoscopecookery:enamel_basin
+      - kaleidoscopecookery:new_millstone
+      - kaleidoscopecookery:pot
+      - kaleidoscopecookery:shawarma_spit
+      - kaleidoscopecookery:steamer
+      - kaleidoscopecookery:stockpot
+      - kaleidoscopecookery:stove
+
+  #功能方块
+  kaleidoscopecookery:functional_blocks:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.functional_blocks>"
+    icon: kaleidoscopecookery:kitchenware_racks
+    list:
+      - kaleidoscopecookery:kitchenware_racks
+      - kaleidoscopecookery:fruit_basket
+      - kaleidoscopecookery:trashcan
+      - kaleidoscopecookery:scarecrow
+      - kaleidoscopecookery:transmutation_lunch_bag
+      - kaleidoscopecookery:recipe_item_no_recipe
+
+  #厨具工具
+  kaleidoscopecookery:tools:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.tools>"
+    icon: kaleidoscopecookery:iron_kitchen_knife
+    list:
+      - kaleidoscopecookery:iron_kitchen_knife
+      - kaleidoscopecookery:gold_kitchen_knife
+      - kaleidoscopecookery:diamond_kitchen_knife
+      - kaleidoscopecookery:netherite_kitchen_knife
+      - kaleidoscopecookery:kitchen_shovel_no_oil
+      - kaleidoscopecookery:oil_pot
+      - kaleidoscopecookery:oil_pot_empty
+      - kaleidoscopecookery:sickle
+      - kaleidoscopecookery:stockpot_lid
+
+  #可穿戴
+  kaleidoscopecookery:wearables:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.wearables>"
+    icon: kaleidoscopecookery:straw_hat
+    list:
+      - kaleidoscopecookery:straw_hat
+      - kaleidoscopecookery:straw_hat_flower
+      - kaleidoscopecookery:farmer_chest_plate
+      - kaleidoscopecookery:farmer_leggings
+      - kaleidoscopecookery:farmer_boots
+
+  #食材
+  kaleidoscopecookery:ingredients:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.ingredients>"
+    icon: kaleidoscopecookery:flour
+    list:
+      - "#kaleidoscopecookery:crops"
+      - "#kaleidoscopecookery:prepared_ingredients"
+
+  #作物
+  kaleidoscopecookery:crops:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.crops>"
+    icon: kaleidoscopecookery:tomato
+    list:
+      - kaleidoscopecookery:chili_seed
+      - kaleidoscopecookery:green_chili
+      - kaleidoscopecookery:red_chili
+      - kaleidoscopecookery:lettuce_seed
+      - kaleidoscopecookery:lettuce
+      - kaleidoscopecookery:rice
+      - kaleidoscopecookery:wild_rice
+      - kaleidoscopecookery:rice_panicle
+      - kaleidoscopecookery:tomato_seed
+      - kaleidoscopecookery:tomato
+
+  #预处理食材
+  kaleidoscopecookery:prepared_ingredients:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.prepared_ingredients>"
+    icon: kaleidoscopecookery:raw_dough
+    list:
+      - kaleidoscopecookery:flour
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:caterpillar
+      - kaleidoscopecookery:cold_cut_ham_slices
+      - kaleidoscopecookery:raw_cow_offal
+      - kaleidoscopecookery:raw_cut_small_meats
+      - kaleidoscopecookery:raw_lamb_chops
+      - kaleidoscopecookery:raw_meatball
+      - kaleidoscopecookery:raw_pork_belly
+      - kaleidoscopecookery:cooked_cow_offal
+      - kaleidoscopecookery:cooked_cut_small_meats
+      - kaleidoscopecookery:cooked_lamb_chops
+      - kaleidoscopecookery:cooked_meatball
+      - kaleidoscopecookery:cooked_pork_belly
+      - kaleidoscopecookery:raw_dough
+      - kaleidoscopecookery:raw_noodles
+      - kaleidoscopecookery:raw_zongzi
+      - kaleidoscopecookery:raw_bamboo_tube_rice
+      - kaleidoscopecookery:stuffed_dough_food
+      - kaleidoscopecookery:sashimi
+
+  #菜肴
+  kaleidoscopecookery:cuisine:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.cuisine>"
+    icon: kaleidoscopecookery:braised_fish
+    list:
+      - "#kaleidoscopecookery:main_dishes"
+      - "#kaleidoscopecookery:soups_noodles"
+      - "#kaleidoscopecookery:staples_snacks"
+      - "#kaleidoscopecookery:platters"
+
+  #主菜
+  kaleidoscopecookery:main_dishes:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.main_dishes>"
+    icon: kaleidoscopecookery:dongpo_pork
+    list:
+      - kaleidoscopecookery:blaze_lamb_chop
+      - kaleidoscopecookery:braised_fish
+      - kaleidoscopecookery:chorus_fried_egg
+      - kaleidoscopecookery:cold_style_sashimi
+      - kaleidoscopecookery:crystal_lamb_chop
+      - kaleidoscopecookery:dark_cuisine
+      - kaleidoscopecookery:desert_style_sashimi
+      - kaleidoscopecookery:dongpo_pork
+      - kaleidoscopecookery:end_style_sashimi
+      - kaleidoscopecookery:fondant_pie
+      - kaleidoscopecookery:fondant_spider_eye
+      - kaleidoscopecookery:frost_lamb_chop
+      - kaleidoscopecookery:golden_salad
+      - kaleidoscopecookery:nether_style_sashimi
+      - kaleidoscopecookery:pan_seared_knight_steak
+      - kaleidoscopecookery:slime_ball_meal
+      - kaleidoscopecookery:spicy_chicken
+      - kaleidoscopecookery:stargazy_pie
+      - kaleidoscopecookery:suspicious_stir_fry
+      - kaleidoscopecookery:sweet_and_sour_ender_pearls
+      - kaleidoscopecookery:tundra_style_sashimi
+      - kaleidoscopecookery:yakitori
+      - kaleidoscopecookery:candied_potato
+      - kaleidoscopecookery:stuffed_tiger_skin_pepper
+      - kaleidoscopecookery:spicy_rabbit_head
+      - kaleidoscopecookery:fried_caterpillar
+      - kaleidoscopecookery:fried_spring_roll
+      - kaleidoscopecookery:braised_pork_ribs
+      - kaleidoscopecookery:cold_roasted_meat
+      - kaleidoscopecookery:oil_splashed_fish
+      - kaleidoscopecookery:numbing_spicy_chicken
+      - kaleidoscopecookery:braised_beef
+      - kaleidoscopecookery:braised_beef_with_potatoes
+      - kaleidoscopecookery:chicken_and_mushroom_stew
+      - kaleidoscopecookery:fish_flavored_shredded_pork
+      - kaleidoscopecookery:scramble_egg_with_tomatoes
+      - kaleidoscopecookery:stir_fried_pork_with_peppers
+      - kaleidoscopecookery:sweet_and_sour_pork
+
+  #汤面
+  kaleidoscopecookery:soups_noodles:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.soups_noodles>"
+    icon: kaleidoscopecookery:beef_noodle
+    list:
+      - kaleidoscopecookery:dough_drop_soup
+      - kaleidoscopecookery:four_joy_meatball_soup
+      - kaleidoscopecookery:spicy_blood_stew
+      - kaleidoscopecookery:brown_mushroom_pot_soup
+      - kaleidoscopecookery:red_mushroom_pot_soup
+      - kaleidoscopecookery:warped_fungus_pot_soup
+      - kaleidoscopecookery:crimson_fungus_pot_soup
+      - kaleidoscopecookery:buddha_jumps_over_the_wall
+      - kaleidoscopecookery:beef_meatball_soup
+      - kaleidoscopecookery:beef_noodle
+      - kaleidoscopecookery:borscht
+      - kaleidoscopecookery:fearsome_thick_soup
+      - kaleidoscopecookery:hot_dry_noodles
+      - kaleidoscopecookery:hui_noodle
+      - kaleidoscopecookery:laba_congee
+      - kaleidoscopecookery:lamb_and_radish_soup
+      - kaleidoscopecookery:pork_bone_soup
+      - kaleidoscopecookery:pufferfish_soup
+      - kaleidoscopecookery:seafood_miso_soup
+      - kaleidoscopecookery:udon_noodle
+      - kaleidoscopecookery:wild_mushroom_rabbit_soup
+
+  #主食点心
+  kaleidoscopecookery:staples_snacks:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.staples_snacks>"
+    icon: kaleidoscopecookery:baozi
+    list:
+      - kaleidoscopecookery:shengjian_mantou
+      - kaleidoscopecookery:bamboo_tube_rice
+      - kaleidoscopecookery:baozi
+      - kaleidoscopecookery:braised_beef_rice_bowl
+      - kaleidoscopecookery:cooked_rice
+      - kaleidoscopecookery:raw_donkey_meat
+      - kaleidoscopecookery:cooked_donkey_meat
+      - kaleidoscopecookery:delicious_egg_fried_rice
+      - kaleidoscopecookery:tomato_beef_brisket_soup
+      - kaleidoscopecookery:donkey_burger
+      - kaleidoscopecookery:dumpling
+      - kaleidoscopecookery:egg_fried_rice
+      - kaleidoscopecookery:fish_flavored_shredded_pork_rice_bowl
+      - kaleidoscopecookery:fried_egg
+      - kaleidoscopecookery:mantou
+      - kaleidoscopecookery:meat_pie
+      - kaleidoscopecookery:qingtuan
+      - kaleidoscopecookery:samsa
+      - kaleidoscopecookery:scramble_egg_with_tomatoes_rice_bowl
+      - kaleidoscopecookery:sticky_candy
+      - kaleidoscopecookery:sticky_rice_cake
+      - kaleidoscopecookery:stir_fried_pork_with_peppers_rice_bowl
+      - kaleidoscopecookery:sweet_and_sour_pork_rice_bowl
+      - kaleidoscopecookery:zongzi
+
+  #拼盘
+  kaleidoscopecookery:platters:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.platters>"
+    icon: kaleidoscopecookery:baozi_plate
+    list:
+      - kaleidoscopecookery:shengjian_mantou_plate
+      - kaleidoscopecookery:baozi_plate
+      - kaleidoscopecookery:qingtuan_plate
+      - kaleidoscopecookery:sticky_candy_plate
+      - kaleidoscopecookery:sticky_rice_cake_plate
+      - kaleidoscopecookery:zongzi_plate
+      - kaleidoscopecookery:berry_platter
+      - kaleidoscopecookery:apple_platter
+      - kaleidoscopecookery:tomato_platter
+      - kaleidoscopecookery:watermelon_platter
+      - kaleidoscopecookery:chorus_fruit_platter
+
+  #茶
+  kaleidoscopecookery:tea:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.tea>"
+    icon: kaleidoscopecookery:biluochun
+    list:
+      - kaleidoscopecookery:teapot
+      - kaleidoscopecookery:teacup_coaster
+      - kaleidoscopecookery:empty_cup
+      - kaleidoscopecookery:sakura_fubuki
+      - kaleidoscopecookery:barley_tea
+      - kaleidoscopecookery:biluochun
+      - kaleidoscopecookery:flower_tea
+      - kaleidoscopecookery:oolong
+      - kaleidoscopecookery:tieguanyin
+
+  #家具
+  kaleidoscopecookery:furniture:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.furniture>"
+    icon: kaleidoscopecookery:cook_stool_oak
+    list:
+      - "#kaleidoscopecookery:tables"
+      - "#kaleidoscopecookery:seating"
+      - "#kaleidoscopecookery:decorations"
+
+  #餐桌
+  kaleidoscopecookery:tables:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.tables>"
+    icon: kaleidoscopecookery:table_oak
+    list:
+      - kaleidoscopecookery:table_oak
+      - kaleidoscopecookery:table_spruce
+      - kaleidoscopecookery:table_birch
+      - kaleidoscopecookery:table_jungle
+      - kaleidoscopecookery:table_acacia
+      - kaleidoscopecookery:table_dark_oak
+      - kaleidoscopecookery:table_mangrove
+      - kaleidoscopecookery:table_cherry
+      - kaleidoscopecookery:table_bamboo
+      - kaleidoscopecookery:table_crimson
+      - kaleidoscopecookery:table_warped
+
+  #座椅
+  kaleidoscopecookery:seating:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.seating>"
+    icon: kaleidoscopecookery:chair_oak
+    list:
+      - kaleidoscopecookery:chair_oak
+      - kaleidoscopecookery:chair_spruce
+      - kaleidoscopecookery:chair_acacia
+      - kaleidoscopecookery:chair_bamboo
+      - kaleidoscopecookery:chair_birch
+      - kaleidoscopecookery:chair_cherry
+      - kaleidoscopecookery:chair_crimson
+      - kaleidoscopecookery:chair_dark_oak
+      - kaleidoscopecookery:chair_jungle
+      - kaleidoscopecookery:chair_mangrove
+      - kaleidoscopecookery:chair_warped
+      - kaleidoscopecookery:cook_stool_oak
+      - kaleidoscopecookery:cook_stool_spruce
+      - kaleidoscopecookery:cook_stool_acacia
+      - kaleidoscopecookery:cook_stool_bamboo
+      - kaleidoscopecookery:cook_stool_birch
+      - kaleidoscopecookery:cook_stool_cherry
+      - kaleidoscopecookery:cook_stool_crimson
+      - kaleidoscopecookery:cook_stool_dark_oak
+      - kaleidoscopecookery:cook_stool_jungle
+      - kaleidoscopecookery:cook_stool_mangrove
+      - kaleidoscopecookery:cook_stool_warped
+
+  #装饰
+  kaleidoscopecookery:decorations:
+    hidden: true
+    name: "<!i><white><l10n:category.kaleidoscopecookery.decorations>"
+    icon: kaleidoscopecookery:straw_block
+    list:
+      - kaleidoscopecookery:oil_block
+      - kaleidoscopecookery:chili_ristra
+      - kaleidoscopecookery:straw_block
+      - kaleidoscopecookery:strung_mushrooms
+
+translations#catalog_categories:
+  zh_cn:
+    category.kaleidoscopecookery.catalog: "森罗物语"
+    category.kaleidoscopecookery.appliances: "厨具与炊具"
+    category.kaleidoscopecookery.functional_blocks: "功能设施"
+    category.kaleidoscopecookery.tools: "工具与装备"
+    category.kaleidoscopecookery.wearables: "穿戴与服饰"
+    category.kaleidoscopecookery.ingredients: "食材与作物"
+    category.kaleidoscopecookery.crops: "作物与种子"
+    category.kaleidoscopecookery.prepared_ingredients: "加工食材"
+    category.kaleidoscopecookery.cuisine: "料理"
+    category.kaleidoscopecookery.main_dishes: "菜肴"
+    category.kaleidoscopecookery.soups_noodles: "汤羹与面食"
+    category.kaleidoscopecookery.staples_snacks: "主食与点心"
+    category.kaleidoscopecookery.platters: "拼盘与盛菜"
+    category.kaleidoscopecookery.tea: "茶饮与茶具"
+    category.kaleidoscopecookery.furniture: "家具与装饰"
+    category.kaleidoscopecookery.tables: "桌子"
+    category.kaleidoscopecookery.seating: "椅子与凳子"
+    category.kaleidoscopecookery.decorations: "厨房陈设"
+  zh_tw:
+    category.kaleidoscopecookery.catalog: "森羅物語"
+    category.kaleidoscopecookery.appliances: "廚具與炊具"
+    category.kaleidoscopecookery.functional_blocks: "功能設施"
+    category.kaleidoscopecookery.tools: "工具與裝備"
+    category.kaleidoscopecookery.wearables: "穿戴與服飾"
+    category.kaleidoscopecookery.ingredients: "食材與作物"
+    category.kaleidoscopecookery.crops: "作物與種子"
+    category.kaleidoscopecookery.prepared_ingredients: "加工食材"
+    category.kaleidoscopecookery.cuisine: "料理"
+    category.kaleidoscopecookery.main_dishes: "菜餚"
+    category.kaleidoscopecookery.soups_noodles: "湯羹與麵食"
+    category.kaleidoscopecookery.staples_snacks: "主食與點心"
+    category.kaleidoscopecookery.platters: "拼盤與盛菜"
+    category.kaleidoscopecookery.tea: "茶飲與茶具"
+    category.kaleidoscopecookery.furniture: "家具與裝飾"
+    category.kaleidoscopecookery.tables: "桌子"
+    category.kaleidoscopecookery.seating: "椅子與凳子"
+    category.kaleidoscopecookery.decorations: "廚房陳設"
+  zh_hk:
+    category.kaleidoscopecookery.catalog: "森羅物語"
+    category.kaleidoscopecookery.appliances: "廚具與炊具"
+    category.kaleidoscopecookery.functional_blocks: "功能設施"
+    category.kaleidoscopecookery.tools: "工具與裝備"
+    category.kaleidoscopecookery.wearables: "穿戴與服飾"
+    category.kaleidoscopecookery.ingredients: "食材與作物"
+    category.kaleidoscopecookery.crops: "作物與種子"
+    category.kaleidoscopecookery.prepared_ingredients: "加工食材"
+    category.kaleidoscopecookery.cuisine: "料理"
+    category.kaleidoscopecookery.main_dishes: "菜餚"
+    category.kaleidoscopecookery.soups_noodles: "湯羹與麵食"
+    category.kaleidoscopecookery.staples_snacks: "主食與點心"
+    category.kaleidoscopecookery.platters: "拼盤與盛菜"
+    category.kaleidoscopecookery.tea: "茶飲與茶具"
+    category.kaleidoscopecookery.furniture: "家具與裝飾"
+    category.kaleidoscopecookery.tables: "桌子"
+    category.kaleidoscopecookery.seating: "椅子與凳子"
+    category.kaleidoscopecookery.decorations: "廚房陳設"
+  en_us:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Cookware & Appliances"
+    category.kaleidoscopecookery.functional_blocks: "Functional Fixtures"
+    category.kaleidoscopecookery.tools: "Tools & Equipment"
+    category.kaleidoscopecookery.wearables: "Wearables & Clothing"
+    category.kaleidoscopecookery.ingredients: "Ingredients & Crops"
+    category.kaleidoscopecookery.crops: "Crops & Seeds"
+    category.kaleidoscopecookery.prepared_ingredients: "Prepared Ingredients"
+    category.kaleidoscopecookery.cuisine: "Cuisine"
+    category.kaleidoscopecookery.main_dishes: "Dishes"
+    category.kaleidoscopecookery.soups_noodles: "Soups & Noodles"
+    category.kaleidoscopecookery.staples_snacks: "Staples & Snacks"
+    category.kaleidoscopecookery.platters: "Platters & Servings"
+    category.kaleidoscopecookery.tea: "Tea & Teaware"
+    category.kaleidoscopecookery.furniture: "Furniture & Decor"
+    category.kaleidoscopecookery.tables: "Tables"
+    category.kaleidoscopecookery.seating: "Chairs & Stools"
+    category.kaleidoscopecookery.decorations: "Kitchen Decor"
+  ja_jp:
+    category.kaleidoscopecookery.catalog: "森羅物語"
+    category.kaleidoscopecookery.appliances: "調理器具"
+    category.kaleidoscopecookery.functional_blocks: "機能設備"
+    category.kaleidoscopecookery.tools: "道具と装備"
+    category.kaleidoscopecookery.wearables: "衣類と装備"
+    category.kaleidoscopecookery.ingredients: "食材と作物"
+    category.kaleidoscopecookery.crops: "作物と種"
+    category.kaleidoscopecookery.prepared_ingredients: "加工食材"
+    category.kaleidoscopecookery.cuisine: "料理"
+    category.kaleidoscopecookery.main_dishes: "おかず"
+    category.kaleidoscopecookery.soups_noodles: "スープと麺"
+    category.kaleidoscopecookery.staples_snacks: "主食と軽食"
+    category.kaleidoscopecookery.platters: "盛り合わせ"
+    category.kaleidoscopecookery.tea: "お茶と茶器"
+    category.kaleidoscopecookery.furniture: "家具と装飾"
+    category.kaleidoscopecookery.tables: "テーブル"
+    category.kaleidoscopecookery.seating: "椅子とスツール"
+    category.kaleidoscopecookery.decorations: "台所の装飾"
+  ko_kr:
+    category.kaleidoscopecookery.catalog: "삼라 이야기"
+    category.kaleidoscopecookery.appliances: "조리 기구"
+    category.kaleidoscopecookery.functional_blocks: "기능 시설"
+    category.kaleidoscopecookery.tools: "도구와 장비"
+    category.kaleidoscopecookery.wearables: "의류와 착용 장비"
+    category.kaleidoscopecookery.ingredients: "식재료와 작물"
+    category.kaleidoscopecookery.crops: "작물과 씨앗"
+    category.kaleidoscopecookery.prepared_ingredients: "가공 재료"
+    category.kaleidoscopecookery.cuisine: "요리"
+    category.kaleidoscopecookery.main_dishes: "주요리"
+    category.kaleidoscopecookery.soups_noodles: "국과 면"
+    category.kaleidoscopecookery.staples_snacks: "주식과 간식"
+    category.kaleidoscopecookery.platters: "모둠 요리"
+    category.kaleidoscopecookery.tea: "차와 다기"
+    category.kaleidoscopecookery.furniture: "가구와 장식"
+    category.kaleidoscopecookery.tables: "탁자"
+    category.kaleidoscopecookery.seating: "의자와 스툴"
+    category.kaleidoscopecookery.decorations: "주방 장식"
+  de_de:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Kochgeschirr & Geräte"
+    category.kaleidoscopecookery.functional_blocks: "Funktionale Einrichtung"
+    category.kaleidoscopecookery.tools: "Werkzeuge & Ausrüstung"
+    category.kaleidoscopecookery.wearables: "Kleidung & Rüstung"
+    category.kaleidoscopecookery.ingredients: "Zutaten & Feldfrüchte"
+    category.kaleidoscopecookery.crops: "Feldfrüchte & Saatgut"
+    category.kaleidoscopecookery.prepared_ingredients: "Verarbeitete Zutaten"
+    category.kaleidoscopecookery.cuisine: "Gerichte"
+    category.kaleidoscopecookery.main_dishes: "Hauptgerichte"
+    category.kaleidoscopecookery.soups_noodles: "Suppen & Nudeln"
+    category.kaleidoscopecookery.staples_snacks: "Grundgerichte & Snacks"
+    category.kaleidoscopecookery.platters: "Platten & Gedecke"
+    category.kaleidoscopecookery.tea: "Tee & Teegeschirr"
+    category.kaleidoscopecookery.furniture: "Möbel & Dekoration"
+    category.kaleidoscopecookery.tables: "Tische"
+    category.kaleidoscopecookery.seating: "Stühle & Hocker"
+    category.kaleidoscopecookery.decorations: "Küchendekoration"
+  es_es:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Utensilios y aparatos"
+    category.kaleidoscopecookery.functional_blocks: "Instalaciones funcionales"
+    category.kaleidoscopecookery.tools: "Herramientas y equipo"
+    category.kaleidoscopecookery.wearables: "Ropa y armadura"
+    category.kaleidoscopecookery.ingredients: "Ingredientes y cultivos"
+    category.kaleidoscopecookery.crops: "Cultivos y semillas"
+    category.kaleidoscopecookery.prepared_ingredients: "Ingredientes preparados"
+    category.kaleidoscopecookery.cuisine: "Cocina"
+    category.kaleidoscopecookery.main_dishes: "Platos"
+    category.kaleidoscopecookery.soups_noodles: "Sopas y fideos"
+    category.kaleidoscopecookery.staples_snacks: "Básicos y aperitivos"
+    category.kaleidoscopecookery.platters: "Bandejas y raciones"
+    category.kaleidoscopecookery.tea: "Té y utensilios"
+    category.kaleidoscopecookery.furniture: "Muebles y decoración"
+    category.kaleidoscopecookery.tables: "Mesas"
+    category.kaleidoscopecookery.seating: "Sillas y taburetes"
+    category.kaleidoscopecookery.decorations: "Decoración de cocina"
+  fr_fr:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Ustensiles et appareils"
+    category.kaleidoscopecookery.functional_blocks: "Installations fonctionnelles"
+    category.kaleidoscopecookery.tools: "Outils et équipement"
+    category.kaleidoscopecookery.wearables: "Vêtements et armures"
+    category.kaleidoscopecookery.ingredients: "Ingrédients et cultures"
+    category.kaleidoscopecookery.crops: "Cultures et graines"
+    category.kaleidoscopecookery.prepared_ingredients: "Ingrédients préparés"
+    category.kaleidoscopecookery.cuisine: "Cuisine"
+    category.kaleidoscopecookery.main_dishes: "Plats"
+    category.kaleidoscopecookery.soups_noodles: "Soupes et nouilles"
+    category.kaleidoscopecookery.staples_snacks: "Féculents et en-cas"
+    category.kaleidoscopecookery.platters: "Plateaux et portions"
+    category.kaleidoscopecookery.tea: "Thé et service à thé"
+    category.kaleidoscopecookery.furniture: "Mobilier et décoration"
+    category.kaleidoscopecookery.tables: "Tables"
+    category.kaleidoscopecookery.seating: "Chaises et tabourets"
+    category.kaleidoscopecookery.decorations: "Décoration de cuisine"
+  it_it:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Pentole e apparecchi"
+    category.kaleidoscopecookery.functional_blocks: "Arredi funzionali"
+    category.kaleidoscopecookery.tools: "Utensili e attrezzatura"
+    category.kaleidoscopecookery.wearables: "Abbigliamento e armature"
+    category.kaleidoscopecookery.ingredients: "Ingredienti e colture"
+    category.kaleidoscopecookery.crops: "Colture e semi"
+    category.kaleidoscopecookery.prepared_ingredients: "Ingredienti preparati"
+    category.kaleidoscopecookery.cuisine: "Cucina"
+    category.kaleidoscopecookery.main_dishes: "Piatti"
+    category.kaleidoscopecookery.soups_noodles: "Zuppe e noodles"
+    category.kaleidoscopecookery.staples_snacks: "Primi e spuntini"
+    category.kaleidoscopecookery.platters: "Vassoi e portate"
+    category.kaleidoscopecookery.tea: "Tè e servizio da tè"
+    category.kaleidoscopecookery.furniture: "Mobili e decorazioni"
+    category.kaleidoscopecookery.tables: "Tavoli"
+    category.kaleidoscopecookery.seating: "Sedie e sgabelli"
+    category.kaleidoscopecookery.decorations: "Decorazioni da cucina"
+  ru_ru:
+    category.kaleidoscopecookery.catalog: "Kaleidoscope Cookery"
+    category.kaleidoscopecookery.appliances: "Посуда и приборы"
+    category.kaleidoscopecookery.functional_blocks: "Функциональные объекты"
+    category.kaleidoscopecookery.tools: "Инструменты и снаряжение"
+    category.kaleidoscopecookery.wearables: "Одежда и доспехи"
+    category.kaleidoscopecookery.ingredients: "Ингредиенты и урожай"
+    category.kaleidoscopecookery.crops: "Урожай и семена"
+    category.kaleidoscopecookery.prepared_ingredients: "Подготовленные ингредиенты"
+    category.kaleidoscopecookery.cuisine: "Кухня"
+    category.kaleidoscopecookery.main_dishes: "Блюда"
+    category.kaleidoscopecookery.soups_noodles: "Супы и лапша"
+    category.kaleidoscopecookery.staples_snacks: "Основы и закуски"
+    category.kaleidoscopecookery.platters: "Ассорти и порции"
+    category.kaleidoscopecookery.tea: "Чай и посуда"
+    category.kaleidoscopecookery.furniture: "Мебель и декор"
+    category.kaleidoscopecookery.tables: "Столы"
+    category.kaleidoscopecookery.seating: "Стулья и табуреты"
+    category.kaleidoscopecookery.decorations: "Кухонный декор"
+  lzh:
+    category.kaleidoscopecookery.catalog: "森羅物語"
+    category.kaleidoscopecookery.appliances: "庖廚之器"
+    category.kaleidoscopecookery.functional_blocks: "功用之設"
+    category.kaleidoscopecookery.tools: "器具衣裝"
+    category.kaleidoscopecookery.wearables: "衣裝護具"
+    category.kaleidoscopecookery.ingredients: "食材作物"
+    category.kaleidoscopecookery.crops: "穀蔬種子"
+    category.kaleidoscopecookery.prepared_ingredients: "治製食材"
+    category.kaleidoscopecookery.cuisine: "餚饌"
+    category.kaleidoscopecookery.main_dishes: "菜餚"
+    category.kaleidoscopecookery.soups_noodles: "羹湯麵食"
+    category.kaleidoscopecookery.staples_snacks: "主食點心"
+    category.kaleidoscopecookery.platters: "拼盤盛饌"
+    category.kaleidoscopecookery.tea: "茗飲茶器"
+    category.kaleidoscopecookery.furniture: "家具陳設"
+    category.kaleidoscopecookery.tables: "几案"
+    category.kaleidoscopecookery.seating: "椅杌之屬"
+    category.kaleidoscopecookery.decorations: "庖廚陳設"

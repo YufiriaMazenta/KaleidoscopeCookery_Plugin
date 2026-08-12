@@ -1,0 +1,74 @@
+templates:
+
+  #金属厨具方块属性
+  kaleidoscopecookery:settings/metal_appliance:
+    template:
+      - default:sound/metal
+    overrides:
+      hardness: ${hardness:-1.0}
+      resistance: ${resistance:-4.5}
+      replaceable: false
+      is_redstone_conductor: ${solid:-true}
+      is_suffocating: ${solid:-true}
+      instrument: basedrum
+      map_color: 15
+      tags:
+        - minecraft:mineable/pickaxe
+
+  #木质厨具方块属性
+  kaleidoscopecookery:settings/wood_appliance:
+    template:
+      - default:sound/wood
+    overrides:
+      hardness: ${hardness:-1.0}
+      resistance: ${resistance:-1.0}
+      replaceable: false
+      is_redstone_conductor: false
+      is_suffocating: false
+      instrument: bass
+      map_color: 12
+      can_occlude: false
+      use_shape_for_light_occlusion: false
+      block_light: 0
+      tags:
+        - minecraft:mineable/axe
+
+  #木质家具方块属性
+  kaleidoscopecookery:settings/wood_furniture:
+    template:
+      - default:sound/wood
+    overrides:
+      item: "${item}"
+      hardness: ${hardness:-2.0}
+      resistance: ${resistance:-3.0}
+      burnable: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      tags:
+        - minecraft:mineable/axe
+
+  #悬挂串方块属性
+  kaleidoscopecookery:settings/hanging_string:
+    template:
+      - default:sound/grass
+    overrides:
+      hardness: 0.0
+      resistance: 0.0
+      map_color: ${map_color:-15}
+      push_reaction: destroy
+      replaceable: false
+      is_redstone_conductor: false
+      is_suffocating: false
+      can_occlude: false
+      use_shape_for_light_occlusion: false
+      block_light: 0
+
+  #作物方块属性
+  kaleidoscopecookery:settings/crop:
+    template:
+      - default:hardness/none
+      - default:sound/grass
+    overrides:
+      item: "${seed}"
+      push_reaction: destroy
+      map_color: 7

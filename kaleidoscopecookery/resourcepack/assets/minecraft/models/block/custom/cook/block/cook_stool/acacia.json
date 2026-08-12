@@ -1,0 +1,6 @@
+{
+  "parent": "block/custom/cook/block/cook_stool/cook_stool",
+  "textures": {
+    "particle": "block/custom/cook/block/cook_stool/acacia"
+  }
+}

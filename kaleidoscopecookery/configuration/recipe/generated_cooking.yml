@@ -1,0 +1,47 @@
+templates:
+  #熔炉烧制配方
+  kaleidoscopecookery:recipe/food_cooking:
+    type: "${type}"
+    category: food
+    ingredients:
+      - "kaleidoscopecookery:${raw}"
+    result:
+      id: "kaleidoscopecookery:${cooked}"
+      count: 1
+    time: ${time}
+    experience: 0.35
+
+config_factory#cooking_recipes:
+  instances:
+    - raw: raw_lamb_chops
+      cooked: cooked_lamb_chops
+    - raw: raw_cow_offal
+      cooked: cooked_cow_offal
+    - raw: raw_pork_belly
+      cooked: cooked_pork_belly
+    - raw: raw_cut_small_meats
+      cooked: cooked_cut_small_meats
+    - raw: raw_meatball
+      cooked: cooked_meatball
+    - raw: stuffed_dough_food
+      cooked: samsa
+  blueprint:
+    recipes:
+      #熔炉烧制配方
+      kaleidoscopecookery:smelt_${cooked}_from_${raw}:
+        template: kaleidoscopecookery:recipe/food_cooking
+        arguments:
+          type: smelting
+          time: 200
+      #烟熏炉烧制配方
+      kaleidoscopecookery:smoke_${cooked}_from_${raw}:
+        template: kaleidoscopecookery:recipe/food_cooking
+        arguments:
+          type: smoking
+          time: 100
+      #营火烧制配方
+      kaleidoscopecookery:campfire_cook_${cooked}_from_${raw}:
+        template: kaleidoscopecookery:recipe/food_cooking
+        arguments:
+          type: campfire_cooking
+          time: 600

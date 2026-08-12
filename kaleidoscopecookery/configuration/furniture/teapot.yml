@@ -1,0 +1,266 @@
+templates:
+  #茶壶外观
+  kaleidoscopecookery:appearance/teapot:
+    state: oxidized_copper_lantern
+    transparent: true
+    entity_renderer:
+      item: "${item}"
+      yaw: ${yaw}
+
+  #茶杯垫外观
+  kaleidoscopecookery:appearance/tea_coaster:
+    auto_state: lower_tripwire
+    transparent: true
+    entity_renderer:
+      item: show:tea_coaster
+      rotation: ${rotation}
+
+items:
+
+  #茶壶
+  kaleidoscopecookery:teapot:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.teapot>
+      lore:
+        - "<!i><white><image:kaleidoscopecookery:tea_left><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_empty><shift:-1><image:kaleidoscopecookery:tea_right>"
+      components:
+        max_stack_size: 1
+    model:
+      type: minecraft:select
+      property: minecraft:display_context
+      cases:
+        - when:
+            - gui
+            - ground
+            - fixed
+            - on_shelf
+          model:
+            type: minecraft:model
+            path: kaleidoscopecookery:item/teapot
+            generation:
+              parent: minecraft:item/generated
+              textures:
+                layer0: item/custom/cook/teapot
+      fallback:
+        type: minecraft:model
+        path: minecraft:block/custom/cook/block/teapot
+    legacy_model:
+      path: kaleidoscopecookery:item/teapot
+      generation:
+        parent: minecraft:item/generated
+        textures:
+          layer0: minecraft:item/custom/cook/teapot
+    behavior:
+      type: kaleidoscopecookery:teapot_item
+      block:
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: kaleidoscopecookery:teapot
+        states:
+          properties:
+            facing:
+              type: 4-direction
+              default: north
+            has_base:
+              type: boolean
+              default: false
+            has_chains:
+              type: boolean
+              default: false
+          appearances:
+            north:
+              state: oxidized_copper_lantern
+              transparent: true
+            south:
+              state: oxidized_copper_lantern
+              transparent: true
+            east:
+              state: oxidized_copper_lantern
+              transparent: true
+            west:
+              state: oxidized_copper_lantern
+              transparent: true
+            north_base:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_base
+                yaw: 180
+            south_base:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_base
+                yaw: 0
+            east_base:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_base
+                yaw: -90
+            west_base:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_base
+                yaw: 90
+            north_chains:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_stick
+                yaw: 180
+            south_chains:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_stick
+                yaw: 0
+            east_chains:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_stick
+                yaw: -90
+            west_chains:
+              template: kaleidoscopecookery:appearance/teapot
+              arguments:
+                item: show:teapot_stick
+                yaw: 90
+          variants:
+            facing=north,has_base=false,has_chains=false:
+              appearance: north
+            facing=south,has_base=false,has_chains=false:
+              appearance: south
+            facing=east,has_base=false,has_chains=false:
+              appearance: east
+            facing=west,has_base=false,has_chains=false:
+              appearance: west
+            facing=north,has_base=true,has_chains=false:
+              appearance: north_base
+            facing=south,has_base=true,has_chains=false:
+              appearance: south_base
+            facing=east,has_base=true,has_chains=false:
+              appearance: east_base
+            facing=west,has_base=true,has_chains=false:
+              appearance: west_base
+            facing=north,has_base=false,has_chains=true:
+              appearance: north_chains
+            facing=south,has_base=false,has_chains=true:
+              appearance: south_chains
+            facing=east,has_base=false,has_chains=true:
+              appearance: east_chains
+            facing=west,has_base=false,has_chains=true:
+              appearance: west_chains
+            facing=north,has_base=true,has_chains=true:
+              appearance: north_base
+            facing=south,has_base=true,has_chains=true:
+              appearance: south_base
+            facing=east,has_base=true,has_chains=true:
+              appearance: east_base
+            facing=west,has_base=true,has_chains=true:
+              appearance: west_base
+
+  #茶杯垫
+  kaleidoscopecookery:teacup_coaster:
+    material: nether_brick
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.teacup_coaster>
+    template: kaleidoscopecookery:item/flat_gui_only
+    arguments:
+      gui_model: minecraft:item/custom/cook/tea_coaster
+      world_model: minecraft:block/custom/cook/block/tea_coaster
+    behavior:
+      type: block_item
+      block:
+        loot:
+          template: default:loot_table/self
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: kaleidoscopecookery:teacup_coaster
+            empty_cup_display_model: show:empty_cup
+            empty_cup_item: kaleidoscopecookery:empty_cup
+        states:
+          properties:
+            facing:
+              type: horizontal_direction
+          appearances:
+            facing=north:
+              template: kaleidoscopecookery:appearance/tea_coaster
+              arguments:
+                rotation: 0
+            facing=south:
+              template: kaleidoscopecookery:appearance/tea_coaster
+              arguments:
+                rotation: 180
+            facing=east:
+              template: kaleidoscopecookery:appearance/tea_coaster
+              arguments:
+                rotation: 90
+            facing=west:
+              template: kaleidoscopecookery:appearance/tea_coaster
+              arguments:
+                rotation: 270
+          variants:
+            facing=north:
+              appearance: facing=north
+            facing=south:
+              appearance: facing=south
+            facing=east:
+              appearance: facing=east
+            facing=west:
+              appearance: facing=west
+
+  #茶杯垫
+  show:tea_coaster:
+    template: kaleidoscopecookery:display/block_model
+    arguments:
+      name: teacup_coaster
+
+config_factory#teapot_displays:
+  instances:
+    #茶壶一
+    - id: teapot_1
+    #茶壶二
+    - id: teapot_2
+    #茶壶底座
+    - id: teapot_base
+    #茶壶挂链
+    - id: teapot_stick
+  blueprint:
+    items:
+      #茶壶与茶水展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: teapot
+
+config_factory#tea_displays:
+  instances:
+    #大麦茶
+    - id: barley_tea
+      name: barley_tea
+    #碧螺春
+    - id: biluochun
+      name: biluochun
+    #空茶杯
+    - id: empty_cup
+      name: empty_cup
+    #花茶
+    - id: flower_tea
+      name: flower_tea
+    #乌龙茶一
+    - id: oolong_1
+      name: oolong
+    #乌龙茶二
+    - id: oolong_2
+      name: oolong
+    #樱吹雪
+    - id: sakura_fubuki
+      name: sakura_fubuki
+    #铁观音
+    - id: tieguanyin
+      name: tieguanyin
+  blueprint:
+    items:
+      #茶壶与茶水展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/model
+        arguments:
+          path: "minecraft:block/custom/cook/block/tea/${id}"

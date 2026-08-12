@@ -1,0 +1,105 @@
+templates:
+  #茶壶配方
+  kaleidoscopecookery:recipe/teapot:
+    fluid: "${fluid:-'minecraft:water'}"
+    require: "${require} ${count:-12}"
+    result: "kaleidoscopecookery:${result}"
+    time: ${time:-240}
+
+teapot_liquid:
+  minecraft:water:
+    display_name: "kaleidoscopecookery.message.teapot.liquid.water"
+    bar_left: kaleidoscopecookery:tea_left
+    bar_right: kaleidoscopecookery:tea_right
+    bar_empty: kaleidoscopecookery:tea_empty
+    bar_water: kaleidoscopecookery:tea_water_full
+  minecraft:lava:
+    display_name: "kaleidoscopecookery.message.teapot.liquid.lava"
+    bar_left: kaleidoscopecookery:tea_left
+    bar_right: kaleidoscopecookery:tea_right
+    bar_empty: kaleidoscopecookery:tea_empty
+    bar_lava: kaleidoscopecookery:tea_lava_full
+
+tea_cup:
+  #大麦茶
+  kaleidoscopecookery:barley_tea:
+    item: kaleidoscopecookery:barley_tea
+    display_model:
+      - show:barley_tea
+  #碧螺春
+  kaleidoscopecookery:biluochun:
+    item: kaleidoscopecookery:biluochun
+    display_model:
+      - show:biluochun
+  #乌龙茶
+  kaleidoscopecookery:oolong:
+    item: kaleidoscopecookery:oolong
+    display_model:
+      - show:oolong_1
+      - show:oolong_2
+  #花茶
+  kaleidoscopecookery:flower_tea:
+    item: kaleidoscopecookery:flower_tea
+    display_model:
+      - show:flower_tea
+  #樱吹雪
+  kaleidoscopecookery:sakura_fubuki:
+    item: kaleidoscopecookery:sakura_fubuki
+    display_model:
+      - show:sakura_fubuki
+  #铁观音
+  kaleidoscopecookery:tieguanyin:
+    item: kaleidoscopecookery:tieguanyin
+    display_model:
+      - show:tieguanyin
+
+teapot_result:
+  barley_tea_from_wheat_seeds:
+    template: kaleidoscopecookery:recipe/teapot
+    arguments:
+      require: minecraft:wheat_seeds
+      result: barley_tea
+  tieguanyin_from_iron_nugget:
+    template: kaleidoscopecookery:recipe/teapot
+    arguments:
+      require: minecraft:iron_nugget
+      result: tieguanyin
+  biluochun_from_nautilus_shell:
+    template: kaleidoscopecookery:recipe/teapot
+    arguments:
+      require: minecraft:nautilus_shell
+      result: biluochun
+  oolong_from_dragon_breath:
+    template: kaleidoscopecookery:recipe/teapot
+    arguments:
+      require: minecraft:dragon_breath
+      result: oolong
+  sakura_fubuki_from_pink_petals:
+    template: kaleidoscopecookery:recipe/teapot
+    arguments:
+      require: minecraft:pink_petals
+      result: sakura_fubuki
+
+config_factory#flower_tea_recipes:
+  instances:
+    - flower: dandelion
+    - flower: poppy
+    - flower: blue_orchid
+    - flower: allium
+    - flower: azure_bluet
+    - flower: red_tulip
+    - flower: orange_tulip
+    - flower: white_tulip
+    - flower: pink_tulip
+    - flower: oxeye_daisy
+    - flower: cornflower
+    - flower: lily_of_the_valley
+    - flower: wither_rose
+    - flower: torchflower
+  blueprint:
+    teapot_result:
+      flower_tea_from_${flower}:
+        template: kaleidoscopecookery:recipe/teapot
+        arguments:
+          require: "minecraft:${flower}"
+          result: flower_tea

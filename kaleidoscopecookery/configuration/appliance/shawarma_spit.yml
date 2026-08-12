@@ -1,0 +1,169 @@
+templates:
+  #旋风烤肉塔外观
+  kaleidoscopecookery:appearance/shawarma_spit:
+    state: barrier
+    entity_renderer:
+      item: "show:shawarma_spit_${part}"
+      rotation: ${rotation}
+
+items:
+
+  #旋风烤肉塔
+  kaleidoscopecookery:shawarma_spit:
+    data:
+      item_name: <!i><lang:item.kaleidoscopecookery.shawarma_spit>
+    texture: minecraft:item/custom/cook/shawarma_spit
+    behavior:
+      type: double_high_block_item
+      block:
+        loot:
+          template: default:loot_table/door
+        settings:
+          template: kaleidoscopecookery:settings/metal_appliance
+        behaviors:
+          - type: double_high_block
+          - type: kaleidoscopecookery:shawarma_spit
+            grill_time: 600
+        states:
+          properties:
+            half:
+              type: double_block_half
+              default: lower
+            facing:
+              type: 4-direction
+              default: north
+            powered:
+              type: boolean
+              default: false
+          appearances:
+            lower_north_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: lower
+                rotation: 0
+            lower_east_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: lower
+                rotation: 90
+            lower_south_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: lower
+                rotation: 180
+            lower_west_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: lower
+                rotation: 270
+            lower_north_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_lower
+                rotation: 0
+            lower_east_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_lower
+                rotation: 90
+            lower_south_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_lower
+                rotation: 180
+            lower_west_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_lower
+                rotation: 270
+            upper_north_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: upper
+                rotation: 0
+            upper_east_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: upper
+                rotation: 90
+            upper_south_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: upper
+                rotation: 180
+            upper_west_unpowered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: upper
+                rotation: 270
+            upper_north_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_upper
+                rotation: 0
+            upper_east_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_upper
+                rotation: 90
+            upper_south_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_upper
+                rotation: 180
+            upper_west_powered:
+              template: kaleidoscopecookery:appearance/shawarma_spit
+              arguments:
+                part: powered_upper
+                rotation: 270
+          variants:
+            half=lower,facing=north,powered=false:
+              appearance: lower_north_unpowered
+            half=lower,facing=north,powered=true:
+              appearance: lower_north_powered
+            half=lower,facing=east,powered=false:
+              appearance: lower_east_unpowered
+            half=lower,facing=east,powered=true:
+              appearance: lower_east_powered
+            half=lower,facing=south,powered=false:
+              appearance: lower_south_unpowered
+            half=lower,facing=south,powered=true:
+              appearance: lower_south_powered
+            half=lower,facing=west,powered=false:
+              appearance: lower_west_unpowered
+            half=lower,facing=west,powered=true:
+              appearance: lower_west_powered
+            half=upper,facing=north,powered=false:
+              appearance: upper_north_unpowered
+            half=upper,facing=north,powered=true:
+              appearance: upper_north_powered
+            half=upper,facing=east,powered=false:
+              appearance: upper_east_unpowered
+            half=upper,facing=east,powered=true:
+              appearance: upper_east_powered
+            half=upper,facing=south,powered=false:
+              appearance: upper_south_unpowered
+            half=upper,facing=south,powered=true:
+              appearance: upper_south_powered
+            half=upper,facing=west,powered=false:
+              appearance: upper_west_unpowered
+            half=upper,facing=west,powered=true:
+              appearance: upper_west_powered
+
+config_factory#shawarma_spit_displays:
+  instances:
+    #烤肉塔下段
+    - id: shawarma_spit_lower
+    #烤肉塔上段
+    - id: shawarma_spit_upper
+    #通电烤肉塔下段
+    - id: shawarma_spit_powered_lower
+    #通电烤肉塔上段
+    - id: shawarma_spit_powered_upper
+  blueprint:
+    items:
+      #旋风烤肉塔展示模型
+      show:${id}:
+        template: kaleidoscopecookery:display/block_model
+        arguments:
+          name: shawarma_spit

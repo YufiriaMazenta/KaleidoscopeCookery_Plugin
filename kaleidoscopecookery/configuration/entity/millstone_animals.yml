@@ -1,0 +1,67 @@
+millstone_animals:
+
+  #骡
+  mule:
+    seconds: 6
+    allowed: true
+    force_leash: false
+
+  #村民
+  villager:
+    seconds: 7.5
+    allowed: true
+    force_leash: true
+
+  #驴
+  donkey:
+    seconds: 10
+    allowed: true
+    force_leash: false
+
+  #马
+  horse:
+    seconds: 25
+    allowed: true
+    force_leash: false
+
+  #骷髅马
+  skeleton_horse:
+    seconds: 25
+    allowed: true
+    force_leash: false
+
+  #羊驼
+  llama:
+    seconds: 30
+    allowed: true
+    force_leash: false
+
+  #行商羊驼
+  trader_llama:
+    seconds: 30
+    allowed: true
+    force_leash: false
+
+  #牛
+  cow:
+    seconds: 40
+    allowed: true
+    force_leash: false
+
+  #哞菇
+  mooshroom:
+    seconds: 40
+    allowed: true
+    force_leash: false
+
+  #绵羊
+  sheep:
+    seconds: 50
+    allowed: true
+    force_leash: false
+
+  #山羊
+  goat:
+    seconds: 50
+    allowed: true
+    force_leash: false

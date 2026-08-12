@@ -1,0 +1,376 @@
+config_factory#shapeless_recipes:
+  instances:
+    - id: netherite_kitchen_knife_from_diamond
+      ingredients:
+        - kaleidoscopecookery:diamond_kitchen_knife
+        - minecraft:netherite_ingot
+      result: kaleidoscopecookery:netherite_kitchen_knife
+    - id: raw_zongzi_from_rice_seed_lily_pad
+      ingredients:
+        - kaleidoscopecookery:rice
+        - minecraft:lily_pad
+      result: kaleidoscopecookery:raw_zongzi
+    - id: raw_bamboo_tube_rice_from_bamboo_grain_rice_raw_meats
+      ingredients:
+        - minecraft:bamboo
+        - kaleidoscopecookery:rice_panicle
+        - minecraft:beef
+      result: kaleidoscopecookery:raw_bamboo_tube_rice
+    - id: rice_panicle_from_straw_block
+      ingredients:
+        - kaleidoscopecookery:straw_block
+      result: kaleidoscopecookery:rice_panicle
+      count: 9
+    - id: oil_from_oil_block
+      ingredients:
+        - kaleidoscopecookery:oil_block
+      result: kaleidoscopecookery:oil
+      count: 9
+    - id: chili_seed_from_green_chili
+      ingredients:
+        - kaleidoscopecookery:green_chili
+      result: kaleidoscopecookery:chili_seed
+    - id: chili_seed_from_red_chili
+      ingredients:
+        - kaleidoscopecookery:red_chili
+      result: kaleidoscopecookery:chili_seed
+    - id: tomato_seed_from_tomato
+      ingredients:
+        - kaleidoscopecookery:tomato
+      result: kaleidoscopecookery:tomato_seed
+    - id: stuffed_dough_food_from_raw_meats_vegetables_dough
+      ingredients:
+        - minecraft:beef
+        - kaleidoscopecookery:lettuce
+        - kaleidoscopecookery:raw_dough
+      result: kaleidoscopecookery:stuffed_dough_food
+    - id: reset_recipe_item
+      ingredients:
+        - kaleidoscopecookery:recipe_item_has_recipe
+      result: kaleidoscopecookery:recipe_item_no_recipe
+    - id: raw_meatball_from_2_raw_meats_vegetables
+      ingredients:
+        - minecraft:beef
+        - minecraft:beef
+        - kaleidoscopecookery:lettuce
+      result: kaleidoscopecookery:raw_meatball
+    - id: empty_cup_from_flower_pot
+      ingredients:
+        - minecraft:flower_pot
+      result: kaleidoscopecookery:empty_cup
+    - id: berry_platter_from_sweet_glow_berries_bowl
+      ingredients:
+        - minecraft:sweet_berries
+        - minecraft:sweet_berries
+        - minecraft:sweet_berries
+        - minecraft:sweet_berries
+        - minecraft:glow_berries
+        - minecraft:glow_berries
+        - minecraft:glow_berries
+        - minecraft:glow_berries
+        - minecraft:bowl
+      result: kaleidoscopecookery:berry_platter
+    - id: golden_salad_from_golden_apple_carrot_melon_bowl
+      ingredients:
+        - minecraft:golden_apple
+        - minecraft:golden_apple
+        - minecraft:golden_carrot
+        - minecraft:golden_carrot
+        - minecraft:glistering_melon_slice
+        - minecraft:glistering_melon_slice
+        - minecraft:bowl
+      result: kaleidoscopecookery:golden_salad
+    - id: nether_style_sashimi_from_fungi_sashimi_bowl
+      ingredients:
+        - minecraft:crimson_fungus
+        - minecraft:warped_fungus
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - minecraft:bowl
+      result: kaleidoscopecookery:nether_style_sashimi
+    - id: desert_style_sashimi_from_cactus_sashimi_bowl
+      ingredients:
+        - minecraft:cactus
+        - minecraft:cactus
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - minecraft:bowl
+      result: kaleidoscopecookery:desert_style_sashimi
+    - id: cold_style_sashimi_from_snowball_sashimi_bowl
+      ingredients:
+        - minecraft:snowball
+        - minecraft:snowball
+        - minecraft:snowball
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - minecraft:bowl
+      result: kaleidoscopecookery:cold_style_sashimi
+    - id: end_style_sashimi_from_chorus_sashimi_bowl
+      ingredients:
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - minecraft:bowl
+      result: kaleidoscopecookery:end_style_sashimi
+    - id: tundra_style_sashimi_from_flowers_sashimi_bowl
+      ingredients:
+        - minecraft:dandelion
+        - minecraft:dandelion
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - kaleidoscopecookery:sashimi
+        - minecraft:bowl
+      result: kaleidoscopecookery:tundra_style_sashimi
+    - id: cold_roasted_meat_from_cooked_beef_bowl
+      ingredients:
+        - minecraft:cooked_beef
+        - minecraft:cooked_beef
+        - minecraft:cooked_beef
+        - minecraft:bowl
+      result: kaleidoscopecookery:cold_roasted_meat
+    - id: cold_cut_ham_slices_from_cooked_pork_belly_bowl
+      ingredients:
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - kaleidoscopecookery:cooked_pork_belly
+        - minecraft:bowl
+      result: kaleidoscopecookery:cold_cut_ham_slices
+    #番茄炒蛋盖饭
+    - id: scramble_egg_with_tomatoes_rice_bowl
+      ingredients:
+        - kaleidoscopecookery:scramble_egg_with_tomatoes
+        - kaleidoscopecookery:cooked_rice
+      result: kaleidoscopecookery:scramble_egg_with_tomatoes_rice_bowl
+    #红烧牛肉盖饭
+    - id: braised_beef_rice_bowl
+      ingredients:
+        - kaleidoscopecookery:braised_beef
+        - kaleidoscopecookery:cooked_rice
+      result: kaleidoscopecookery:braised_beef_rice_bowl
+    #青椒炒肉盖饭
+    - id: stir_fried_pork_with_peppers_rice_bowl
+      ingredients:
+        - kaleidoscopecookery:stir_fried_pork_with_peppers
+        - kaleidoscopecookery:cooked_rice
+      result: kaleidoscopecookery:stir_fried_pork_with_peppers_rice_bowl
+    #糖醋里脊盖饭
+    - id: sweet_and_sour_pork_rice_bowl
+      ingredients:
+        - kaleidoscopecookery:sweet_and_sour_pork
+        - kaleidoscopecookery:cooked_rice
+      result: kaleidoscopecookery:sweet_and_sour_pork_rice_bowl
+    #鱼香肉丝盖饭
+    - id: fish_flavored_shredded_pork_rice_bowl
+      ingredients:
+        - kaleidoscopecookery:fish_flavored_shredded_pork
+        - kaleidoscopecookery:cooked_rice
+      result: kaleidoscopecookery:fish_flavored_shredded_pork_rice_bowl
+    - id: raw_dough_from_1_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+    - id: raw_dough_from_2_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 2
+    - id: raw_dough_from_3_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 3
+    - id: raw_dough_from_4_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 4
+    - id: raw_dough_from_5_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 5
+    - id: raw_dough_from_6_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 6
+    - id: raw_dough_from_7_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 7
+    - id: raw_dough_from_8_flour
+      ingredients:
+        - minecraft:water_bucket
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+        - kaleidoscopecookery:flour
+      result: kaleidoscopecookery:raw_dough
+      count: 8
+    - id: shengjian_mantou_plate_from_5_shengjian_mantou_bowl
+      ingredients:
+        - kaleidoscopecookery:shengjian_mantou
+        - kaleidoscopecookery:shengjian_mantou
+        - kaleidoscopecookery:shengjian_mantou
+        - kaleidoscopecookery:shengjian_mantou
+        - kaleidoscopecookery:shengjian_mantou
+        - minecraft:bowl
+      result: kaleidoscopecookery:shengjian_mantou_plate
+    - id: baozi_plate_from_5_baozi_bowl
+      ingredients:
+        - kaleidoscopecookery:baozi
+        - kaleidoscopecookery:baozi
+        - kaleidoscopecookery:baozi
+        - kaleidoscopecookery:baozi
+        - kaleidoscopecookery:baozi
+        - minecraft:bowl
+      result: kaleidoscopecookery:baozi_plate
+    - id: qingtuan_plate_from_4_qingtuan_bowl
+      ingredients:
+        - kaleidoscopecookery:qingtuan
+        - kaleidoscopecookery:qingtuan
+        - kaleidoscopecookery:qingtuan
+        - kaleidoscopecookery:qingtuan
+        - minecraft:bowl
+      result: kaleidoscopecookery:qingtuan_plate
+    - id: sticky_candy_plate_from_4_sticky_candy_bowl
+      ingredients:
+        - kaleidoscopecookery:sticky_candy
+        - kaleidoscopecookery:sticky_candy
+        - kaleidoscopecookery:sticky_candy
+        - kaleidoscopecookery:sticky_candy
+        - minecraft:bowl
+      result: kaleidoscopecookery:sticky_candy_plate
+    - id: sticky_rice_cake_plate_from_5_sticky_rice_cake_bowl
+      ingredients:
+        - kaleidoscopecookery:sticky_rice_cake
+        - kaleidoscopecookery:sticky_rice_cake
+        - kaleidoscopecookery:sticky_rice_cake
+        - kaleidoscopecookery:sticky_rice_cake
+        - kaleidoscopecookery:sticky_rice_cake
+        - minecraft:bowl
+      result: kaleidoscopecookery:sticky_rice_cake_plate
+    - id: zongzi_plate_from_4_zongzi_bowl
+      ingredients:
+        - kaleidoscopecookery:zongzi
+        - kaleidoscopecookery:zongzi
+        - kaleidoscopecookery:zongzi
+        - kaleidoscopecookery:zongzi
+        - minecraft:bowl
+      result: kaleidoscopecookery:zongzi_plate
+    - id: tomato_platter_from_5_tomato_bowl
+      ingredients:
+        - kaleidoscopecookery:tomato
+        - kaleidoscopecookery:tomato
+        - kaleidoscopecookery:tomato
+        - kaleidoscopecookery:tomato
+        - kaleidoscopecookery:tomato
+        - minecraft:bowl
+      result: kaleidoscopecookery:tomato_platter
+    - id: apple_platter_from_4_apple_bowl
+      ingredients:
+        - minecraft:apple
+        - minecraft:apple
+        - minecraft:apple
+        - minecraft:apple
+        - minecraft:bowl
+      result: kaleidoscopecookery:apple_platter
+    - id: watermelon_platter_from_3_melon_slice_bowl
+      ingredients:
+        - minecraft:melon_slice
+        - minecraft:melon_slice
+        - minecraft:melon_slice
+        - minecraft:bowl
+      result: kaleidoscopecookery:watermelon_platter
+    - id: chorus_fruit_platter_from_5_chorus_fruit_bowl
+      ingredients:
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - minecraft:chorus_fruit
+        - minecraft:bowl
+      result: kaleidoscopecookery:chorus_fruit_platter
+  blueprint:
+    recipes:
+      #无序合成配方
+      kaleidoscopecookery:craftless_${id}:
+        type: shapeless
+        category: misc
+        ingredients: ${ingredients}
+        result:
+          id: "${result}"
+          count: ${count:-1}
+
+recipes:
+  #空油壶加油合成满油壶
+  kaleidoscopecookery:craftless_oil_pot_from_empty_oil_pot_oil:
+    type: shapeless
+    category: misc
+    ingredients:
+      - kaleidoscopecookery:oil_pot_empty
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+      - kaleidoscopecookery:oil
+    result:
+      id: kaleidoscopecookery:oil_pot
+      count: 1
+      post_processors:
+        - type: apply_data
+          data:
+            components:
+              minecraft:damage: 248
