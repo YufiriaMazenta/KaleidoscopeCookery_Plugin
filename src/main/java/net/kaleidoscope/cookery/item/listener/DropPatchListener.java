@@ -80,7 +80,7 @@ public class DropPatchListener implements Listener {
 
     @EventHandler
     public void onBreakGrassDropSeed(BlockDropItemEvent event) {
-        if (!GRASSES.contains(event.getBlock().getType())) {
+        if (!GRASSES.contains(event.getBlockState().getType())) {
             return;
         }
         List<Item> items = event.getItems();
@@ -111,7 +111,7 @@ public class DropPatchListener implements Listener {
             BukkitItemDefinition seedItem = CraftEngineItems.byId(seedKey);
             if (seedItem == null) {
                 Bukkit.getConsoleSender().sendMessage("§cCan not get seed by id: " + seedKey.asString());
-                return;
+                continue;
             }
             item.setItemStack(seedItem.buildBukkitItem());
         }
