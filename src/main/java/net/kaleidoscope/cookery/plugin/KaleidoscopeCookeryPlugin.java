@@ -26,6 +26,7 @@ import net.kaleidoscope.cookery.api.BlockTags;
 import net.kaleidoscope.cookery.api.ItemTags;
 import net.kaleidoscope.cookery.api.MillstoneAnimals;
 import net.kaleidoscope.cookery.command.RecipeCommand;
+import net.kaleidoscope.cookery.item.listener.DropPatchListener;
 import net.kaleidoscope.cookery.recipe.DishCarriers;
 import net.kaleidoscope.cookery.recipe.FoodRecipeManager;
 import net.kaleidoscope.cookery.ui.RecipeMenuConfig;
@@ -93,6 +94,7 @@ public final class KaleidoscopeCookeryPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new DisplayTrackingListener(), this);
         getServer().getPluginManager().registerEvents(new LunchBagListener(), this);
         getServer().getPluginManager().registerEvents(new CraftEngineRegistryCheckListener(this), this);
+        getServer().getPluginManager().registerEvents(new DropPatchListener(), this);
         if (FoliaUtil.isFolia()) {
             TrashCanRespawnListener.registerFoliaPackets(this);
         } else {

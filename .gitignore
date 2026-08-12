@@ -24,10 +24,10 @@ bin/
 .vscode/
 
 # CraftEngine 资源包内容 不随插件仓库分发 但保留定位包所需的元数据
-/Kaleidoscope/*
-!/Kaleidoscope/*/
-/Kaleidoscope/*/*
-!/Kaleidoscope/*/pack.yml
+#/Kaleidoscope/*
+#!/Kaleidoscope/*/
+#/Kaleidoscope/*/*
+#!/Kaleidoscope/*/pack.yml
 
 # 本地配置 / 凭据
 .claude/settings.local.json
