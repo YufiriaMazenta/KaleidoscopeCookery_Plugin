@@ -474,6 +474,8 @@ templates:
   #菜品阶段展示模型
   kaleidoscopecookery:dish/display:
     material: minecraft:nether_brick
+    data:
+      item_name: "<!i><lang:item.kaleidoscopecookery.${name}>"
     model:
       type: minecraft:model
       path: "${path}"

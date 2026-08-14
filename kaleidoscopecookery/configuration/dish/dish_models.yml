@@ -9,11 +9,13 @@ config_factory#food_fwd_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
 
 config_factory#food_fwd_3:
   instances:
@@ -34,16 +36,19 @@ config_factory#food_fwd_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_2"
+          name: "${dish}"
 
 config_factory#food_fwd_4:
   instances:
@@ -84,21 +89,25 @@ config_factory#food_fwd_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_2"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_3"
+          name: "${dish}"
 
 config_factory#food_fwd_5:
   instances:
@@ -137,26 +146,31 @@ config_factory#food_fwd_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_2"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_3"
+          name: "${dish}"
       #第4口展示模型
       kaleidoscopecookery:${dish}_display_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_4"
+          name: "${dish}"
 
 config_factory#food_fwd_6:
   instances:
@@ -169,31 +183,37 @@ config_factory#food_fwd_6:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_2"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_3"
+          name: "${dish}"
       #第4口展示模型
       kaleidoscopecookery:${dish}_display_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_4"
+          name: "${dish}"
       #第5口展示模型
       kaleidoscopecookery:${dish}_display_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_5"
+          name: "${dish}"
 
 config_factory#food_fwd_7:
   instances:
@@ -206,36 +226,43 @@ config_factory#food_fwd_7:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_0"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_1"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_2"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_3"
+          name: "${dish}"
       #第4口展示模型
       kaleidoscopecookery:${dish}_display_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_4"
+          name: "${dish}"
       #第5口展示模型
       kaleidoscopecookery:${dish}_display_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_5"
+          name: "${dish}"
       #第6口展示模型
       kaleidoscopecookery:${dish}_display_6:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_6"
+          name: "${dish}"
 
 config_factory#food_wide_4:
   instances:
@@ -248,41 +275,49 @@ config_factory#food_wide_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+          name: "${dish}"
       #第0口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_0:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+          name: "${dish}"
       #第1口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+          name: "${dish}"
       #第1口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+          name: "${dish}"
       #第2口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+          name: "${dish}"
       #第2口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+          name: "${dish}"
       #第3口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+          name: "${dish}"
       #第3口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+          name: "${dish}"
 
 config_factory#food_wide_5:
   instances:
@@ -295,51 +330,61 @@ config_factory#food_wide_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+          name: "${dish}"
       #第0口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_0:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+          name: "${dish}"
       #第1口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+          name: "${dish}"
       #第1口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+          name: "${dish}"
       #第2口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+          name: "${dish}"
       #第2口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+          name: "${dish}"
       #第3口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+          name: "${dish}"
       #第3口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+          name: "${dish}"
       #第4口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_4"
+          name: "${dish}"
       #第4口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_4"
+          name: "${dish}"
 
 config_factory#food_wide_6:
   instances:
@@ -352,61 +397,73 @@ config_factory#food_wide_6:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_0"
+          name: "${dish}"
       #第0口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_0:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_0"
+          name: "${dish}"
       #第1口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_1"
+          name: "${dish}"
       #第1口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_1"
+          name: "${dish}"
       #第2口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_2"
+          name: "${dish}"
       #第2口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_2"
+          name: "${dish}"
       #第3口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_3"
+          name: "${dish}"
       #第3口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_3"
+          name: "${dish}"
       #第4口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_4"
+          name: "${dish}"
       #第4口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_4"
+          name: "${dish}"
       #第5口左盘展示模型
       kaleidoscopecookery:${dish}_display_left_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_left_5"
+          name: "${dish}"
       #第5口右盘展示模型
       kaleidoscopecookery:${dish}_display_right_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/food/${dish}_right_5"
+          name: "${dish}"
 
 config_factory#plate_rev_4:
   instances:
@@ -419,21 +476,25 @@ config_factory#plate_rev_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_0"
+          name: "${dish}"
 
 config_factory#plate_rev_5:
   instances:
@@ -454,26 +515,31 @@ config_factory#plate_rev_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_4"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+          name: "${dish}"
       #第4口展示模型
       kaleidoscopecookery:${dish}_display_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_0"
+          name: "${dish}"
 
 config_factory#plate_rev_6:
   instances:
@@ -494,28 +560,34 @@ config_factory#plate_rev_6:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_5"
+          name: "${dish}"
       #第1口展示模型
       kaleidoscopecookery:${dish}_display_1:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_4"
+          name: "${dish}"
       #第2口展示模型
       kaleidoscopecookery:${dish}_display_2:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_3"
+          name: "${dish}"
       #第3口展示模型
       kaleidoscopecookery:${dish}_display_3:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_2"
+          name: "${dish}"
       #第4口展示模型
       kaleidoscopecookery:${dish}_display_4:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_1"
+          name: "${dish}"
       #第5口展示模型
       kaleidoscopecookery:${dish}_display_5:
         template: kaleidoscopecookery:dish/display
         arguments:
           path: "minecraft:block/custom/cook/block/plate/${dish}_0"
+          name: "${dish}"
