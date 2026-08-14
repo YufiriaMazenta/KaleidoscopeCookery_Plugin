@@ -117,6 +117,8 @@ blocks:
       harvest_entries:
         - type: item
           item: kaleidoscopecookery:tomato
+        - type: item
+          item: kaleidoscopecookery:tomato_seed
 
   #生菜作物
   kaleidoscopecookery:lettuce_crop:
@@ -129,6 +131,15 @@ blocks:
       harvest_entries:
         - type: item
           item: kaleidoscopecookery:lettuce
+        - type: item
+          item: kaleidoscopecookery:lettuce_seed
+        - type: alternatives
+          children:
+            - type: item
+              item: kaleidoscopecookery:caterpillar
+              conditions:
+                - type: random
+                  value: 0.1
 
   #辣椒作物
   kaleidoscopecookery:chili_crop:
@@ -139,6 +150,8 @@ blocks:
       crop_seed: kaleidoscopecookery:chili_seed
       visual_state: minecraft:potatoes[age=6]
       harvest_entries:
+        - type: item
+          item: kaleidoscopecookery:chili_seed
         - type: alternatives
           children:
             - type: item
