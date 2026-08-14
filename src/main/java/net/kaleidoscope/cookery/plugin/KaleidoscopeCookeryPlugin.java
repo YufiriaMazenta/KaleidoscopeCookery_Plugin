@@ -28,6 +28,7 @@ import net.kaleidoscope.cookery.api.MillstoneAnimals;
 import net.kaleidoscope.cookery.command.RecipeCommand;
 import net.kaleidoscope.cookery.item.listener.DropPatchListener;
 import net.kaleidoscope.cookery.recipe.DishCarriers;
+import net.kaleidoscope.cookery.recipe.FoodGroups;
 import net.kaleidoscope.cookery.recipe.FoodRecipeManager;
 import net.kaleidoscope.cookery.ui.RecipeMenuConfig;
 import net.kaleidoscope.cookery.ui.input.AnvilTextPrompt;
@@ -75,6 +76,7 @@ public final class KaleidoscopeCookeryPlugin extends JavaPlugin {
         FoodRecipeManager.registerParsers();
         MillstoneAnimals.registerParser();
         ItemTags.registerParser();
+        FoodGroups.registerParser();
         DishCarriers.registerParser();
         BlockTags.registerParser();
         getServer().getPluginManager().registerEvents(new DishCarrierListener(), this);
