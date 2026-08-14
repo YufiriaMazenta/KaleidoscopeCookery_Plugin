@@ -2,6 +2,11 @@
 #这里补的是合成 蒸笼 茶壶的产出 那三条路没有 carrier 字段
 #摆盘菜走 dishes.yml 的 eaten_pools 也别写进来 两边都写会退两个
 dish_carrier:
+  #炒锅的失败与烧糊产物 容器由炒锅行为的 failed_result_carrier burnt_result_carrier 决定 两边要一致
+  #高汤锅的谜之炖菜是原版物品 自带 use_remainder 会自己退碗 写进来会退两个
+  kaleidoscopecookery:suspicious_stir_fry: minecraft:bowl
+  kaleidoscopecookery:dark_cuisine: minecraft:bowl
+
   #茶 退空茶杯
   kaleidoscopecookery:barley_tea: kaleidoscopecookery:empty_cup
   kaleidoscopecookery:biluochun: kaleidoscopecookery:empty_cup

@@ -1,0 +1,26 @@
+#食材分组 只对炒锅与高汤锅的模糊配方生效
+#等效食材 同组内互相顶替 配方 perfect 里写哪个都行
+#调味品   进锅只占一格 不进配比 不算杂料 不影响品质
+#
+#组里只要有一个成员进了下锅白名单 整组都能下锅 不用另外登记
+#tags 这层不能省 CE 只把值是映射的顶层键分发给解析器 顶层直接写列表会被静默跳过
+#两段删掉或留空即关闭该功能 插件只读不写 不会自己往配置里生成东西
+#
+#这个文件也是 /kcrecipe edit 食材分组 菜单的写入目标 手改与菜单改效果一致
+
+item_tags:
+  kaleidoscopecookery:equivalent_egg:
+    - minecraft:egg
+    - minecraft:brown_egg
+    - minecraft:blue_egg
+
+  kaleidoscopecookery:seasoning:
+    - minecraft:sugar
+
+equivalent_foods:
+  tags:
+    - "#kaleidoscopecookery:equivalent_egg"
+
+seasonings:
+  tags:
+    - "#kaleidoscopecookery:seasoning"
