@@ -8,6 +8,7 @@ import net.momirealms.craftengine.bukkit.item.BukkitItemDefinition;
 import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
@@ -31,8 +32,10 @@ public class DropPatchListener implements Listener {
         EntityType.PIG,
         EntityType.PIGLIN,
         EntityType.PIGLIN_BRUTE,
+        EntityType.ZOMBIFIED_PIGLIN,
         EntityType.HOGLIN
     );
+
     private final Set<Material> GRASSES = Set.of(
         Material.SHORT_GRASS,
         Material.TALL_GRASS
@@ -67,13 +70,25 @@ public class DropPatchListener implements Listener {
         boolean isKnife = ItemTags.instance().matches(
             Key.of("kaleidoscopecookery:kitchen_knife"),
             mainHandItemDef.buildItem(BukkitAdaptor.adapt(killer)));
+        int lootingLevel = itemInMainHand.getItemMeta().getEnchantLevel(Enchantment.LOOTING);
+        int oilNum;
+        switch (deathEntity.getType()) {
+            case PIG, ZOMBIFIED_PIGLIN -> {
+                oilNum = RANDOM.nextInt(1, 3);
+            }
+            default -> {
+                oilNum = RANDOM.nextInt(2, 5);
+            }
+        }
+
+        boolean dropMoreOil = RANDOM.nextInt(100) <= lootingLevel;
         if (isKnife) {
             BukkitItemDefinition oilItem = CraftEngineItems.byId(ItemKeys.OIL);
             if (oilItem == null) {
                 return;
             }
             ItemStack bukkitOilItem = oilItem.buildBukkitItem();
-            bukkitOilItem.setAmount(RANDOM.nextInt(3));
+            bukkitOilItem.setAmount(dropMoreOil ? oilNum * 2 : oilNum);
             event.getDrops().add(bukkitOilItem);
         }
     }
