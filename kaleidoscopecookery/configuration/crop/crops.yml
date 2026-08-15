@@ -39,8 +39,10 @@ templates:
           - "#kaleidoscopecookery:range_harvest_tool"
         loot:
           pools:
+            - rolls: 1
+              entries: ${harvest_crop_entries}
             - rolls: 2
-              entries: ${harvest_entries}
+              entries: ${harvest_extra_entries} #用于掉落种子/猪儿虫
     loot:
       template: default:loot_table/seed_crop
       arguments:
@@ -114,9 +116,10 @@ blocks:
       crop_item: kaleidoscopecookery:tomato
       crop_seed: kaleidoscopecookery:tomato_seed
       visual_state: minecraft:potatoes[age=6]
-      harvest_entries:
+      harvest_crop_entries:
         - type: item
           item: kaleidoscopecookery:tomato
+      harvest_extra_entries:
         - type: item
           item: kaleidoscopecookery:tomato_seed
 
@@ -128,9 +131,10 @@ blocks:
       crop_item: kaleidoscopecookery:lettuce
       crop_seed: kaleidoscopecookery:lettuce_seed
       visual_state: minecraft:potatoes[age=6]
-      harvest_entries:
+      harvest_crop_entries:
         - type: item
           item: kaleidoscopecookery:lettuce
+      harvest_extra_entries:
         - type: item
           item: kaleidoscopecookery:lettuce_seed
         - type: alternatives
@@ -149,9 +153,10 @@ blocks:
       crop_item: kaleidoscopecookery:red_chili
       crop_seed: kaleidoscopecookery:chili_seed
       visual_state: minecraft:potatoes[age=6]
-      harvest_entries:
+      harvest_extra_entries:
         - type: item
           item: kaleidoscopecookery:chili_seed
+      harvest_crop_entries:
         - type: alternatives
           children:
             - type: item
