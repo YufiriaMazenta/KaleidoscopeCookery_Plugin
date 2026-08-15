@@ -39,7 +39,7 @@ templates:
           - "#kaleidoscopecookery:range_harvest_tool"
         loot:
           pools:
-            - rolls: 1
+            - rolls: 2
               entries: ${harvest_entries}
     loot:
       template: default:loot_table/seed_crop
