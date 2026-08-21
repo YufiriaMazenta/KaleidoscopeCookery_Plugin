@@ -171,7 +171,8 @@ items:
           operation: add_value
     texture: minecraft:item/custom/cook/kitchen_shovel_no_oil
 
-  #旧沾油锅铲兼容 1.1.9删除
+  # 兼容旧版沾油锅铲
+  #删的时候只能删物品本身 这个 id 同时是新锅铲沾油态的 item_model 模型定义按物品 id 生成 删干净沾油铲就变缺失模型
   kaleidoscopecookery:kitchen_shovel_has_oil:
     material: iron_shovel
     data:

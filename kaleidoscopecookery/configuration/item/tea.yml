@@ -23,7 +23,7 @@ config_factory#teas:
         data:
           components:
             minecraft:consumable:
-              sound: minecraft:entity.generic.drink
+              sound: minecraft:item.honey_bottle.drink
 
 items:
   #空茶杯

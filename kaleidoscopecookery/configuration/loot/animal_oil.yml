@@ -1,0 +1,57 @@
+templates:
+  # 菜刀击杀猪类生物时使用的油脂掉落
+  kaleidoscopecookery:recipe/animal_oil:
+    type: item
+    item: kaleidoscopecookery:oil
+    functions:
+      - type: set_count
+        count:
+          type: uniform
+          min: 1
+          max: 2
+      - type: apply_bonus
+        enchantment: minecraft:looting
+        formula:
+          type: kaleidoscopecookery:uniform_bonus_count
+          multiplier: 1
+
+loot_sources:
+  # 猪与僵尸猪灵各结算一次油脂掉落
+  kaleidoscopecookery:pig_oil:
+    type: entity_death
+    target:
+      - minecraft:pig
+      - minecraft:zombified_piglin
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_item
+              items:
+                - kaleidoscopecookery:iron_kitchen_knife
+                - kaleidoscopecookery:gold_kitchen_knife
+                - kaleidoscopecookery:diamond_kitchen_knife
+                - kaleidoscopecookery:netherite_kitchen_knife
+          entries:
+            - template: kaleidoscopecookery:recipe/animal_oil
+
+  # 大型猪类与猪灵各结算两次油脂掉落
+  kaleidoscopecookery:large_pig_oil:
+    type: entity_death
+    target:
+      - minecraft:hoglin
+      - minecraft:piglin
+      - minecraft:piglin_brute
+      - minecraft:zoglin
+    loot:
+      pools:
+        - rolls: 2
+          conditions:
+            - type: match_item
+              items:
+                - kaleidoscopecookery:iron_kitchen_knife
+                - kaleidoscopecookery:gold_kitchen_knife
+                - kaleidoscopecookery:diamond_kitchen_knife
+                - kaleidoscopecookery:netherite_kitchen_knife
+          entries:
+            - template: kaleidoscopecookery:recipe/animal_oil

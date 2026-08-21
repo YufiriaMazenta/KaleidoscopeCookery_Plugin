@@ -103,7 +103,7 @@ jar {
 
 tasks.named('assemble') {
     dependsOn(tasks.named('shadowJar'))
-    dependsOn('javadocJar')
+//    dependsOn('javadocJar')
 }
 
 tasks {
@@ -112,9 +112,9 @@ tasks {
     }
 }
 
-java {
-    withJavadocJar()
-}
+//java {
+//    withJavadocJar()
+//}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'

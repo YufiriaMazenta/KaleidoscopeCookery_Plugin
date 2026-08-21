@@ -400,7 +400,7 @@ items:
         minecraft:consumable:
           consume_seconds: 1.6
           animation: drink
-          sound: minecraft:entity.generic.drink
+          sound: minecraft:item.honey_bottle.drink
     texture: minecraft:item/custom/cook/tea/sakura_fubuki
 
 config_factory#foods:
